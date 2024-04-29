@@ -1,0 +1,26 @@
+namespace = IRE_political_events
+
+country_event = {
+	id = IRE_political_events.1
+	title = IRE_political_events.1.t
+	desc = IRE_political_events.1.desc
+	picture = GFX_report_event_DEN_Irish_Introduction #Need to edit this
+
+	is_triggered_only = yes
+
+	option = {
+		name = IRE_political_events.1.a
+		IRE = { country_event = { days = 1 id = IRE_political_events.2 }}
+	}
+	option = {
+		name = IRE_political_events.1.b
+	}
+}
+country_event = {
+	id = IRE_political_events.2
+	title = IRE_political_events.2.t
+	desc = IRE_political_events.2.desc
+	picture = GFX_report_event_DEN_Irish_Introduction #Need to edit this
+
+	is_triggered_only = yes
+}

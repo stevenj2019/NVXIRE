@@ -1,0 +1,3983 @@
+focus_tree = {
+	id = NV_Ireland_focus_tree
+	country = { 
+		factor = 0 
+		modifier = {
+			add = 20
+			original_tag = IRE
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 25
+		y = 3200
+	}
+	initial_show_position = {
+		x = 25
+		y = 0 
+	}
+
+	############################
+	#### NV EUROPEAN SHARED ####
+	############################
+	shared_focus = GEN_modernize_the_airforce
+	shared_focus = GEN_modernize_the_navy
+
+	#################################
+	#### IRISH INDUSTRIAL BRANCH ####
+	#################################
+	focus = { #INDUSTRY
+		id = IRE_rebuilding_ireland
+		icon = GFX_focus_generic_industry_1
+		x = -2
+		y = 0
+		cost = 2 
+		available = {
+
+		}
+		allow_branch = {
+			
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY 
+		}
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = IRE_industry_buff
+				bonus = 2
+				ahead_reduction = 2
+				uses = 3
+				category = industry
+			}
+			add_tech_bonus = {
+				name = IRE_industry_buff
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = { #INDUSTRY
+		id = IRE_small_business_owners
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = IRE_rebuilding_ireland }
+		x = -2
+		y = 1
+		relative_position_id = IRE_rebuilding_ireland
+		cost = 3
+		available = {
+
+		}
+		allow_branch = {
+			
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY 
+		}
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { #INDUSTRY
+		id = IRE_foreign_support
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = IRE_rebuilding_ireland }
+		x = 0
+		y = 1
+		relative_position_id = IRE_rebuilding_ireland
+		cost = 4
+		available = {
+
+		}
+		allow_branch = {
+			
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY 
+		}
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { #INDUSTRY
+		id = IRE_industrial_buildup
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = IRE_rebuilding_ireland }
+		x = 2
+		y = 1
+		relative_position_id = IRE_rebuilding_ireland
+		cost = 2
+		available = {
+
+		}
+		allow_branch = {
+			
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY 
+		}
+		completion_reward = {
+			random_core_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+					is_owned_and_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = IRE_Industrial_buildup
+				days = 180
+			}
+		}
+	}
+	focus = { #RESEARCH
+	id = IRE_Scientific_advancements
+	icon = GFX_goal_continuous_research
+	prerequisite = { focus = IRE_rebuilding_ireland }
+	x = -6
+	y = 1
+	relative_position_id = IRE_rebuilding_ireland
+	cost = 10 
+	available = { }
+	allow_branch = { }
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		add_research_slot = 1
+		add_timed_idea = {
+			idea = IRE_Upgrading_Labs
+			days = 180
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_subsidies_mid_class
+	icon = GFX_goal_generic_construction
+	prerequisite = { focus = IRE_small_business_owners }
+	x = 0
+	y = 1
+	relative_position_id = IRE_small_business_owners
+	cost = 3
+	available = {
+
+	}
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_extra_state_shared_building_slots = 7
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				free_building_slots = {
+					building = infrastructure
+					size > 0
+					include_locked = yes
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_encourage_rich_home
+	icon = GFX_focus_generic_industrialists
+	prerequisite = { focus = IRE_foreign_support }
+	x = 0
+	y = 1
+	relative_position_id = IRE_foreign_support
+	cost = 5
+	available = {
+
+	}
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+focus = { #INDUSTRY/RESEARCH
+	id = IRE_industry_go_bragh
+	icon = GFX_focus_generic_industry_2
+	prerequisite = { focus = IRE_industrial_buildup }
+	x = 0
+	y = 1
+	relative_position_id = IRE_industrial_buildup
+	cost = 5
+	available = { NOT = { has_idea = IRE_Industrial_buildup } }
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		random_core_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 5
+			uses = 2
+			category = industry
+		}
+	}
+}
+focus = { #INDUSTRY/RESEARCH
+	id = IRE_technology_industry
+	icon = GFX_focus_generic_modernize_industry
+	prerequisite = { focus = IRE_industrial_buildup }
+	x = 2
+	y = 1
+	relative_position_id = IRE_industrial_buildup
+	cost = 4 
+	available = {
+
+	}
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 5
+			uses = 1
+			category = electronics
+		}
+	}
+}
+focus = { #RESEARCH
+	id = IRE_invest_in_dublin_university
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_Scientific_advancements }
+	x = 0
+	y = 1
+	relative_position_id = IRE_Scientific_advancements
+	cost = 10 
+	available = { NOT = { has_idea = IRE_Upgrading_Labs } }
+	allow_branch = { }
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		add_research_slot = 1
+		add_ideas = { IRE_Dublin_University }
+	}
+}
+focus = { #INDUSTRY/RESEARCH #TODO make require subsidies and rich or
+	id = IRE_long_term_industrial_plan
+	icon = GFX_focus_generic_modernize_industry
+	prerequisite = { 	focus = IRE_subsidies_mid_class 
+						focus = IRE_encourage_rich_home 
+		}
+	x = -1
+	y = 1
+	relative_position_id = IRE_encourage_rich_home
+	cost = 10 
+	available = {
+
+	}
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 5
+			uses = 1
+			ahead_reduction = 5
+			category = electronics
+		}
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		}
+		add_research_slot = 1
+	}
+}
+focus = { #INDUSTRY/RESEARCH
+	id = IRE_heavy_industry
+	icon = GFX_goal_continuous_non_factory_construct
+	prerequisite = { 	focus = IRE_subsidies_mid_class 
+						focus = IRE_encourage_rich_home 
+						focus = IRE_industry_go_bragh
+		}
+	x = 1
+	y = 1
+	relative_position_id = IRE_encourage_rich_home
+	cost = 10 
+	available = {
+
+	}
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 5
+			uses = 1
+			category = electronics
+		}
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+}
+focus = { #RESEARCH
+	id = IRE_labs_of_the_future
+	icon = GFX_focus_research2
+	prerequisite = { focus = IRE_invest_in_dublin_university }
+	x = 0
+	y = 1
+	relative_position_id = IRE_invest_in_dublin_university
+	cost = 10 
+	available = {
+		controls_state = 119
+	}
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = IRE_inddustry_buff
+			bonus = 5
+			uses = 1
+			category = electronics
+		}
+		add_research_slot = 1
+		add_ideas = { IRE_Belfast_University }
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_invest_in_aluminium
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_heavy_industry 
+	}
+	x = -3
+	y = 1
+	relative_position_id = IRE_heavy_industry
+	cost = 14
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		134 = {
+			add_resource = {
+				type = aluminium
+				amount = 5
+			}
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_invest_in_steel
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_heavy_industry 
+	}
+	x = -1
+	y = 1
+	relative_position_id = IRE_heavy_industry
+	cost = 4
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		135 = {
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_invest_in_oil
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_heavy_industry 
+	}
+	x = 1
+	y = 1
+	relative_position_id = IRE_heavy_industry
+	cost = 4 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		135 = {
+			add_resource = {
+				type = oil
+				amount = 5
+			}
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_invest_in_rubber
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_heavy_industry 
+	}
+	x = 3
+	y = 1
+	relative_position_id = IRE_heavy_industry
+	cost = 4 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		135 = {
+			add_resource = {
+				type = rubber
+				amount = 10
+			}
+		}
+		add_timed_idea = {
+			idea = IRE_Industrial_buildup
+			days = 180
+		}
+	}
+}
+focus = { #INDUSTRY
+id = IRE_subsidies_rubber
+icon = GFX_focus_generic_rubber
+prerequisite = { focus = IRE_invest_in_rubber }
+mutually_exclusive = { focus = IRE_subsidies_oil }
+x = 0
+y = 1
+relative_position_id = IRE_invest_in_rubber
+cost = 4 
+available = {
+}
+allow_branch = {
+}
+ai_will_do = {
+	factor = 20
+}
+search_filters = {
+	FOCUS_FILTER_INDUSTRY 
+}
+completion_reward = {
+	135 = {
+		add_resource = {
+			type = rubber
+			amount = 10
+		}
+	}
+}
+}
+focus = { #RESEARCH
+	id = IRE_belfast_university
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_labs_of_the_future
+	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_labs_of_the_future
+	cost = 4 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		135 = {
+			add_resource = {
+				type = aluminium
+				amount = 5
+			}
+		}
+		
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_subsidies_aluminum
+	icon = GFX_focus_generic_aluminum
+	prerequisite = { focus = IRE_invest_in_aluminium 
+	}
+	mutually_exclusive = { focus = IRE_subsidies_steel }
+	x = 0
+	y = 1
+	relative_position_id = IRE_invest_in_aluminium
+	cost = 8
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = aluminium
+				amount = 5
+			}
+		}
+		add_timed_idea = {
+			idea = IRE_Industrial_buildup
+			days = 365
+		}
+	}
+}
+focus = { #INDUSTRY 
+	id = IRE_subsidies_steel
+	icon = GFX_focus_generic_steel
+	prerequisite = { focus = IRE_invest_in_steel
+	}
+	mutually_exclusive = { 	focus = IRE_subsidies_aluminum }
+	x = 0
+	y = 1
+	relative_position_id = IRE_invest_in_steel
+	cost = 8
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = steel
+				amount = 10
+			}
+		}
+		add_timed_idea = {
+			idea = IRE_Industrial_buildup
+			days = 365
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_subsidies_oil
+	icon = GFX_goal_generic_oil_refinery
+	prerequisite = { focus = IRE_invest_in_oil
+	}
+	mutually_exclusive = { focus = IRE_subsidies_tyres }
+	x = 0
+	y = 1
+	relative_position_id = IRE_invest_in_oil
+	cost = 8 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = oil
+				amount = 10
+			}
+		}
+		add_timed_idea = {
+			idea = IRE_Industrial_buildup
+			days = 180
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_survey_for_resources
+	icon = GFX_focus_generic_resource_extraction
+	prerequisite = { 	focus = IRE_subsidies_aluminum
+						focus = IRE_subsidies_steel
+						focus = IRE_subsidies_oil
+						focus = IRE_subsidies_tyres
+	}
+	x = 0
+	y = 3
+	relative_position_id = IRE_heavy_industry
+	cost = 10 
+	available = { NOT = { has_idea = IRE_industrial_buildup } }
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = steel
+				amount = 5
+			}
+		}
+		113 = {
+			add_resource = {
+				type = aluminium
+				amount = 2
+			}
+		}
+		113 = {
+			add_resource = {
+				type = oil
+				amount = 2
+			}
+		}
+	}
+}
+focus = { #INDUSTRY
+id = IRE_found_chromium_company
+icon = GFX_goal_unknown
+prerequisite = { focus = IRE_survey_for_resources
+}
+x = 2
+y = 1
+relative_position_id = IRE_survey_for_resources
+cost = 10 
+available = {
+}
+allow_branch = {
+}
+ai_will_do = {
+	factor = 20
+}
+search_filters = {
+	FOCUS_FILTER_INDUSTRY 
+}
+completion_reward = {
+	113 = {
+		add_resource = {
+			type = chromium
+			amount = 3
+		}
+	}
+	add_timed_idea = {
+		idea = IRE_Industrial_buildup
+		days = 365
+	}
+}
+}
+focus = { #INDUSTRY
+	id = IRE_found_tungsten_company
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_survey_for_resources
+	}
+	x = -2
+	y = 1
+	relative_position_id = IRE_survey_for_resources
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+		}
+		add_timed_idea = {
+			idea = IRE_Industrial_buildup
+			days = 365
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_expand_tungsten
+	icon = GFX_focus_generic_tungsten
+	prerequisite = { focus = IRE_found_tungsten_company
+	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_found_tungsten_company
+	cost = 10 
+	available = { NOT = { has_idea = IRE_industrial_buildup } }
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+		}
+		random_core_state = {
+			add_resource = {
+				type = tungsten
+				amount = 3
+			}
+		}
+	}
+}
+focus = { #INDUSTRY
+	id = IRE_nationalise_strat_resources
+	icon = GFX_focus_SOV_merge_plants
+	prerequisite = { focus = IRE_survey_for_resources
+	}
+	x = 0
+	y = 2
+	relative_position_id = IRE_survey_for_resources
+	cost = 1
+	available = {
+		has_war = yes
+		NOT = { has_idea = IRE_industrial_buildup }
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+		}
+		random_core_state = {
+			add_resource = {
+				type = tungsten
+				amount = 3
+			}
+		}
+		add_timed_idea = {
+			idea = IRE_Industrial_buildup
+			days = 365
+		}
+	}
+}
+	focus = { #INDUSTRY
+	id = IRE_expand_chromium
+	icon = GFX_focus_generic_license_production
+	prerequisite = { focus = IRE_found_chromium_company
+	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_found_chromium_company
+	cost = 10 
+	available = { NOT = { has_idea = IRE_industrial_buildup } }
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY 
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = chromium
+				amount = 2
+			}
+		}
+		random_core_state = {
+			add_resource = {
+				type = chromium
+				amount = 3
+			}
+		}
+	}
+}
+focus = { #INDUSTRY/Research
+	id = IRE_autarky
+	icon = GFX_focus_generic_industry_3
+	prerequisite = { focus = IRE_nationalise_strat_resources
+	}
+	x = -1
+	y = 1
+	relative_position_id = IRE_nationalise_strat_resources
+	cost = 12
+	available = { has_war = yes
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+		}
+		random_core_state = {
+			add_resource = {
+				type = tungsten
+				amount = 3
+			}
+		}
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 3
+		}
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 5
+			uses = 4
+			category = industry
+		}
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 10
+			uses = 2
+			category = electronics
+		}
+		add_research_slot = 1
+		add_ideas = { IRE_Autarky IRE_economic_dictatorship }
+	}
+}
+focus = { #INDUSTRY/Research
+	id = IRE_sanction_proof_economy
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = IRE_nationalise_strat_resources
+	}
+	x = 1
+	y = 1
+	relative_position_id = IRE_nationalise_strat_resources
+	cost = 12
+	available = { has_war = yes
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH
+	}
+	completion_reward = {
+		113 = {
+			add_resource = {
+				type = tungsten
+				amount = 2
+			}
+		}
+		random_core_state = {
+			add_resource = {
+				type = tungsten
+				amount = 3
+			}
+		}
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 3
+		}
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 5
+			uses = 4
+			category = industry
+		}
+		add_tech_bonus = {
+			name = IRE_industry_buff
+			bonus = 10
+			uses = 2
+			category = electronics
+		}
+		add_research_slot = 1
+		add_ideas = { IRE_Autarky IRE_economic_dictatorship }
+	}
+}
+################################
+#### IRISH POLITICAL BRANCH ####
+################################
+focus = { #POLITICS
+	id = IRE_political_introduction
+	icon = GFX_focus_generic_concessions
+	x = 20
+	y = 0
+	cost = 1
+	available = {
+
+	}
+	allow_branch = {
+		
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL 
+	}
+	completion_reward = {
+			IRE = {country_event = { days = 1 id = IRE_political_events.1} }
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_return
+	icon = GFX_focus_generic_military_dictatorship
+	prerequisite = { focus = IRE_political_introduction }
+	mutually_exclusive = { 	}
+	x = -7
+	y = 1
+	relative_position_id = IRE_political_introduction
+	cost = 4 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL 
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.10
+		}
+		add_ideas = { PIRA_return }
+	}
+}
+### OTHER IDEOLOGIES HERE WHEN I CAN BE ARSED
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_recruitment_drive
+	icon = GFX_goal_continuous_def_against_influence
+	prerequisite = { focus = IRE_pira_return }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_return
+	cost = 2
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.1
+		}
+		add_stability = -0.1
+		army_experience = 50
+		###TESTING
+		create_country_leader = {
+			name = IRE_ira_council_leader_n
+			desc = IRE_ira_council_leader_d
+			picture = "gfx/leaders/NVIRE/ira_army_council.dds"
+			expire = "1.1.1.1"
+			ideology = military_junta
+		}
+		add_field_marshal_role = {
+			character = IRE_Michael_McKevitt
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 5
+			traits = {}
+		}
+		add_corps_commander_role = {
+			character = IRE_Liam_Campbell
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			traits = { }
+		}
+		# ### PUT lATER IN TREE
+		add_corps_commander_role = {
+			character = IRE_Colm_Murphy
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			traits={ trickster }
+		}
+		recruit_character = IRE_Seamus_Daly
+		add_corps_commander_role = {
+			character = IRE_Seamus_Daly
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			traits = {}
+		}
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_whip_up_nationalism
+	icon = GFX_focus_FIN_national_fanatism
+	prerequisite = { focus = IRE_pira_recruitment_drive }
+	mutually_exclusive = { 	}
+	x = -2
+	y = 1
+	relative_position_id = IRE_pira_recruitment_drive
+	cost = 3 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_stability = -0.1
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_prepare_militias
+	icon = GFX_focus_generic_military_academy
+	prerequisite = { focus = IRE_pira_recruitment_drive }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_recruitment_drive
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.1
+		}
+		add_stability = -0.1
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_demand_irish_language_only_schools
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_pira_recruitment_drive }
+	mutually_exclusive = { 	}
+	x = 2
+	y = 1
+	relative_position_id = IRE_pira_recruitment_drive
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.1
+		}
+		add_stability = -0.05
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_demand_migrants_know_irish
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_pira_whip_up_nationalism }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_whip_up_nationalism
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.025
+		}
+		add_stability = -0.1
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_raid_stockpiles
+	icon = GFX_focus_FIN_weapon_caches
+	prerequisite = { focus = IRE_pira_prepare_militias }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_prepare_militias
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_stability = -0.2
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_make_it_a_culture_war
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_demand_irish_language_only_schools }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_demand_irish_language_only_schools
+	cost = 3 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.1
+		}
+		add_stability = -0.1
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_we_want_our_republic_back
+	icon = GFX_focus_ETH_freedom_at_gunpoint
+	prerequisite = { 	focus = IRE_pira_make_it_a_culture_war
+						focus = IRE_pira_demand_migrants_know_irish }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_raid_stockpiles
+	cost = 1
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		create_country_leader = {
+			name = IRE_ira_council_leader_n
+			desc = IRE_ira_council_leader_d
+			picture = "gfx/leaders/NVIRE/ira_army_council.dds"
+			expire = "1.1.1.1"
+			ideology = military_junta
+		}
+		add_field_marshal_role = {
+			character = IRE_Michael_McKevitt
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 5
+			traits = {}
+		}
+		add_corps_commander_role = {
+			character = IRE_Liam_Campbell
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			traits = { }
+		}
+		# ### PUT lATER IN TREE
+		add_corps_commander_role = {
+			character = IRE_Colm_Murphy
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			traits={ trickster }
+		}
+		recruit_character = IRE_Seamus_Daly
+		add_corps_commander_role = {
+			character = IRE_Seamus_Daly
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			traits = {}
+		}
+		# create_corps_commander = {
+		# 	name = "Colm Murphy"
+		# 	gfx = "GFX_IRA_Colm_Murphy"
+		# 	skill = 3
+		# 	attack_skill = 6
+		# 	defense_skill = 2
+		# 	planning_skill = 4
+		# 	logistics_skill = 5
+		# 	traits = {}
+		# }
+		# create_corps_commander = {
+		# 	name = "Seamus Daly"
+		# 	gfx = "GFX_IRA_Seamus_Daly"
+		# 	skill = 3
+		# 	attack_skill = 2
+		# 	defense_skill = 4
+		# 	planning_skill = 3
+		# 	logistics_skill = 2
+		# 	traits = {}
+		# }
+
+		add_political_power = 200
+
+		start_civil_war = {
+			ruling_party = nationalist
+			ideology = ROOT
+			size = 0.6
+		}
+
+		swap_ideas = {
+			remove_idea = PIRA_return
+			add_idea = PIRA_Military_Government
+		}
+
+		set_cosmetic_tag = PRI
+		add_manpower = 100000
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_begin_constituional_talks_with_sf
+	icon = GFX_focus_generic_concessions
+	prerequisite = { 	focus = IRE_pira_we_want_our_republic_back}
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_we_want_our_republic_back
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+	id = IRE_a_nationalist_constitution
+	icon = GFX_goal_support_fascism
+	prerequisite = { 	focus = IRE_begin_constituional_talks_with_sf}
+	mutually_exclusive = { focus = IRE_a_socialist_constitution	}
+	x = -4
+	y = 1
+	relative_position_id = IRE_begin_constituional_talks_with_sf
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = PIRA_Military_Government
+			add_idea = PIRA_Friendly
+		}
+		add_ideas = IRE_authoritarian_democracy
+	}
+}
+focus = { #POLITICAL-SOCDEM
+	id = IRE_a_socialist_constitution
+	icon = GFX_goal_unknown
+	prerequisite = { 	focus = IRE_begin_constituional_talks_with_sf}
+	mutually_exclusive = { focus = IRE_a_nationalist_constitution }
+	x = -2
+	y = 6
+	relative_position_id = IRE_socialist_coalition
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+	id = IRE_the_new_form_of_warfare
+	icon = GFX_focus_generic_air_defense
+	prerequisite = { 	focus = IRE_a_nationalist_constitution}
+	x = -3
+	y = 1
+	relative_position_id = IRE_a_nationalist_constitution
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = tac_bomber
+			bonus = 1
+			uses = 1
+		}
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+	id = IRE_aggressive_irish_migration
+	icon = GFX_focus_generic_population_growth
+	prerequisite = { 	focus = IRE_a_nationalist_constitution}
+	x = 0
+	y = 1
+	relative_position_id = IRE_a_nationalist_constitution
+	cost = 10 
+	available = {}
+	allow_branch = {}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_manpower = 250000
+		add_timed_idea = {
+			idea = IRE_migrant_effort
+			days = 730
+		}
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_pira_special_forces
+	icon = GFX_goal_generic_special_forces
+	prerequisite = { 	focus = IRE_a_nationalist_constitution
+						focus = IRE_a_socialist_constitution 
+					}
+	x = 2
+	y = 1
+	relative_position_id = IRE_a_nationalist_constitution
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_timed_idea = {
+			idea = PIRASF_Reforming
+			days = 90
+		}
+		add_ideas = PIRASF_1
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_womens_issues
+	icon = GFX_goal_unknown
+	prerequisite = { 	focus = IRE_a_nationalist_constitution
+						focus = IRE_a_socialist_constitution 
+					}
+	x = -2
+	y = 1
+	relative_position_id = IRE_a_socialist_constitution
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_ban_contraception
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_womens_issues }
+	mutually_exclusive = { focus = IRE_liberalise_birth_control
+	}
+	x = -1
+	y = 1
+	relative_position_id = IRE_womens_issues
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_liberalise_birth_control
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_womens_issues }
+	mutually_exclusive = { focus = IRE_ban_contraception
+	}
+	x = 1
+	y = 1
+	relative_position_id = IRE_womens_issues
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_womens_nationalist_movement
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_ban_contraception focus = IRE_liberalise_birth_control }
+	mutually_exclusive = { }
+	x = 0
+	y = 2
+	relative_position_id = IRE_womens_issues
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_progress_majority_rights
+	icon = GFX_focus_generic_treaty
+	prerequisite = { 	focus = IRE_a_nationalist_constitution
+						focus = IRE_a_socialist_constitution 
+					}
+	x = -5
+	y = 1
+	relative_position_id = IRE_a_socialist_constitution
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+	id = IRE_women_soliders
+	icon = GFX_focus_generic_women_in_military
+	prerequisite = { focus = IRE_progress_majority_rights }
+	x = 0
+	y = 1
+	relative_position_id = IRE_progress_majority_rights 
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = PIRASF_1
+			add_idea = PIRASF_2
+		}
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_physics_scholarships
+	icon = GFX_focus_spr_masters_of_our_own_fate
+	prerequisite = { 	focus = IRE_the_new_form_of_warfare
+					}
+	x = -1
+	y = 1
+	relative_position_id = IRE_the_new_form_of_warfare
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = tac_bomber
+			bonus = 1
+			ahead_reduction = 3
+			uses = 1
+		}
+		add_research_slot = 1
+		army_experience = 100
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_rocketry_scholarships
+	icon = GFX_goal_continuous_research
+	prerequisite = { focus = IRE_the_new_form_of_warfare }
+	x = 1
+	y = 1
+	relative_position_id = IRE_the_new_form_of_warfare
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = tac_bomber
+			bonus = 1
+			ahead_reduction = 3
+			uses = 1
+		}
+		add_research_slot = 1
+		army_experience = 100
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+	id = IRE_expand_pirasf
+	icon = GFX_focus_SMB_special_forces_option_3
+	prerequisite = { focus = IRE_pira_special_forces }
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_special_forces 
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = PIRASF_1
+			add_idea = PIRASF_2
+		}
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_pra_drone_and_missle_service
+	icon = GFX_goal_generic_build_airforce
+	prerequisite = { 	focus = IRE_rocketry_scholarships
+						focus = IRE_physics_scholarships
+					}
+	x = 0
+	y = 2
+	relative_position_id = IRE_the_new_form_of_warfare
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_manpower = 20000
+		add_ideas = IRE_PIRADF
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+	id = IRE_celtic_zionism
+	icon = GFX_focus_eng_decolonization
+	prerequisite = { focus = IRE_aggressive_irish_migration }
+	x = 0
+	y = 2
+	relative_position_id = IRE_aggressive_irish_migration 
+	cost = 10 
+	available = { 	NOT = { has_idea = IRE_migrant_effort } 
+					has_war = yes
+				}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_ideas = IRE_zionism
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+id = IRE_pirasf_primacy
+	icon = GFX_focus_eng_special_air_service
+	prerequisite = { focus = IRE_expand_pirasf }
+	x = 0
+	y = 1
+	relative_position_id = IRE_expand_pirasf 
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = PIRASF_2
+			add_idea = PIRASF_3
+		}
+	}
+}
+focus = { #POLITICAL-NATIONALIST
+id = IRE_women_drone_pilots
+	icon = GFX_focus_SOV_women_in_aviation
+	prerequisite = { focus = IRE_women_soliders }
+	x = 0
+	y = 1
+	relative_position_id = IRE_women_soliders
+	cost = 10 
+	available = {
+		has_completed_focus = IRE_pra_drone_and_missle_service
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = PIRASF_2
+			add_idea = PIRASF_3
+		}
+	}
+}
+focus = { #POLITICAL-SOCDEM
+	id = IRE_socialist_coalition
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_political_introduction }
+	mutually_exclusive = { focus = IRE_pira_return}
+	x = 0
+	y = 1
+	relative_position_id = IRE_political_introduction
+	cost = 10 
+	available = { 
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 300
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 20
+		}
+	}
+}
+focus = { #POLITICAL-Democracy
+	id = IRE_status_quo
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_political_introduction }
+	mutually_exclusive = { focus = IRE_pira_return}
+	x = 10
+	y = 1
+	relative_position_id = IRE_political_introduction
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 300
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 20
+		}
+	}
+}	
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_albion_will_pay
+	icon = GFX_focus_generic_total_war
+	prerequisite = { 	focus = IRE_a_nationalist_constitution
+						focus = IRE_a_socialist_constitution 
+					}
+	x = 0
+	y = 5
+	relative_position_id = IRE_begin_constituional_talks_with_sf
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_air_reform
+	icon = GFX_focus_generic_air_defense
+	prerequisite = { focus = IRE_albion_will_pay }
+	x = 24
+	y = 1
+	relative_position_id = IRE_albion_will_pay
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_fortress_ireland
+	icon = GFX_goal_generic_defence
+	prerequisite = { focus = IRE_albion_will_pay }
+	x = 35
+	y = 1
+	relative_position_id = IRE_albion_will_pay
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_irish_wall
+	icon = GFX_focus_generic_coastal_fort
+	prerequisite = { focus = IRE_fortress_ireland }
+	x = 0
+	y = 1
+	relative_position_id = IRE_fortress_ireland
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_defend_the_towns
+	icon = GFX_focus_generic_coastal_fort
+	prerequisite = { focus = IRE_irish_wall }
+	x = 0
+	y = 1
+	relative_position_id = IRE_irish_wall
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_defend_the_ports
+	icon = GFX_focus_generic_coastal_fort
+	prerequisite = { focus = IRE_defend_the_towns }
+	x = 0
+	y = 1
+	relative_position_id = IRE_defend_the_towns
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_defend_the_irish_sea
+	icon = GFX_focus_generic_coastal_fort
+	prerequisite = { focus = IRE_defend_the_ports }
+	x = -2
+	y = 1
+	relative_position_id = IRE_defend_the_ports
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_buy_modern_patrol_boats
+	icon = GFX_focus_ge
+	prerequisite = { focus = IRE_albion_will_pay }
+	x = 30
+	y = 1
+	relative_position_id = IRE_albion_will_pay
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_reverse_engineer_modern_boats
+	icon = GFX_focus_ge
+	prerequisite = { focus = IRE_buy_modern_patrol_boats }
+	x = 0
+	y = 2
+	relative_position_id = IRE_buy_modern_patrol_boats
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_naval_ISD10_project 
+	icon = GFX_focus_ge
+	prerequisite = { focus = IRE_reverse_engineer_modern_boats }
+	x = 0
+	y = 2
+	relative_position_id = IRE_reverse_engineer_modern_boats
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_naval_ISD10_targetting_tech
+	icon = GFX_focus_ge
+	prerequisite = { focus = IRE_naval_ISD10_project }
+	x = -1
+	y = 3
+	relative_position_id = IRE_naval_ISD10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_naval_ISD10_nuclear
+	icon = GFX_focus_ge
+	prerequisite = { focus = IRE_naval_ISD10_project }
+	x = 1
+	y = 3
+	relative_position_id = IRE_naval_ISD10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_naval_ISD10_gunnery
+	icon = GFX_focus_ge
+	prerequisite = { focus = IRE_naval_ISD10_project }
+	x = 0
+	y = 2
+	relative_position_id = IRE_naval_ISD10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_naval_finish_ISD10_gunnery
+	icon = GFX_focus_ge
+	prerequisite = { focus = IRE_naval_ISD10_gunnery }
+	prerequisite = { focus = IRE_naval_ISD10_nuclear }
+	prerequisite = { focus =  IRE_naval_ISD10_targetting_tech }
+	x = 0
+	y = 4
+	relative_position_id = IRE_naval_ISD10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_fortress_cities
+	icon = GFX_focus_generic_coastal_fort
+	prerequisite = { focus = IRE_defend_the_ports }
+	x = 0
+	y = 1
+	relative_position_id = IRE_defend_the_ports
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_fighter_modernisation
+	icon = GFX_focus_generic_air_defense
+	prerequisite = { focus = IRE_air_reform }
+	x = -1
+	y = 1
+	relative_position_id = IRE_air_reform
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_air_if10_project
+	icon = GFX_
+	prerequisite = { focus = IRE_fighter_modernisation }
+	x = 0
+	y = 3
+	relative_position_id = IRE_fighter_modernisation
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_air_if10_stealth_1
+	icon = GFX_
+	prerequisite = { focus = IRE_air_if10_project }
+	x = 0
+	y = 1
+	relative_position_id = IRE_air_if10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_air_if10_stealth_2
+	icon = GFX_
+	prerequisite = { focus = IRE_air_if10_stealth_1 }
+	x = 0
+	y = 1.8
+	relative_position_id = IRE_air_if10_stealth_1
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_air_if10_missles
+	icon = GFX_
+	prerequisite = { focus = IRE_air_if10_project }
+	x = -2
+	y = 1
+	relative_position_id = IRE_air_if10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_air_if10_engines
+	icon = GFX_
+	prerequisite = { focus = IRE_air_if10_project }
+	x = 2
+	y = 1
+	relative_position_id = IRE_air_if10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_complete_if10_project
+	icon = GFX_
+	prerequisite = { focus = IRE_air_if10_stealth_1 }
+	x = 0
+	y = 1
+	relative_position_id = IRE_air_if10_stealth_2
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_our_own_iron_dome
+	icon = GFX_focus_generic_air_defense
+	prerequisite = { focus = IRE_air_reform }
+	x = 3
+	y = 1
+	relative_position_id = IRE_air_reform
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_expand_the_dome_to_all_ireland
+	icon = GFX_focus_generic_air_defense
+	prerequisite = { focus = IRE_our_own_iron_dome }
+	x = -2
+	y = 1
+	relative_position_id = IRE_our_own_iron_dome
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_state_of_the_art_radar
+	icon = GFX_goal_generic_radar
+	prerequisite = { focus = IRE_our_own_iron_dome }
+	x = 1
+	y = 1
+	relative_position_id = IRE_our_own_iron_dome
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_expand_the_dome_to_ulster
+	icon = GFX_focus_generic_air_defense
+	prerequisite = { focus = IRE_expand_the_dome_to_all_ireland }
+	x = 2
+	y = 1
+	relative_position_id = IRE_expand_the_dome_to_all_ireland
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_assess_dome
+	icon = GFX_focus_NO
+	prerequisite = { 	focus = IRE_state_of_the_art_radar }
+	prerequisite = { 	focus = IRE_expand_the_dome_to_ulster }
+	x = 0
+	y = 2.5
+	relative_position_id = IRE_expand_the_dome_to_ulster
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_ireland_untouchable
+	icon = GFX_focus_NO
+	prerequisite = { 	focus = IRE_assess_dome }
+	x = 0
+	y = 2.5
+	relative_position_id = IRE_assess_dome
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_gun_manufacturers
+	icon = GFX_focus_ETH_freedom_at_gunpoint
+	prerequisite = { focus = IRE_military_complex }
+	mutually_exclusive = { focus = IRE_drone_industry }
+	x = -1
+	y = 1
+	relative_position_id = IRE_military_complex
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_drone_industry
+	icon = GFX_focus_generic_air_defense
+	prerequisite = { focus = IRE_military_complex }
+	x = 1
+	y = 1
+	relative_position_id = IRE_military_complex
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_armored_industry
+	icon = GFX_focus_generic_tank_production
+	prerequisite = { focus = IRE_big_guns_factories 
+						focus = IRE_air_industry }
+	x = 0
+	y = 1
+	relative_position_id = IRE_big_guns_factories
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_air_industry
+	icon = GFX_goal_generic_build_airforce
+	prerequisite = { 	focus = IRE_drone_industry 
+						focus = IRE_gun_manufacturers }
+	x = 0
+	y = 1
+	relative_position_id = IRE_drone_industry
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_resources_for_the_air_war
+	icon = GFX_goal_continuous_air_production
+	prerequisite = { focus = IRE_air_industry 
+						focus = IRE_big_guns_factories }
+	x = 0
+	y = 1
+	relative_position_id = IRE_air_industry
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_irish_military_industrial_complex
+	icon = GFX_goal_continuous_air_production
+	prerequisite = { 	focus = IRE_armored_industry
+						focus = IRE_resources_for_the_air_war }
+	x = 1
+	y = 1
+	relative_position_id = IRE_armored_industry
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_big_guns_factories
+	icon = GFX_goal_generic_army_artillery2
+	prerequisite = { 	focus = IRE_gun_manufacturers
+						focus = IRE_drone_industry }
+	mutually_exclusive = { focus = IRE_air_industry}
+	x = 0
+	y = 1
+	relative_position_id = IRE_gun_manufacturers
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_recruit_a_cabinet
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = IRE_albion_will_pay }
+	x = -9
+	y = 1
+	relative_position_id = IRE_albion_will_pay
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM recruit Chief of Army as the council (will have leader portrait later) recruit 2x provo Field Marshals (one with core defence for the militias, other for offensive)
+	id = IRE_reach_out_to_the_pira
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = IRE_recruit_a_cabinet }
+	x = 0
+	y = 1
+	relative_position_id = IRE_recruit_a_cabinet
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM Create Irish Tank General
+	id = IRE_pira_army_control
+	icon = GFX_focus_ITA_generic_fascist_workers
+	prerequisite = { focus = IRE_reach_out_to_the_pira }
+	x = 0
+	y = 1
+	relative_position_id = IRE_reach_out_to_the_pira
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM Create Irish Special Forces General
+	id = IRE_pira_special_forces_commander
+	icon = GFX_focus_FIN_expand_air_force_academy
+	prerequisite = { focus = IRE_pira_army_control }
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_army_control
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+	}
+}
+focus = { #Create Scottish/Welsh/Irish Defensive General + Field Marshal
+	id = IRE_pira_militia_formations
+	icon = GFX_focus_generic_workers
+	prerequisite = { focus = IRE_pira_army_control }
+	x = 2
+	y = 1
+	relative_position_id = IRE_pira_army_control
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #Create Scottish/Welsh/Irish Defensive General + Field Marshal
+	id = IRE_pira_army_reforms
+	icon = GFX_focus_generic_workers
+	prerequisite = { focus = IRE_pira_tank_commander focus = IRE_pira_special_forces_commander }
+	x = 1
+	y = 1
+	relative_position_id = IRE_pira_tank_commander
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #Create Scottish/Welsh/Irish Defensive General + Field Marshal
+	id = IRE_pira_militia_formations_from_celtic_lands
+	icon = GFX_focus_generic_workers
+	prerequisite = { focus = IRE_pira_militia_formations }
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_militia_formations
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #Create Scottish/Welsh/Irish Defensive General + Field Marshal
+	id = IRE_revoke_paramilitary_ban
+	icon = GFX_focus_SWE_revoke_militia_law
+	prerequisite = { focus = IRE_pira_militia_formations_from_celtic_lands }
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_militia_formations_from_celtic_lands
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_second_industrial_plan
+	icon = GFX_focu
+	prerequisite = { focus = IRE_belfast_university }
+	prerequisite = { focus = IRE_autarky }
+	x = 2
+	y = 6
+	relative_position_id = IRE_belfast_university
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_modernise_electronics
+	icon = GFX_f
+	prerequisite = { focus = IRE_second_industrial_plan }
+	x = -1
+	y = 5
+	relative_position_id = IRE_second_industrial_plan
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_second_industrial_revolution
+	icon = GFX_goal_gener
+	prerequisite = { focus = IRE_second_industrial_plan }
+	x = 1
+	y = 5
+	relative_position_id = IRE_second_industrial_plan
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_military_complex
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = IRE_autarky }
+	x = 2
+	y = 1
+	relative_position_id = IRE_autarky
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_political_reforms
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = IRE_albion_will_pay }
+	x = -4
+	y = 1
+	relative_position_id = IRE_albion_will_pay
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_pira_tank_commander
+	icon = GFX_goal_generic_army_tanks
+	prerequisite = { focus = IRE_pira_army_control }
+	x = -2
+	y = 1
+	relative_position_id = IRE_pira_army_control
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_antagonise_the_english
+	icon = GFX_focus_prc_infiltration
+	prerequisite = { focus = IRE_albion_will_pay }
+	x = 0
+	y = 1
+	relative_position_id = IRE_albion_will_pay
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_propaganda
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = IRE_antagonise_the_english }
+	x = -1
+	y = 1
+	relative_position_id = IRE_antagonise_the_english
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_a_soldiers_song
+	icon = GFX_goal_continuous_def_against_influence
+	prerequisite = { focus = IRE_antagonise_the_english }
+	x = 4
+	y = 1
+	relative_position_id = IRE_antagonise_the_english
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_now_action
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = IRE_antagonise_the_english }
+	x = 0
+	y = 2
+	relative_position_id = IRE_antagonise_the_english
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_our_own
+	icon = GFX_goal_generic_national_unity
+	prerequisite = { focus = IRE_now_action }
+	prerequisite = { focus = IRE_a_soldiers_song}
+	x = 4
+	y = 3
+	relative_position_id = IRE_antagonise_the_english
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_reach_out_to_russia
+	icon = GFX_Align_to_Russia
+	prerequisite = { focus = IRE_our_own_friends }
+	x = 0
+	y = 1
+	relative_position_id = IRE_our_own_friends
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_join_the_csto
+	icon = align_to_csto
+	prerequisite = { focus = IRE_reach_out_to_russia }
+	mutually_exclusive = { focus = IRE_national_liberation_front }
+	x = 1
+	y = 1
+	relative_position_id = IRE_reach_out_to_russia
+	cost = 5
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		#join CSTO
+	}
+}
+focus = {
+	id = IRE_national_liberation_front
+	icon = align_to_
+	prerequisite = { focus = IRE_reach_out_to_middle_east }
+	mutually_exclusive = { focus = IRE_join_the_csto } 
+	x = 0
+	y = 1
+	relative_position_id = IRE_reach_out_to_middle_east
+	cost = 5
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		#join CSTO
+	}
+}
+focus = {
+	id = IRE_join_brics
+	icon = align_to_
+	prerequisite = {	focus = IRE_reach_out_to_russia }
+	x = -1
+	y = 1
+	relative_position_id = IRE_reach_out_to_russia
+	cost = 5
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		#join CSTO
+	}
+}
+focus = {
+	id = IRE_start_brics_conference
+	icon = GFX_
+	prerequisite = { focus = IRE_join_brics }
+	x = 0
+	y = 1
+	relative_position_id = IRE_join_brics
+	cost = 5
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		#join CSTO
+	}
+}
+focus = {
+	id = IRE_brics_conference_trade_union
+	icon = GFX_
+	prerequisite = { focus = IRE_start_brics_conference }
+	x = -3
+	y = 1
+	relative_position_id = IRE_start_brics_conference
+	cost = 5
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		#join CSTO
+	}
+}
+focus = {
+	id = IRE_brics_conference_resource_pact
+	icon = GFX_
+	prerequisite = { focus = IRE_start_brics_conference }
+	x = -1
+	y = 1
+	relative_position_id = IRE_start_brics_conference
+	cost = 5
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		#join CSTO
+	}
+}
+focus = {
+	id = IRE_brics_military_pact
+	icon = GFX_
+	prerequisite = { focus = IRE_start_brics_conference }
+	prerequisite = { focus = IRE_join_the_csto }
+	x = 2
+	y = 1
+	relative_position_id = IRE_start_brics_conference
+	cost = 5
+
+	ai_will_do = {
+		factor = 10
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		#join CSTO
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_reach_out_to_middle_east
+	icon = GFX_goal_generic_major_alliance
+	prerequisite = { focus = IRE_our_own_friends }
+	x = 3
+	y = 1
+	relative_position_id = IRE_our_own_friends
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_our_own_friends
+	icon = GFX_goal_generic_alliance
+	prerequisite = { focus = IRE_our_own }
+	x = 12
+	y = 1
+	relative_position_id = IRE_our_own
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_our_own_deterrent
+	icon = GFX_focus_generic_concessions
+	prerequisite = { focus = IRE_our_own }
+	x = 6
+	y = 1
+	relative_position_id = IRE_our_own
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_establish_a_nuclear_agency
+	icon = GFX_focus_usa_build_the_pentagon
+	prerequisite = { focus = IRE_our_own_deterrent }
+	x = 0
+	y = 1
+	relative_position_id = IRE_our_own_deterrent
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_invest_in_rockets
+	icon = GFX_goal_generic_air_naval_bomber
+	prerequisite = { focus = IRE_establish_a_nuclear_agency }
+	x = 0
+	y = 1
+	relative_position_id = IRE_establish_a_nuclear_agency
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_nuclear_command
+	icon = GFX_focus_NORDIC_com_selector_research
+	prerequisite = { focus = IRE_invest_in_rockets }
+	x = -1
+	y = 3
+	relative_position_id = IRE_invest_in_rockets
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_modern_rockets
+	icon = GFX_focus_NORDIC_com_selector_material
+	prerequisite = { focus = IRE_invest_in_rockets }
+	x = 1
+	y = 3
+	relative_position_id = IRE_invest_in_rockets
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_modern_foreign_policy
+	icon = GFX_focus_NORDIC_com_institution_1
+	prerequisite = {	focus = IRE_start_brics_conference
+						focus = IRE_brics_conference_trade_union
+						focus = IRE_brics_conference_resource_pact
+						focus = IRE_brics_military_pact }
+	x = 0
+	y = 2
+	relative_position_id = IRE_start_brics_conference
+	cost = 10 
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#close conference
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_modern_airforce
+	icon = GFX_focus_NORDIC_com_airforce
+	prerequisite = { focus = IRE_complete_if10_project }
+	prerequisite = { focus = IRE_ireland_untouchable }
+	x = 0
+	y = 1.2
+	relative_position_id = IRE_complete_if10_project
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_the_eyes_see
+	icon = GFX_foc
+	prerequisite = { focus = IRE_antagonise_the_english }
+	x = 0
+	y = 4
+	relative_position_id = IRE_now_action
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_the_hands_do
+	icon = GFX_foc
+	prerequisite = { focus = IRE_the_eyes_see }
+	x = 0
+	y = 1.5
+	relative_position_id = IRE_the_eyes_see
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_our_own_tactics
+	icon = GFX_foc
+	prerequisite = { focus = IRE_our_own }
+	x = -2
+	y = 1
+	relative_position_id = IRE_our_own
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_fund_ulster_raid
+	icon = GFX_foc
+	prerequisite = { focus = IRE_our_own_tactics }
+	x = 0
+	y = 1
+	relative_position_id = IRE_our_own_tactics
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_fund_bombings
+	icon = GFX_foc
+	prerequisite = { focus = IRE_fund_ulster_raid }
+	x = 0
+	y = 1
+	relative_position_id = IRE_fund_ulster_raid
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_fund_uprisings
+	icon = GFX_foc
+	prerequisite = { focus = IRE_fund_bombings }
+	x = 0
+	y = 1.5
+	relative_position_id = IRE_fund_bombings
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_our_own_people
+	icon = GFX_foc
+	prerequisite = { focus = IRE_our_own }
+	x = 0
+	y = 1
+	relative_position_id = IRE_our_own
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_our_own_pentagon
+	icon = GFX_focus_usa_build_the_pentagon
+	prerequisite = { focus = IRE_our_own }
+	x = 3
+	y = 1
+	relative_position_id = IRE_our_own
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_secret_police
+	icon = GFX_focus_NOR_lurk_in_the_shadows
+	prerequisite = { focus = IRE_our_own_pentagon }
+	x = -1
+	y = 1
+	relative_position_id = IRE_our_own_pentagon
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_agency_expansion
+	icon = GFX_goal_continuous_suppression
+	prerequisite = { focus = IRE_secret_police }
+	prerequisite = { focus = IRE_intelligence_agents } 
+	x = 0
+	y = 2
+	relative_position_id = IRE_our_own_pentagon
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = { #POLITICAL-NATIONALIST/SOCDEM
+	id = IRE_intelligence_agents #build an agency
+	icon = GFX_focus_generic_vatican_agents
+	prerequisite = { focus = IRE_our_own_pentagon }
+	x = 1
+	y = 1
+	relative_position_id = IRE_our_own_pentagon
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_strike_at_the_beast
+	icon = GFX_focus_AST_never_gallipoli
+	prerequisite = { 	focus = IRE_the_hands_do 
+						focus = IRE_fund_uprisings }
+	x = 1
+	y = 1.5
+	relative_position_id = IRE_the_hands_do
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+focus = {
+	id = IRE_ireland_victor
+	icon = IRE_strike_at_the_beast
+	prerequisite = { focus = IRE_strike_at_the_beast }
+	x = 0
+	y = 2
+	relative_position_id = IRE_strike_at_the_beast
+	cost = 10 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		#give research buffs for drones and missle
+	}
+}
+
+}

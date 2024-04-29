@@ -1,0 +1,41 @@
+Rebuild_Ireland = {
+	Industrial_Ireland = {
+        visible = { original_tag = "IRE" }
+		icon = generic_major_decision
+		cost = 100
+		days_remove = 100
+		complete_effect = {
+			random_state = {
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	Get_Irish_Foreign_Support = {
+        visible = { original_tag = "IRE" }
+		icon = generic_major_decision
+		cost = 100
+		days_remove = 180
+		complete_effect = {
+			IRE = {
+				add_offsite_building = {
+					type  = civilian_factory
+					level = 2
+				}
+			}
+		}
+	}
+	IRA_Foreign_Supply = {
+        visible = { original_tag = "IRE" }
+		icon = generic_major_decision
+		cost = 200
+		days_remove = 365
+		complete_effect = {
+			IRE = {
+				add_offsite_building = {
+					type  = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+}
