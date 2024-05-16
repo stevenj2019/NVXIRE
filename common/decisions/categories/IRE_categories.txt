@@ -1,0 +1,23 @@
+IRE_irish_civil_war = {
+	icon = GFX_decision_category_NOR_fascist_deploy_pre
+	picture = GFX_decisions_cat_civil_war_picture # test, idk if this will work
+	visible = { original_tag = IRE
+				has_idea = PIRA_return
+	}
+}
+
+IRE_rebuild_ireland = {
+	icon = GFX_decision_category_generic_economy
+	picture = GFX_decision_cat_picture_soviet_comecon # TODO make one for this, picture of the global irish
+	visible = { original_tag = IRE
+				has_idea = IRE_rebuild_ireland_idea
+	}
+}
+
+IRE_celtic_union = {
+	icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+	picture = GFX_decision_cat_generic_european_union # TODO make similar one but with celtic union and a cletic symbol overlay
+	visible = { original_tag = IRE 
+				has_cosmetic_tag = CEL 
+				has_idea = IRE_celtic_union_decisions }
+}

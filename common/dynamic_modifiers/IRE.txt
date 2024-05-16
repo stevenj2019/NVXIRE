@@ -1,0 +1,15 @@
+#RESOURCE/ECONOMIC/INDUSTRIAL
+##RESOURCE
+IRE_invested_in_resources = {
+	icon = ARG_resource_extration_focus
+	consumer_goods_factor = IRE_resource_investment_var
+}
+##SANCTIONS
+IRE_sanctions_regime = { #max 0.4 i think based on relations
+	icon = GFX_idea_sanctioned
+	consumer_goods_factor = IRE_countries_sanctioned_impact_var
+}
+IRE_sanction_avoidance_via_smuggling = { #max 0.1 min = gets removed, decision and events to come
+	icon = generic_spy_political
+	consumer_goods_factor = IRE_avoidance_effectiveness_var
+}

@@ -1,33 +1,107 @@
-Rebuild_Ireland = {
+IRE_rebuild_ireland = {
 	Industrial_Ireland = {
-        visible = { original_tag = "IRE"
-					has_completed_focus = IRE_industrial_buildup }
+        visible = { has_completed_focus = IRE_industrial_buildup }
+		available = { has_idea = IRE_build_ireland_tall }
 		icon = generic_major_decision
 		cost = 100
 		days_remove = 30
 		complete_effect = {
-			random_owned_state = {
-				add_extra_state_shared_building_slots = 2
+			random_list = {
+				10 = {
+					random_core_state = { add_extra_state_shared_building_slots = 2 }
+					random_core_state = { add_extra_state_shared_building_slots = 2 }
+					random_core_state = { add_extra_state_shared_building_slots = 2 }						
+					}
+				20 = {
+					random_core_state = { add_extra_state_shared_building_slots = 2 }
+					random_core_state = { add_extra_state_shared_building_slots = 2 }
+				}
+				20 = {					
+					random_core_state = { add_extra_state_shared_building_slots = 1 }
+					random_core_state = { add_extra_state_shared_building_slots = 1 }
+					random_core_state = { add_extra_state_shared_building_slots = 1 }	
+				}
+				25 = {
+					random_core_state = { add_extra_state_shared_building_slots = 2 }
+				}
+				25 = {
+					random_core_state = { add_extra_state_shared_building_slots = 3 }
+					random_core_state = { add_extra_state_shared_building_slots = 3 }
+					random_core_state = { add_extra_state_shared_building_slots = 3 }
+					remove_ideas = IRE_build_ireland_tall
+				}
 			}
 		}
 	}
-	Get_Irish_Foreign_Support = {
-        visible = { original_tag = "IRE" 
-					has_completed_focus = IRE_foreign_support }
+	Modernise_Production_equipment = {
+		visible = { has_completed_focus = IRE_long_term_industrial_plan }
+		fire_only_once = yes
+		icon = GFX_decision_unknown
+		cost = 300
+		days_remove = 5
+		complete_effect = {
+			add_tech_bonus = {
+				name = IRE_research_buff
+				bonus = 5
+				uses = 5
+				ahead_reduction = 5
+				category = industry
+			}
+			add_tech_bonus = {
+				name = IRE_research_buff
+				bonus = 5
+				uses = 1 
+				ahead_reduction = 5
+				category = electronics
+			}
+		}
+	}
+	IRE_get_foreign_patriot_investments = {
+        visible = { has_completed_focus = IRE_foreign_support }
+		available = { has_idea = IRE_foreign_patriot_investments }
 		icon = generic_major_decision
 		cost = 100
 		days_remove = 180
 		complete_effect = {
-			IRE = {
-				add_offsite_building = {
-					type  = industrial_complex
-					level = 2
+			random_list = {
+				10 = { 
+					add_offsite_building = {
+						type = industrial_complex
+						level = 5
+					} 
 				}
+				20 = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 4
+					}
+				}
+				15 = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 3
+					}
+				}
+				15 = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+				10 = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				10 = {}
+				20 = { remove_ideas = IRE_foreign_patriot_support }
 			}
 		}
 	}
 	IRA_Foreign_Supply = {
         visible = { original_tag = "IRE" 
+					has_idea = IRE_foreign_patriot_support
 					OR = {	has_idea = PIRA_Military_Government
 							has_idea = PIRA_Friendly
 						}
@@ -36,6 +110,22 @@ Rebuild_Ireland = {
 		cost = 200
 		days_remove = 365
 		complete_effect = {
+			random_list = {
+				25 = {
+					add_offsite_building = {
+						type  = arms_factory
+						level = 2
+					}
+				}
+				25 = {
+					add_offsite_building = {
+						type  = arms_factory
+						level = 1
+					}
+				}
+				25 = {}
+				25 = { remove_ideas = IRE_foreign_patriot_support }
+			}
 			IRE = {
 				add_offsite_building = {
 					type  = arms_factory
@@ -44,23 +134,381 @@ Rebuild_Ireland = {
 			}
 		}
 	}
-	Celtic_Zionism = {
-        visible = { original_tag = "IRE" has_completed_focus = IRE_aggressive_irish_migration }
-        icon = generic_major_decision
-        days_remove = 30
-        cost = 50
-        complete_effect = {
-			if = {
-				limit = { has_idea = IRE_zionism }
-				every_state = {
-					limit = {is_controlled_by = IRE }
-					add_manpower = 50000
+	### Resource Decisions
+	Get_random_resource = {
+		visible = { has_completed_focus = IRE_survey_for_resources }
+		available = { has_idea = IRE_resource_discovery }
+		icon = GFX_decision_gre_investment_decisions
+		cost = 200
+		days_remove = 180
+		complete_effect = {
+			random_list = {
+				25 = {
+					random_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						random_list = {
+							30 = {
+								add_resource = {
+									type = steel
+									amount = 3
+										}
+								}
+							30 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+							30 = {
+								add_resource = {
+									type = rubber
+									amount = 2
+								}
+							}
+							10 = {
+								add_resource = {
+									type = chromium
+									amount = 2
+								}
+							}
+						}
+					}
+					random_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						random_list = {
+							30 = {
+								add_resource = {
+									type = steel
+									amount = 3
+										}
+								}
+							30 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+							30 = {
+								add_resource = {
+									type = rubber
+									amount = 2
+								}
+							}
+							10 = {
+								add_resource = {
+									type = chromium
+									amount = 2
+								}
+							}
+						}
+					}
+					}
+				25 = {
+					random_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						random_list = {
+							30 = {
+								add_resource = {
+									type = steel
+									amount = 3
+										}
+								}
+							30 = {
+								add_resource = {
+									type = aluminium
+									amount = 2
+								}
+							}
+							30 = {
+								add_resource = {
+									type = rubber
+									amount = 2
+								}
+							}
+							10 = {
+								add_resource = {
+									type = chromium
+									amount = 2
+								}
+							}
+						}
+					}
+					}
+				25 = {
+					random_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						random_list = {
+							30 = {
+								add_resource = {
+									type = steel
+									amount = 2
+										}
+								}
+							30 = {
+								add_resource = {
+									type = aluminium
+									amount = 1
+								}
+							}
+							30 = {
+								add_resource = {
+									type = rubber
+									amount = 1
+								}
+							}
+							10 = {
+								add_resource = {
+									type = chromium
+									amount = 1
+								}
+							}
+						}
+					}
+					remove_ideas = IRE_resource_discovery
+					}
 				}
-			} 
-			if = {
-				limit = {has_idea = IRE_migrant_effort}
-				random_core_state = { add_manpower = 50000 }
 			}
-    	}
-	}
+		}
+	Expand_aluminum_trade = {
+		visible = { has_completed_focus = IRE_survey_for_resources }
+		available = { has_completed_focus = IRE_subsidies_aluminum }
+		icon = GFX_decision_aluminium
+		days_remove = 90
+		cost = 300
+		fire_only_once = yes
+		complete_effect = {
+			random_list = {
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = aluminium
+							amount = 4
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = aluminium
+							amount = 2
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = aluminium
+							amount = 1
+								}
+							}
+						}				
+				25 = {}
+				}
+			}
+		}
+	Expand_steel_trade = {
+		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
+		available = { 	has_completed_focus = IRE_subsidies_steel } 
+		icon = GFX_decision_steel
+		days_remove = 90
+		cost = 300
+		fire_only_once = yes
+		complete_effect = {
+			random_list = {
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = steel
+							amount = 5
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = steel
+							amount = 4
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = steel
+							amount = 2
+								}
+							}
+						}				
+				25 = {}
+				}
+			}
+		}
+	Expand_oil_trade = {
+		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
+		available = { 	has_completed_focus = IRE_subsidies_oil }
+		icon = GFX_decision_oil
+		days_remove = 90
+		cost = 300
+		fire_only_once = yes
+		complete_effect = {
+			random_list = {
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = oil
+							amount = 3
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = oil
+							amount = 2
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = oil
+							amount = 1
+								}
+							}
+						}				
+				25 = {}
+				}
+			}
+		}
+	Expand_rubber_trade = {
+		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
+		available = { 	has_completed_focus = IRE_subsidies_rubber }
+		icon = GFX_decision_rubber
+		days_remove = 90
+		cost = 300
+		fire_only_once = yes
+		complete_effect = {
+			random_list = {
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = rubber
+							amount = 3
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = rubber
+							amount = 2
+								}
+							}
+						}
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = rubber
+							amount = 1
+								}
+							}
+						}				
+				25 = {}
+				}
+			}
+		}
+
+	Expand_tungsten_trade = {
+		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
+		available = { 	has_completed_focus = IRE_expand_tungsten } 
+		icon = GFX_decision_tungsten
+		days_remove = 90
+		cost = 300
+		fire_only_once = yes
+		complete_effect = {
+			random_list = {
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = tungsten
+							amount = 3
+								}
+							}
+						}
+					25 = {
+						every_core_state = {
+							limit = { is_owned_and_controlled_by = ROOT }
+							add_resource = {
+								type = tungsten
+								amount = 2
+								}
+							}
+						}
+					25 = {
+						every_core_state = {
+							limit = { is_owned_and_controlled_by = ROOT }
+							add_resource = {
+								type = tungsten
+								amount = 1
+								}
+							}
+						}				
+					25 = {}
+					}
+				}
+			}
+		
+	Expand_chromium_trade = {
+		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
+		available = { has_completed_focus = IRE_expand_chromium }
+		icon = GFX_decision_tungsten
+		days_remove = 90
+		cost = 300
+		fire_only_once = yes
+		complete_effect = {
+			random_list = {
+				25 = {
+					every_core_state = {
+						limit = { is_owned_and_controlled_by = ROOT }
+						add_resource = {
+							type = chromium
+							amount = 3
+								}
+							}
+						}
+					25 = {
+						every_core_state = {
+							limit = { is_owned_and_controlled_by = ROOT }
+							add_resource = {
+								type = chromium
+								amount = 2
+								}
+							}
+						}
+					25 = {
+						every_core_state = {
+							limit = { is_owned_and_controlled_by = ROOT }
+							add_resource = {
+								type = chromium
+								amount = 1
+								}
+							}
+						}				
+					25 = {}
+					}
+				}
+			}
 }

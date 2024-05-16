@@ -1,0 +1,14 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_orange_marches"
+		texturefile = "gfx/event_pictures/report_event_orange_marches.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ira_marches"
+		texturefile = "gfx/event_pictures/report_event_ira_marches.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_real_ira"
+		texturefile = "gfx/event_pictures/report_event_real_ira.dds"
+	}
+}

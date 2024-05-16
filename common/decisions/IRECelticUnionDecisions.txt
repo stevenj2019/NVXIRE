@@ -1,7 +1,18 @@
-celtic_nationalism = {
+IRE_celtic_union = {
+	liberate_northern_ireland = {
+		available = { has_completed_focus = IRE_strike_at_the_beast
+						controls_state = 119
+		}
+		icon = GFX_decision_generic_nationalism
+		complete_effect = {
+			add_state_core = 119
+			add_ideas = {IRE_northern_ireland_liberated IRE_ulster_unionists_weak}
+		}
+	}
     form_celtic_union = {
-        visible = { original_tag = "IRE" }
-        icon = generic_major_decision
+		available = { has_completed_focus = IRE_strike_at_the_beast }
+        
+		icon = generic_major_decision
 
         fire_only_once = yes
 
@@ -11,20 +22,75 @@ celtic_nationalism = {
             add_state_core = 121 
             add_state_core = 122 
             add_state_core = 123 
-            add_state_core = 128
             add_state_core = 133
             add_state_core = 136 
             add_state_core = 337
-            add_state_core = 338 
             add_state_core = 1172
             add_state_core = 1173
             add_state_core = 1309 
-            set_cosmetic_tag = IRE_CEL
-        }
+
+            set_cosmetic_tag = CEL
+			add_ideas = { IRE_celtic_union IRE_english_republican_army_weak IRE_free_english_army_medium }
+		}
     }
+	expand_our_control = {
+		icon = GFX_decision_eng_trade_unions_demand
+		fire_only_once = yes
+		complete_effect = {
+			add_state_core = 128
+			add_state_core = 131
+			add_state_core = 132
+			add_state_core = 338 
+			#esclate english republicans by 2
+			if = {	limit = { OR = {	has_idea = IRE_english_republican_army_strong 
+										has_idea = IRE_english_republican_army_medium} }
+
+					remove_ideas = { 	IRE_english_republican_army_strong
+										IRE_english_republican_army_medium}
+
+					#start a civilwar
+			}
+			if = {	limit = { has_idea = IRE_english_republican_army_weak }
+					swap_ideas = { 
+						remove_idea = IRE_english_republican_army_weak
+						add_idea = IRE_english_republican_army_strong
+					}
+			}
+			if = { 	limit = { has_idea = IRE_english_republican_army_crushed }
+					swap_ideas = { 
+						remove_idea = IRE_english_republican_army_crushed
+						add_idea = IRE_english_republican_army_medium
+					}
+			}
+			#escalate english royalists by 1
+			if = {limit = { has_idea = IRE_free_english_army_strong }
+					remove_ideas = IRE_free_english_army_strong
+			}
+			if = {limit = { has_idea = IRE_free_english_army_medium }
+				swap_ideas = { 
+					remove_idea = IRE_free_english_army_medium
+					add_idea = IRE_free_english_army_strong
+				}
+			}
+			if = {limit = { has_idea = IRE_free_english_army_weak }
+				swap_ideas = { 
+					remove_idea = IRE_free_english_army_weak
+					add_idea = IRE_free_english_army_medium
+				}
+			}
+			if = { 	limit = { has_idea = IRE_free_english_army_crushed }
+					swap_ideas = { 
+						remove_idea = IRE_free_english_army_crushed
+						add_idea = IRE_free_english_army_weak
+					}
+			}
+		}
+	}
     form_English_Free_State = {
-        visible = { original_tag = "IRE" }
-        icon = generic_major_decision
+        visible = { original_tag = "IRE"
+					has_idea = IRE_celtic_union }
+        
+					icon = generic_major_decision
 
         fire_only_once = yes
 
@@ -34,15 +100,17 @@ celtic_nationalism = {
                 transfer_state = 126
                 transfer_state = 127
                 transfer_state = 129
-            }
+            } 
+			
             IRE = { puppet = "ENG" }
-            ENG = { set_cosmetic_tag = ENG_AFS }
-
+            ENG = { set_cosmetic_tag = AFS }
+			#add decision to determine if it will be a republic or a monarchy, change faction as needed
         }
     }
-
     Integrate_Albion = {
-        visible = { original_tag = "IRE" }
+        visible = { original_tag = "IRE"
+					has_idea = IRE_celtic_union }
+
         icon = generic_major_decision
 
         fire_only_once = yes
@@ -52,6 +120,52 @@ celtic_nationalism = {
             add_state_core = 126
             add_state_core = 127
             add_state_core = 129
+
+			#esclate english republicans by 1
+			if = {	limit = { has_idea = IRE_english_republican_army_strong }
+					remove_ideas = IRE_english_republican_army_strong
+					#start a civilwar
+				}
+			if = { 	limit = {has_idea = IRE_english_republican_army_medium } 
+					swap_ideas = {
+						remove_idea = IRE_english_republican_army_medium
+						add_idea = IRE_english_republican_army_strong
+					}
+			}
+			if = {	limit = { has_idea = IRE_english_republican_army_weak }
+					swap_ideas = { 
+						remove_idea = IRE_english_republican_army_weak
+						add_idea = IRE_english_republican_army_medium
+					}
+			}
+			if = { 	limit = { has_idea = IRE_english_republican_army_crushed }
+					swap_ideas = { 
+						remove_idea = IRE_english_republican_army_crushed
+						add_idea = IRE_english_republican_army_weak
+					}
+			}
+			#escalate english royalists by 1
+			if = {	limit = { has_idea = IRE_free_english_army_strong }
+					remove_ideas = IRE_free_english_army_strong
+			}
+			if = { 	limit = { has_idea = IRE_free_english_army_medium }
+					swap_ideas = { 
+						remove_idea = IRE_free_english_army_medium
+						add_idea = IRE_free_english_army_strong
+					}
+				}
+			if = {	limit = { has_idea = IRE_free_english_army_weak }
+					swap_ideas = { 
+						remove_idea = IRE_free_english_army_weak
+						add_idea = IRE_free_english_army_medium
+					}
+			}
+			if = {	limit = { has_idea = IRE_free_english_army_crushed }
+					swap_ideas = { 
+					remove_idea = IRE_free_english_army_crushed
+					add_idea = IRE_free_english_army_weak
+					}
+			}
         }
     }
 }

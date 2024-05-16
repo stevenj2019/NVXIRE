@@ -1,6 +1,7 @@
-namespace = IRE_political_events
+add_namespace = IRE_political_events
 
-country_event = {
+#IRE_political_introduction EVENT CHAIN
+country_event = {#Triggered by IRE_political_introduction
 	id = IRE_political_events.1
 	title = IRE_political_events.1.t
 	desc = IRE_political_events.1.desc
@@ -10,17 +11,78 @@ country_event = {
 
 	option = {
 		name = IRE_political_events.1.a
-		IRE = { country_event = { days = 1 id = IRE_political_events.2 }}
+		country_event = { days = 1 id = IRE_political_events.2 }
 	}
 	option = {
 		name = IRE_political_events.1.b
 	}
 }
-country_event = {
+country_event = {#more information about the Republics political scene
 	id = IRE_political_events.2
 	title = IRE_political_events.2.t
 	desc = IRE_political_events.2.desc
 	picture = GFX_report_event_DEN_Irish_Introduction #Need to edit this
-
 	is_triggered_only = yes
+	option = {#Start Viewing Nationalist/Socialist/Democractic Factions
+		name = IRE_political_events.2.a
+		country_event = { days = 1 id = IRE_political_events.3 }
+	}
+	option = {
+		name = IRE_political_events.2.b
+	}
 }
+country_event = {#Nationalist/IRA faction and the sinn fein connection
+	id = IRE_political_events.3
+	title = IRE_political_events.3.t
+	desc  = IRE_political_events.3.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = { 
+		name = IRE_political_events.3.a
+		# country_event = {days = 1 id = IRE_political_events.4 }
+	}
+}
+country_event = {#Socialist/Communists IRA connections
+	id = IRE_political_events.4
+	title = IRE_political_events.4.t
+	desc  = IRE_political_events.4.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = {
+		name = IRE_political_events.4.a
+		# country_event = {days = 1 id = IRE_political_events.5}
+	}
+}
+country_event = {#panceltic nationalists - communists/technocracts/nationalists
+	id = IRE_political_events.5
+	title = IRE_political_events.5.t
+	desc  = IRE_political_events.5.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = {
+		name = IRE_political_events.5.a
+		# country_event = {days = 1 id = IRE_political_events.6}
+	}
+}
+country_event = {#Democratic Powers Conservatives/Reactionaries
+	id = IRE_political_events.6
+	title = IRE_political_events.6.t
+	desc  = IRE_political_events.6.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = {
+		name = IRE_political_events.6.a
+		# country_event = {days = 1 id = IRE_political_events.7}
+	}
+}
+country_event = {#Democratic Powers Democractic Socialists/Green Party "TheLeft"
+	id = IRE_political_events.7
+	title = IRE_political_events.7.t
+	desc  = IRE_political_events.7.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = {
+		name = IRE_political_events.7.a
+	}
+}
+#IRE Nationalist Events

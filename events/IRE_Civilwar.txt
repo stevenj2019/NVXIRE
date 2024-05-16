@@ -1,0 +1,536 @@
+add_namespace = IRE_civilwar_events
+
+country_event = {#Civilwar reduced gov support event//
+	id = IRE_civilwar_events.1
+	title = IRE_civilwar_events.1.t
+	desc = IRE_civilwar_events.1.desc
+	picture = GFX_report_event_orange_marches
+	is_triggered_only = yes
+	option = {
+		name = IRE_civilwar_events.1.a
+		add_political_power = 1000
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_stability = -0.05
+		if = { 	
+			limit = { has_idea = IRE_no_support }
+			add_political_power = 300
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.02
+			}
+			remove_mission = IRE_imminent_civilwar
+			add_ideas = { IRE_civil_war_avoided }
+			swap_ideas = {
+				remove_idea = PIRA_Military_Government
+				add_idea = PIRA_Friendly
+			}
+		}
+		if = { 	limit = { has_idea = IRE_urban_support }
+				swap_ideas = {
+				remove_idea = IRE_urban_support
+				add_idea = IRE_no_support
+			}
+		}
+		if = { 	limit = { has_idea = IRE_medium_support }
+				swap_ideas = {
+				remove_idea = IRE_medium_support
+				add_idea = IRE_urban_support
+			}
+		}
+		if = { 	limit = { has_idea = IRE_popular_support }
+				swap_ideas = {
+					remove_idea = IRE_popular_support
+					add_idea = IRE_medium_support
+				}
+		}
+	}
+}
+country_event = { # secure munster
+	id = IRE_civilwar_events.2
+	title = IRE_civilwar_events.2.t
+	desc = IRE_civilwar_events.2.desc
+	picture = GFX_report_event_orange_marches
+	is_triggered_only = yes
+	option = {
+		name = IRE_civilwar_events.2.a
+	}
+}
+country_event = { # secure connanaught
+	id = IRE_civilwar_events.3
+	title = IRE_civilwar_events.3.t
+	desc = IRE_civilwar_events.3.desc
+	picture = GFX_report_event_ira_marches
+	is_triggered_only = yes
+	option = {
+		name = IRE_civilwar_events.3.a
+	}
+}
+country_event = {#PM Assassinated
+	id = IRE_civilwar_events.4
+	title = IRE_civilwar_events.4.t
+	desc = IRE_civilwar_events.4.desc
+	picture = GFX_report_event_real_ira
+	is_triggered_only = yes
+	option = { ## hidden coup option, puts sinn fein in power immediatly, bypassing up to the nationalist constitution focus
+		name = IRE_civilwar_events.4.a
+		if = { 	limit = { has_idea = IRE_civil_war_avoided }}
+				add_political_power = 300
+				add_popularity = {
+					ideology = nationalist
+					popularity = 0.05
+				}
+				add_stability = -0.05
+				if = { 	
+					limit = { has_idea = IRE_no_support }
+					add_political_power = 1000	
+					remove_ideas = { IRE_british_republican_support IRE_american_volunteers IRE_civil_war_impending}
+					swap_ideas = {
+						remove_idea = IRE_no_support
+						add_idea = IRE_civil_war_avoided
+					}
+					swap_ideas = { #IRA government
+						remove_idea = PIRA_return
+						add_idea = PIRA_Military_Government
+					}
+					add_ideas = IRE_left_wing_nationalist
+					create_country_leader = { #IRA government
+						name = "Gerry Adams"
+						picture = "gfx/leaders/IRE/gerry_adams.dds"
+						expire = "1.1.1.1"
+						ideology = national_democrat
+					}
+					set_politics = {
+						ruling_party = nationalist
+						elections_allowed = yes
+						election_frequency = 60
+						name = "Sinn Féin[R]"
+					}
+					create_field_marshal = { #"Michael McKevitt"
+						name = "Michael McKevitt"
+						picture = "generals/michael_mckevitt.dds"
+						skill = 2
+						attack_skill = 4
+						defense_skill = 2
+						planning_skill = 2
+						logistics_skill = 5
+						traits = { politically_connected infantry_leader commando organisational_leader }
+					}
+
+					create_corps_commander = { #Liam Campbell
+						name = "Liam Campbell"
+						picture = "generals/liam_campbell.dds"
+						skill = 3
+						attack_skill = 2
+						defense_skill = 3
+						planning_skill = 4
+						logistics_skill = 4
+						traits = { politically_connected infantry_leader }
+					}
+					set_cosmetic_tag = ROI
+				}
+	}
+	#TODO add option for the socialist coalition to cooperate with the militias, far-right, socially conservative (use GG as inspiration)
+	option = { ## Start the civil War now!
+		name = IRE_civilwar_events.4.b
+		create_country_leader = { #IRA government
+				name = "IRA Council"
+				picture = "gfx/leaders/IRE/ira_council.dds"
+				expire = "1.1.1.1"
+				ideology = military_junta
+			}
+			swap_ideas = { #IRA government
+				remove_idea = PIRA_return
+				add_idea = PIRA_Military_Government
+			}
+			add_political_power = 200
+
+			if = {	limit = { OR = { has_idea = IRE_popular_support has_idea = IRE_medium_support }}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+					}
+			}
+			if = {	limit = { NOT = {has_completed_focus = IRE_pira_arm_militias}}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+					}
+			}
+			if = {	limit = { NOT = {has_completed_focus = IRE_pira_raid_government_armories}}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+					}
+			}
+			if = {	limit = { OR = { has_idea = IRE_no_support has_idea = IRE_urban_support }}
+					start_civil_war = { #CIVILWAR
+						ruling_party = nationalist
+						ideology = ROOT
+						states = { 134 135 }
+						size = 0.6 
+					}
+			}
+			if = { 	limit = { has_idea = IRE_medium_support }
+				start_civil_war = { #CIVILWAR
+				ruling_party = nationalist
+				ideology = ROOT
+				states = { 135 }
+				size = 0.6 
+			}}
+			create_field_marshal = { #"Michael McKevitt"
+				name = "Michael McKevitt"
+				picture = "generals/michael_mckevitt.dds"
+				skill = 2
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 5
+				traits = { politically_connected infantry_leader commando organisational_leader }
+			}
+			create_corps_commander = { #Liam Campbell
+				name = "Liam Campbell"
+				picture = "generals/liam_campbell.dds"
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+				traits = { politically_connected infantry_leader }
+			}
+
+			set_cosmetic_tag = PRI
+
+			add_manpower = 100000
+			
+			load_oob = ire_cv_template
+			
+			if = {	limit = {has_idea = IRE_popular_support}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+									owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+									owner = ROOT }	
+				}
+			}
+			if = {	limit = {has_idea = IRE_british_republican_support}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+						owner = ROOT }	
+					}
+			}
+
+			if = {	limit = {has_idea = IRE_american_volunteers}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_recruitment_drive}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_whip_up_nationalism}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_arm_militias}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_raid_government_armories}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+	}
+	option = {
+		name = IRE_civilwar_events.4.c ## bide our time
+		## TODO add code to replace leader, and actually kill the boyo in charge here
+	}
+}
+country_event = {#Civilwar Begins Works 
+	id = IRE_civilwar_events.5
+	title = IRE_civilwar_events.5.t
+	desc = IRE_civilwar_events.5.desc
+	picture = GFX_report_event_real_ira
+	is_triggered_only = yes
+	option = {
+		name = IRE_civilwar_events.5.a
+		add_political_power = 1000
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_stability = -0.05
+		create_country_leader = { #IRA government
+			name = "IRA Council"
+			picture = "gfx/leaders/IRE/ira_council.dds"
+			expire = "1.1.1.1"
+			ideology = military_junta
+		}
+		swap_ideas = { #IRA government
+			remove_idea = PIRA_return
+			add_idea = PIRA_Military_Government
+		}
+		add_political_power = 200
+
+		if = {	limit = { OR = { has_idea = IRE_popular_support has_idea = IRE_medium_support }}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+				}
+		}
+		if = {	limit = { NOT = {has_completed_focus = IRE_pira_arm_militias}}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+				}
+		}
+		if = {	limit = { NOT = {has_completed_focus = IRE_pira_raid_government_armories}}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+				}
+		}
+
+		if = {	limit = { NOT = { has_completed_focus = IRE_secure_connanaught }}
+				start_civil_war = { #CIVILWAR
+					ruling_party = nationalist
+					ideology = ROOT
+					states = { 113 }
+					size = 0.5
+				}
+		}
+		if = { limit = { NOT = { has_completed_focus = IRE_secure_munster }}
+		start_civil_war = { #CIVILWAR
+			ruling_party = nationalist
+			ideology = ROOT
+			states = { 113 134 }
+			size = 0.25 
+			}
+		}
+		if = { limit = { has_completed_focus = IRE_secure_munster }
+			start_civil_war = { #CIVILWAR
+			ruling_party = nationalist
+			ideology = ROOT
+			states = { 113 134 }
+			size = 0.5 
+			}
+		}
+		create_field_marshal = { #"Michael McKevitt"
+			name = "Michael McKevitt"
+			picture = "generals/michael_mckevitt.dds"
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 5
+			traits = { politically_connected infantry_leader commando organisational_leader }
+		}
+		create_corps_commander = { #Liam Campbell
+			name = "Liam Campbell"
+			picture = "generals/liam_campbell.dds"
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			traits = { politically_connected infantry_leader }
+		}
+
+		set_cosmetic_tag = PRI
+
+		add_manpower = 100000
+		
+		load_oob = ire_cv_template
+		
+		if = { limit = {has_completed_focus = IRE_secure_munster }}
+			if = {	limit = {has_idea = IRE_popular_support}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+									owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+									owner = ROOT }	
+				}
+			}
+			if = {	limit = {has_idea = IRE_british_republican_support}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+						owner = ROOT }	
+					}
+			}
+
+			if = {	limit = {has_idea = IRE_american_volunteers}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_recruitment_drive}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_whip_up_nationalism}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_arm_militias}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+			if = {	limit = {has_completed_focus = IRE_pira_raid_government_armories}
+					random_core_state = {
+						create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+										owner = ROOT }
+					}
+			}
+	}
+}
+country_event = {#Civilwar Begins - unexpectedly
+	id = IRE_civilwar_events.6
+	title = IRE_civilwar_events.6.t
+	desc = IRE_civilwar_events.6.desc
+	picture = GFX_report_event_ira_marches
+	is_triggered_only = yes
+	option = {
+		name = IRE_civilwar_events.6.a
+		add_political_power = 1000
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_stability = -0.05
+		create_country_leader = { #IRA government
+			name = "IRA Council"
+			picture = "gfx/leaders/IRE/ira_council.dds"
+			expire = "1.1.1.1"
+			ideology = military_junta
+		}
+		swap_ideas = { #IRA government
+			remove_idea = PIRA_return
+			add_idea = PIRA_Military_Government
+		}
+		add_political_power = 200
+
+		if = {	limit = { OR = { has_idea = IRE_popular_support has_idea = IRE_medium_support }}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1" owner = ROOT }
+				}
+		}
+		if = {	limit = { NOT = {has_completed_focus = IRE_pira_arm_militias}}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+				}
+		}
+		if = {	limit = { NOT = {has_completed_focus = IRE_pira_raid_government_armories}}
+				random_core_state = {
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+					create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+				}
+		}
+		start_civil_war = { #CIVILWAR
+			ruling_party = nationalist
+			ideology = ROOT
+			states = { 135 }
+			size = 0.6 
+		}
+		create_field_marshal = { #"Michael McKevitt"
+			name = "Michael McKevitt"
+			picture = "generals/michael_mckevitt.dds"
+			skill = 2
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 5
+			traits = { politically_connected infantry_leader commando organisational_leader }
+		}
+		create_corps_commander = { #Liam Campbell
+			name = "Liam Campbell"
+			picture = "generals/liam_campbell.dds"
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			traits = { politically_connected infantry_leader }
+		}
+
+		set_cosmetic_tag = PRI
+
+		add_manpower = 100000
+		
+		load_oob = ire_cv_template
+	}}
+
+country_event = {#Transfer of Power to Sinn Fein - Needs event picturee
+	id = IRE_civilwar_events.7
+	title = IRE_civilwar_events.7.t
+	desc = IRE_civilwar_events.7.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	fire_only_once = yes
+	option = {
+		name = IRE_civilwar_events.7.a
+		create_country_leader = { #IRA government
+			name = "Gerry Adams"
+			picture = "gfx/leaders/IRE/gerry_adams.dds"
+			expire = "1.1.1.1"
+			ideology = national_democrat
+		}
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = yes
+			election_frequency = 60
+			name = "Sinn Féin[R]"
+		}
+		swap_ideas = {
+			remove_idea = PIRA_Military_Government
+			add_idea = PIRA_Friendly
+		}
+		add_ideas = IRE_left_wing_nationalist
+	}
+}

@@ -1,0 +1,202 @@
+﻿l_english:
+  #COSMETIC TAGS
+  PRI_nationalist:0 "Provisional IRA"
+  ROI_nationalist:0 "Irish National Republic"
+  CEL_nationalist:0 "Celtic Empire"
+
+  #LEADERS
+  ##NATIONALIST
+  IRE_ira_council_leader_n: "Provisional IRA Council"
+  IRE_ira_council_leader_d: "TODO"
+
+  #FOCUS TREES
+  ## IRISH INDUSTRIAL TREE
+  ### IRISH INDUSTRIAL TREE start
+  IRE_rebuilding_ireland: "Industrial Ireland"
+  IRE_rebuilding_ireland_desc: "TODO"
+
+  #### RESEARCH BRANCH
+  IRE_Scientific_advancements: "Scientific Advancements"
+  IRE_Scientific_advancements_desc: "TODO"
+
+  IRE_invest_in_dublin_university: "Expand Dublin University"
+  IRE_invest_in_dublin_university_desc: "TODO"
+
+  IRE_labs_of_the_future: "State of the Art Lab Equipment"
+  IRE_labs_of_the_future_desc: "TODO"
+
+  IRE_belfast_university: "Reopen Belfast University"
+  IRE_belfast_university_desc: "TODO"
+
+
+  #### SMALL BUSINESS CIVVIES
+  IRE_small_business_owners: "Encourage Small Business Ownership"
+  IRE_small_business_owners_desc: "TODO"
+
+  IRE_subsidies_mid_class: "Subsidies for the middle class"
+  IRE_subsidies_mid_class_desc: "TODO"
+
+
+  IRE_long_term_industrial_plan: "Ireland's Long Term Plan"
+  IRE_long_term_industrial_plan_desc: "TODO"
+
+  #### FOREIGN SUPPORT BRANCH
+  IRE_foreign_support: "Encourage Foreign Irish Investments"
+  IRE_foreign_support_desc: "TODO"  
+
+  IRE_encourage_rich_home: "Invite Irish Entrepreneurs Home"
+  IRE_encourage_rich_home_desc: "TODO"
+  
+  #### INDUSTRY/ELECTRONICS RESEARCH BRANCH
+  IRE_industrial_buildup: "Irish Industrialisation"
+  IRE_industrial_buildup_desc: "TODO" 
+
+  IRE_industry_go_bragh: "Irish Industry go Braagh!"
+  IRE_industry_go_bragh_desc: "TODO" 
+
+  IRE_technology_industry: "Invest in the Technology Sector"
+  IRE_technology_industry_desc: "TODO"
+
+
+  ####IRISH INDUSTRY/FOREIGNSUPPORT - RESOURCE CONNECTOR
+  IRE_heavy_industry: "Irish Heaavy Industry"
+  IRE_heavy_industry_desc: "TODO"
+
+  #### IRELAND RESOURCE BRANCH
+  IRE_invest_in_aluminium: "Invest In Quantum Aluminum Production"
+  IRE_invest_in_aluminium_desc: "TODO"
+
+  IRE_invest_in_steel: "Invest in Irish Steel"
+  IRE_invest_in_steel_desc: "TODO"
+
+  IRE_invest_in_oil: "Invest in Gas Networks Ireland"
+  IRE_invest_in_oil_desc: "TODO"
+
+  IRE_invest_in_rubber: "Invest in Irish Tyre Industry Association"
+  IRE_invest_in_rubber_desc: "TODO"
+
+  IRE_subsidies_aluminum: "Subsidise more Aluminum"
+  IRE_subsidies_aluminum_desc: "TODO"
+
+  IRE_subsidies_steel: "Subsidise more Steel"
+  IRE_subsidies_steel_desc: "TODO"
+
+  IRE_subsidies_oil: "Subsidise more oil"
+  IRE_subsidies_oil_desc: "TODO"
+
+  IRE_subsidies_rubber: "TODO"
+  IRE_subsidies_rubber_desc: "TODO"
+
+  IRE_survey_for_resources: "Expand Resource Surveying"
+  IRE_survey_for_resources_desc: "TODO"
+
+  IRE_found_tungsten_company: "Invest in Ormonde Mining"
+  IRE_found_tungsten_company_desc: "TODO"
+
+  IRE_expand_tungsten: "More Tungsten"
+  IRE_expand_tungsten_desc: "TODO"
+
+  IRE_found_chromium_company: "TODO"
+  IRE_found_chromium_company_desc: "TODO"
+
+  IRE_expand_chromium: "TODO"
+  IRE_expand_chromium_desc: "TODO"
+
+  IRE_nationalise_strat_resources: "Nationalise War Materials"
+  IRE_nationalise_strat_resources_desc: "TODO"
+
+  ### IRELAND SECOND INDUSTURIAL PLAN BRANCH
+  IRE_second_industrial_plan: "TODO"
+  IRE_second_industrial_plan_desc: "TODO"
+
+  ### IRELAND AUTARKY BRANCH
+  IRE_autarky: "Éire, Aonair agus Láidir"
+  IRE_autarky_desc: "TODO"
+
+  ### IRELAND SANCTION PROOF ECONOMY BRANCH
+  IRE_sanction_proof_economy: "TODO"
+  IRE_sanction_proof_economy_desc: "TODO"
+
+  ## IRISH POLITICAL TREE
+  IRE_political_introduction: "State of the Republic"
+  IRE_political_introduction_desc: "TODO"
+
+  ### IRISH POLITICAL TREE - SOCIALIST
+  IRE_socialist_coalition: "SF Labour Coalition"
+  IRE_socialist_coalition_desc: "TODO"
+  
+  ### IRISH POLITICAL TREE - CIVILWAR
+  IRE_pira_return: "Provo Resurgence" 
+  IRE_pira_return_desc: "TODO"
+
+  IRE_secure_munster: "TODO"
+  IRE_secure_munster_desc: "TODO"
+
+
+  IRE_secure_connanaught: "TODO"
+  IRE_secure_connanaught_desc: "TODO"
+
+
+  IRE_pira_recruitment_drive: "Provo Recruitment Drives"
+  IRE_pira_recruitment_drive_desc: "TODO"
+
+  IRE_pira_whip_up_nationalism: "Attack Immigration Policies"
+  IRE_pira_whip_up_nationalism_desc: "TODO"
+  
+  IRE_pira_arm_militias: "Provo Units Start Forming"
+  IRE_pira_arm_militias_desc: "TODO"
+
+  IRE_pira_raid_government_armories: "Raid the Republics stockpiles"
+  IRE_pira_raid_government_armories_desc: "TODO"
+
+  IRE_assassinate_the_pm: "TODO"
+  IRE_pira_we_want_our_republic_back: "We Want our Republic Back!"
+
+  IRE_a_nationalist_consititution: "TODO"
+
+  # IRISH BUFFS
+  IRE_industry_buff: "Industrial Research Subsidies"
+  IRE_research_buff: "Electronic Ressearch Buff"
+  IRE_military_buff: "IRA Budget Increases"
+  # IRISH EVENTS
+  ## IRISH POLITICAL INTRODUCTIONS
+  ### CHAIN BY FOCUS IRE_political_introduction
+  IRE_political_events.1.t: "The Fate of the Irish Republic"
+  IRE_political_events.1.desc: "The Fate of the Irish Republic Hangs in the Balance, as the far right agitate over migration, Irish language supremacy, and Most Importantly, the 6 \"missing\" counties. as the left rallies on the furthering of capital interests, and the environment. the republic is a pressure bomb thhreatening to explode and drag us back to the dark days"
+  IRE_political_events.1.a: "I want to hear more"
+  IRE_political_events.1.b: "Stop Yapping (Reccomended)"
+
+  IRE_political_events.2.t: "Details on the Factions."
+  IRE_political_events.2.desc: "1. The Nationalists. \n with the recent agreement of peace. we have started an agreement to disarm the agitators, however they are threatening to pull out. They are dissapointed by the nation remaining minority Irish speaking, which is further being fueled by a reported drop in its usage. this is further fuelled, and is fuelling, anti migrant sentiments. \n\n 2. The Socialists. \n TODO WRITE THIS \n\n 3. Democractic Forces \n TODO WRITE THIS"
+  IRE_political_events.2.a: "Lets hear more about the Factions"
+  IRE_political_events.2.b: "Okay. That is enough "
+
+  IRE_political_events.3.t: "The Nationalist Front."
+  IRE_political_events.3.desc: "TODO IRA history/info in 2000s, Talk about common right wing issues, and their connection to the left briefly (will be done later in event chain)"
+  IRE_political_events.3.a: "Sorry, this is all i could be bothered to do, rest will come when the focus tree is written"
+
+  IRE_political_events.4.t: "TODO"
+  IRE_political_events.4.desc: "TODO"
+  IRE_political_events.4.a: "TODO"
+
+  IRE_political_events.5.t: "TODO"
+  IRE_political_events.5.desc: "TODO"
+  IRE_political_events.5.a: "TODO"
+
+  IRE_political_events.6.t: "TODO"
+  IRE_political_events.6.desc: "TODO"
+  IRE_political_events.6.a: "TODO"
+
+  IRE_political_events.7.t: "TODO"
+  IRE_political_events.7.desc: "TODO"
+  IRE_political_events.7.a: "TODO"
+
+  ##IRISH CIVIL WAR EVENTS - NAT/COM
+  IRE_civilwar_events.1.t: "Government Support Dropping!"
+  IRE_civilwar_events.1.desc: "The nationalists are slowly winning the people over..."
+  IRE_civilwar_events.1.a: "This is concerning"
+
+  IRE_civilwar_events.4.t: "Nationalist Coup"
+  IRE_civilwar_events.4.desc: "Following a successful plot on our Taoiseach, The IRA and other nationalist elements have siezed control of the republic in a coup. The Republic breathes its final breathe. "
+  IRE_civilwar_events.4.a: "Nationalist Militias hand the government over to sinn fein"
+

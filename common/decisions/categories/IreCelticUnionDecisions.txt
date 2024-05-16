@@ -1,4 +1,0 @@
-celtic_nationalism = {
-	icon = generic_political_actions
-}
-

@@ -1,0 +1,75 @@
+IRE_irish_civil_war = {
+	IRE_imminent_civilwar = {
+		activation = {
+			has_completed_focus = IRE_pira_return
+		}
+		icon = GFX_decision_revolt
+		is_good = no 
+		days_mission_timeout = 100 	# edit this
+									# also ensure it is possible to move to demand the republic in time
+									# simultaniously, it must be possible to cock it up
+		fire_only_once = yes
+		selectable_mission = yes
+		cancel_trigger = {
+			has_idea = IRE_left_wing_nationalist 
+		}
+		complete_effect = {
+			country_event = {days = 0 id = IRE_civilwar_events.5 }
+		}
+		timeout_effect = {				
+			country_event = {days = 0 id = IRE_civilwar_events.6 }
+		}
+	}
+	discourage_violence_at_rallies = {
+		icon = GFX_decision_generic_speech
+		cost = 30
+		days_remove = 20
+		complete_effect = {
+			add_stability = 0.02
+			add_days_mission_timeout = {
+				mission = IRE_imminent_civilwar
+				days = 5
+			}
+		}
+	}
+	rally_against_government_policy = {
+		icon = GFX_decision_generic_political_rally
+		cost = 50
+		days_remove = 30
+		complete_effect = {
+			add_stability = -0.01
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.02
+			}
+			add_days_mission_timeout = {
+				mission = IRE_imminent_civilwar
+				days = -5
+			}
+		}
+	}
+	use_the_old_songs_at_rallies = {
+		icon = GFX_decision_hol_radio_oranje
+		cost = 20
+		days_remove = 45
+		complete_effect = {
+			add_stability = -0.05
+		}
+	}
+	communist_counter_rally = {
+		icon = GFX_decision_generic_political_rally
+		cost = 50
+		days_remove = 30
+		complete_effect = {
+			add_stability = -0.01
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.02
+			}
+			add_days_mission_timeout = {
+				mission = IRE_imminent_civilwar
+				days = -5
+			}
+		}
+	}
+}

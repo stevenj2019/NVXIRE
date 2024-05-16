@@ -1,0 +1,140 @@
+IRA_CGM = {
+	name = "Cosaint Chríochach Deonach"
+
+	for_countries = { IRE }
+
+	can_use = { has_government = nationalist }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%da Cosaint Chríochach Deonach"
+
+	ordered =
+	{
+		1 = { "%da Cosaint Chríochach Deonach" }
+		2 = { "%da Cosaint Chríochach Deonach" }
+		3 = { "%da Cosaint Chríochach Deonach" }
+		4 = { "%da Cosaint Chríochach Deonach" }
+		5 = { "%da Cosaint Chríochach Deonach" }
+		6 = { "%da Cosaint Chríochach Deonach" }
+		7 = { "%da Cosaint Chríochach Deonach" }
+		8 = { "%da Cosaint Chríochach Deonach" }
+		9 = { "%da Cosaint Chríochach Deonach" }
+		10 = { "%da Cosaint Chríochach Deonach" }
+		11 = { "%da Cosaint Chríochach Deonach" }
+		12 = { "%da Cosaint Chríochach Deonach" }
+		13 = { "%da Cosaint Chríochach Deonach" }
+		14 = { "%da Cosaint Chríochach Deonach" }
+		15 = { "%da Cosaint Chríochach Deonach" }
+		16 = { "%da Cosaint Chríochach Deonach" }
+		17 = { "%da Cosaint Chríochach Deonach" }
+		18 = { "%da Cosaint Chríochach Deonach" }
+		19 = { "%da Cosaint Chríochach Deonach" }
+		20 = { "%da Cosaint Chríochach Deonach" }		
+	}
+}
+IRA_Infantry = {
+	name = "Cathlán Coisithe"
+
+	for_countries = { IRE }
+
+	can_use = { has_government = nationalist }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%da Cathlán Coisithe"
+
+	ordered =
+	{
+		1 = { "%da Cathlán Coisithe" }
+		2 = { "%da Cathlán Coisithe" }
+		3 = { "%da Cathlán Coisithe" }
+		4 = { "%da Cathlán Coisithe" }
+		5 = { "%da Cathlán Coisithe" }
+		6 = { "%da Cathlán Coisithe" }
+		7 = { "%da Cathlán Coisithe" }
+		8 = { "%da Cathlán Coisithe" }
+		9 = { "%da Cathlán Coisithe" }
+		10 = { "%da Cathlán Coisithe" }
+		11 = { "%da Cathlán Coisithe" }
+		12 = { "%da Cathlán Coisithe" }
+		13 = { "%da Cathlán Coisithe" }
+		14 = { "%da Cathlán Coisithe" }
+		15 = { "%da Cathlán Coisithe" }
+		16 = { "%da Cathlán Coisithe" }
+		17 = { "%da Cathlán Coisithe" }
+		18 = { "%da Cathlán Coisithe" }
+		19 = { "%da Cathlán Coisithe" }
+		20 = { "%da Cathlán Coisithe" }		
+	}
+}
+IRA_Special_Forces = {
+	name = "Cathlán Fórsaí Speisialta"
+
+	for_countries = { IRE }
+
+	can_use = { has_government = nationalist }
+
+	division_types = { "paratrooper" "marine" }
+
+	fallback_name = "%da Cathlán Fórsaí Speisialta"
+
+	ordered =
+	{
+		1 = { "%da Cathlán Fórsaí Speisialta" }
+		2 = { "%da Cathlán Fórsaí Speisialta" }
+		3 = { "%da Cathlán Fórsaí Speisialta" }
+		4 = { "%da Cathlán Fórsaí Speisialta" }
+		5 = { "%da Cathlán Fórsaí Speisialta" }
+		6 = { "%da Cathlán Fórsaí Speisialta" }
+		7 = { "%da Cathlán Fórsaí Speisialta" }
+		8 = { "%da Cathlán Fórsaí Speisialta" }
+		9 = { "%da Cathlán Fórsaí Speisialta" }
+		10 = { "%da Cathlán Fórsaí Speisialta" }
+		11 = { "%da Cathlán Fórsaí Speisialta" }
+		12 = { "%da Cathlán Fórsaí Speisialta" }
+		13 = { "%da Cathlán Fórsaí Speisialta" }
+		14 = { "%da Cathlán Fórsaí Speisialta" }
+		15 = { "%da Cathlán Fórsaí Speisialta" }
+		16 = { "%da Cathlán Fórsaí Speisialta" }
+		17 = { "%da Cathlán Fórsaí Speisialta" }
+		18 = { "%da Cathlán Fórsaí Speisialta" }
+		19 = { "%da Cathlán Fórsaí Speisialta" }
+		20 = { "%da Cathlán Fórsaí Speisialta" }	
+	}
+}
+IRA_Tanks = {
+	name = "Cathlán Meicnithe"
+
+	for_countries = { IRE }
+
+	can_use = { has_government = nationalist }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%da Cathlán Meicnithe"
+
+	ordered =
+	{
+		1 = { "%da Cathlán Meicnithe" }
+		2 = { "%da Cathlán Meicnithe" }
+		3 = { "%da Cathlán Meicnithe" }
+		4 = { "%da Cathlán Meicnithe" }
+		5 = { "%da Cathlán Meicnithe" }
+		6 = { "%da Cathlán Meicnithe" }
+		7 = { "%da Cathlán Meicnithe" }
+		8 = { "%da Cathlán Meicnithe" }
+		9 = { "%da Cathlán Meicnithe" }
+		10 = { "%da Cathlán Meicnithe" }
+		11 = { "%da Cathlán Meicnithe" }
+		12 = { "%da Cathlán Meicnithe" }
+		13 = { "%da Cathlán Meicnithe" }
+		14 = { "%da Cathlán Meicnithe" }
+		15 = { "%da Cathlán Meicnithe" }
+		16 = { "%da Cathlán Meicnithe" }
+		17 = { "%da Cathlán Meicnithe" }
+		18 = { "%da Cathlán Meicnithe" }
+		19 = { "%da Cathlán Meicnithe" }
+		20 = { "%da Cathlán Meicnithe" }	
+	}
+}
