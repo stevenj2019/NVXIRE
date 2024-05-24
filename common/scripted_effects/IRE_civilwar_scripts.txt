@@ -130,6 +130,7 @@ IRA_coup = {
 		add_idea = IRE_PIRA_Military_Government_idea
 	}
 	start_civilwar = yes
+	recruit_civilwar_commanders = yes
 }
 lower_government_support = {
 	if = { 	limit = { has_idea = IRE_no_support }
