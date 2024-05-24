@@ -65,7 +65,6 @@ country_event = {#Civilwar Begins Works
 	is_triggered_only = yes
 	option = {
 		name = IRE_civilwar_events.5.a
-		
 		recruit_civilwar_commanders = yes
 		lower_government_support = yes
 		IRA_coup = yes
