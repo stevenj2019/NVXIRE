@@ -7,157 +7,289 @@
   #LEADERS
   ##NATIONALIST
   IRE_ira_council_leader_n: "Provisional IRA Council"
-  IRE_ira_council_leader_d: "TODO"
+  IRE_ira_council_leader_d: "The Shadowy Hand of the revolution.\n While The Identity of its members aare shrouded in mystery, they are none the less the spearhand. and the strong hand we need through these difficult times"
 
   #FOCUS TREES
   ## IRISH INDUSTRIAL TREE
   ### IRISH INDUSTRIAL TREE start
   IRE_rebuilding_ireland: "Industrial Ireland"
-  IRE_rebuilding_ireland_desc: "TODO"
+  IRE_rebuilding_ireland_desc: "Ireland has long lagged behind on industrial capability, favouring a service economny, This must change, it is time to form an industrial plan, so eire can carve it's rightful place out in the world."
 
   #### RESEARCH BRANCH
   IRE_Scientific_advancements: "Scientific Advancements"
-  IRE_Scientific_advancements_desc: "TODO"
+  IRE_Scientific_advancements_desc: "We are a small island. We will not win through raw industrial capacity, but by efficient manufacturing"
 
   IRE_invest_in_dublin_university: "Expand Dublin University"
-  IRE_invest_in_dublin_university_desc: "TODO"
+  IRE_invest_in_dublin_university_desc: "Invest Further in the Science Community"
 
   IRE_labs_of_the_future: "State of the Art Lab Equipment"
-  IRE_labs_of_the_future_desc: "TODO"
+  IRE_labs_of_the_future_desc: "Long Term investments in our future"
 
   IRE_belfast_university: "Reopen Belfast University"
-  IRE_belfast_university_desc: "TODO"
-
+  IRE_belfast_university_desc: "Now we have removed the Anglicans and the traitors, we can go back to educating the irish people. investing massively in the centre of Ulster to ensure we get the untapped loyal academics."
 
   #### SMALL BUSINESS CIVVIES
   IRE_small_business_owners: "Encourage Small Business Ownership"
-  IRE_small_business_owners_desc: "TODO"
+  IRE_small_business_owners_desc: "Invest in our high streets"
 
   IRE_subsidies_mid_class: "Subsidies for the middle class"
-  IRE_subsidies_mid_class_desc: "TODO"
+  IRE_subsidies_mid_class_desc: "Ensure business owners have the head room to grow their businesses further, their success is ours."
 
 
   IRE_long_term_industrial_plan: "Ireland's Long Term Plan"
-  IRE_long_term_industrial_plan_desc: "TODO"
+  IRE_long_term_industrial_plan_desc: "After our extensive tax reforms to encourage growth, now we must focus on industrialisation of the island of ireland. to ensure we can attain self reliance. there are stormy days ahead"
 
   #### FOREIGN SUPPORT BRANCH
   IRE_foreign_support: "Encourage Foreign Irish Investments"
-  IRE_foreign_support_desc: "TODO"  
+  IRE_foreign_support_desc: "The Irish are an industrious folk, many have formed businesses abroad after fleeing their persecution, with a renewed vigour for pro irish agenda, maybe we can get some investments from the betterment of the homeland"  
 
   IRE_encourage_rich_home: "Invite Irish Entrepreneurs Home"
-  IRE_encourage_rich_home_desc: "TODO"
+  IRE_encourage_rich_home_desc: "Now we have built up the infrastructure, we can start repopulating, we can start by encourage the rich home with subsidise and heelp relocating their businesses here. The industrialisation will be an expensive affair. "
   
   #### INDUSTRY/ELECTRONICS RESEARCH BRANCH
   IRE_industrial_buildup: "Irish Industrialisation"
-  IRE_industrial_buildup_desc: "TODO" 
+  IRE_industrial_buildup_desc: "Dense Industry is good industry. We must be efficient with space. " 
 
   IRE_industry_go_bragh: "Irish Industry go Braagh!"
-  IRE_industry_go_bragh_desc: "TODO" 
+  IRE_industry_go_bragh_desc: "Vital Government Investments. We will have a domestic arms industry, and we will be able to support one. we must. " 
 
   IRE_technology_industry: "Invest in the Technology Sector"
-  IRE_technology_industry_desc: "TODO"
+  IRE_technology_industry_desc: "we must continue to attract technology companies, staying ahead is vital. offer investments and subsidise to attract them and make them remain here. "
 
 
   ####IRISH INDUSTRY/FOREIGNSUPPORT - RESOURCE CONNECTOR
-  IRE_heavy_industry: "Irish Heaavy Industry"
-  IRE_heavy_industry_desc: "TODO"
+  IRE_heavy_industry: "Irish Heavy Industry"
+  IRE_heavy_industry_desc: ""
 
   #### IRELAND RESOURCE BRANCH
   IRE_invest_in_aluminium: "Invest In Quantum Aluminum Production"
-  IRE_invest_in_aluminium_desc: "TODO"
+  IRE_invest_in_aluminium_desc: "Buys shares in Aluminum Company"
 
   IRE_invest_in_steel: "Invest in Irish Steel"
-  IRE_invest_in_steel_desc: "TODO"
+  IRE_invest_in_steel_desc: "Buys shares in Irish Steel"
 
   IRE_invest_in_oil: "Invest in Gas Networks Ireland"
-  IRE_invest_in_oil_desc: "TODO"
+  IRE_invest_in_oil_desc: "Buys shares in Gas Networks Ireland"
 
   IRE_invest_in_rubber: "Invest in Irish Tyre Industry Association"
-  IRE_invest_in_rubber_desc: "TODO"
+  IRE_invest_in_rubber_desc: "Buy out companies in trouble who are members of the assosciation"
 
   IRE_subsidies_aluminum: "Subsidise more Aluminum"
-  IRE_subsidies_aluminum_desc: "TODO"
+  IRE_subsidies_aluminum_desc: "Investments in Aluminum Production Capability"
 
   IRE_subsidies_steel: "Subsidise more Steel"
-  IRE_subsidies_steel_desc: "TODO"
+  IRE_subsidies_steel_desc: "Investments in Steel refining automation"
 
   IRE_subsidies_oil: "Subsidise more oil"
-  IRE_subsidies_oil_desc: "TODO"
+  IRE_subsidies_oil_desc: "Fund the opening of more oil rigs"
 
-  IRE_subsidies_rubber: "TODO"
-  IRE_subsidies_rubber_desc: "TODO"
+  IRE_subsidies_rubber: "Gain Majority control of ITIA"
+  IRE_subsidies_rubber_desc: "By Gaining the majority of the assosciation, we can easier control how any negotions of increasing demostic production. "
 
   IRE_survey_for_resources: "Expand Resource Surveying"
-  IRE_survey_for_resources_desc: "TODO"
+  IRE_survey_for_resources_desc: "We always need more resources to fuel our ever growing economy"
 
   IRE_found_tungsten_company: "Invest in Ormonde Mining"
-  IRE_found_tungsten_company_desc: "TODO"
+  IRE_found_tungsten_company_desc: "Buying shared in Ormonde Mining and faciliating the expansion of its tungsten market"
 
   IRE_expand_tungsten: "More Tungsten"
-  IRE_expand_tungsten_desc: "TODO"
+  IRE_expand_tungsten_desc: "Direct Investments in Mining equipment. Allowing for a larger yield"
 
-  IRE_found_chromium_company: "TODO"
-  IRE_found_chromium_company_desc: "TODO"
+  IRE_found_chromium_company_with_prc: "Work With China on Chromium Production methods"
+  IRE_found_chromium_company_desc: "By leveraging our socialist credentials, we can get the help of the other economic power in our project. "
 
-  IRE_expand_chromium: "TODO"
-  IRE_expand_chromium_desc: "TODO"
+  IRE_expand_chromium: "chromium for Shipbuilding"
+  IRE_expand_chromium_desc: "If we can subsidise more of these to produce in our harbours, to reduce the strain on naval production"
 
   IRE_nationalise_strat_resources: "Nationalise War Materials"
-  IRE_nationalise_strat_resources_desc: "TODO"
-
-  ### IRELAND SECOND INDUSTURIAL PLAN BRANCH
-  IRE_second_industrial_plan: "TODO"
-  IRE_second_industrial_plan_desc: "TODO"
+  IRE_nationalise_strat_resources_desc: "Now the facilities are here, we no longer need this expensive facade, we will take them and use them"
 
   ### IRELAND AUTARKY BRANCH
   IRE_autarky: "Éire, Aonair agus Láidir"
   IRE_autarky_desc: "TODO"
 
   ### IRELAND SANCTION PROOF ECONOMY BRANCH
-  IRE_sanction_proof_economy: "TODO"
-  IRE_sanction_proof_economy_desc: "TODO"
+  IRE_sanction_proof_economy: "A Sanction Proof Economy"
+  IRE_sanction_proof_economy_desc: "Autarky, and sneaky economics are the requirement of the day. this must be a key focus in the short term. we must not fall behind. "
 
   ## IRISH POLITICAL TREE
   IRE_political_introduction: "State of the Republic"
-  IRE_political_introduction_desc: "TODO"
-
-  ### IRISH POLITICAL TREE - SOCIALIST
-  IRE_socialist_coalition: "SF Labour Coalition"
-  IRE_socialist_coalition_desc: "TODO"
+  IRE_political_introduction_desc: "Get a run down on the state of the irish republic (* means fictional, and for fun. and to learn. i did do research, but have used details liberally. enjoy.)"
   
+  ### Lame Ass Democractic Start
+  IRE_status_quo: "Status Quo"
+  IRE_status_quo: "What kind of vanilla ass mf are you. go outside"
+
   ### IRISH POLITICAL TREE - CIVILWAR
-  IRE_pira_return: "Provo Resurgence" 
+  IRE_pira_return: "the 'RA returns" 
   IRE_pira_return_desc: "TODO"
 
-  IRE_secure_munster: "TODO"
-  IRE_secure_munster_desc: "TODO"
+  IRE_secure_munster: "Secure Munster"
+  IRE_secure_munster_desc: "Munster was the last stand inm the irish civilwar. always been heavy republican. it will be our best choice for a base of operations. should anything go wrong. "
+  IRE_secure_munster_tt: "Secures Munster in the event of a Civil War"
 
-
-  IRE_secure_connanaught: "TODO"
-  IRE_secure_connanaught_desc: "TODO"
-
+  IRE_secure_connanaught: "Secure Connanaught"
+  IRE_secure_connanaught_desc: "With our increasing popularity. Connanaught has recently started becoming more and more radicalised. we best exploit this, and establish a foothold in the region"
+  IRE_secure_connanaught_tt: "Secures Connanaught in the event of a Civil War"
 
   IRE_pira_recruitment_drive: "Provo Recruitment Drives"
-  IRE_pira_recruitment_drive_desc: "TODO"
+  IRE_pira_recruitment_drive_desc: "We must appear large to threaten the spineless democrats. we do not want a war. but we must be ready for one."
 
   IRE_pira_whip_up_nationalism: "Attack Immigration Policies"
-  IRE_pira_whip_up_nationalism_desc: "TODO"
+  IRE_pira_whip_up_nationalism_desc: "Infiltatre Migration protests. we can trojan horse the government with these issues. Ireland is for the Irish!"
   
   IRE_pira_arm_militias: "Provo Units Start Forming"
-  IRE_pira_arm_militias_desc: "TODO"
+  IRE_pira_arm_militias_desc: "With the FF cabinet still failing to address the issues. nationalist militia groups have started practicing. and marching freely in the rural south. further rallying the locals to their cause"
+
+  IRE_pira_pr: "IRA Propaganda Machine"
+  IRE_pira_pr_desc: "Popular Support. and International sympathy, are 2 neccessary components for the coming struggle"
+
+  IRE_interview_in_an_phoblacht: "Milita Parade members interviewed in An Phoblacht"
+  IRE_interview_in_an_phoblacht_desc: "The 'Band Members' met with a reporter. alongside Mr Adams from the Sinn Fein Party. And had an interview where they describe an ireland. free from globalisation. for the irish. by the irish. apparently to applause by other party members in attendance. an embarrassment for the ruling cabinet"
+
+  IRE_interview_on_rte: "Mainstream Media attention"
+  IRE_interview_on_rte_desc: "with the fiery inteerview a few weeks back, the movements really started finding its feet. and grassroots approval. Further daamaging stability. but increasing ratings!"
+
+  IRE_interview_on_bbc: "Attention from across the Irish Sea"
+  IRE_interview_on_bbc_desc: "As is standard. Britain is all too eager to distract from their own failings. \n but we are all too willing to recruit republicans to our side. leading the way as an anti globalisation power house. anyone will fight for hope."
+
+  IRE_interview_on_fox: "Gain Irish-American Support"
+  IRE_interview_on_fox_desc: "With things beecoming increasingly shakey, we have taken to recruting Irish nationals from the states, land and bread for the protectors of the nationalist movement!"
 
   IRE_pira_raid_government_armories: "Raid the Republics stockpiles"
-  IRE_pira_raid_government_armories_desc: "TODO"
+  IRE_pira_raid_government_armories_desc: "we have men. we have the people. what we need. is guns. and a lot of them, \n we can wait for a 'friendly' guard to be on duty, make sure the cameras are off, no one has to die. "
 
-  IRE_assassinate_the_pm: "TODO"
+  IRE_assassinate_the_pm: "Cut the head of the snake"
+  IRE_assassinate_the_pm_desc: "The Irish people are fed up of being ignored. it is now inevitable."
+
   IRE_pira_we_want_our_republic_back: "We Want our Republic Back!"
+  IRE_pira_we_want_our_republic_back_desc: "The Spineless parliment are weak, we will take control. the time has come. WE WANT OUR COUNTRY BACK!"
+  
+  IRE_a_socialist_constitution: "The People's Constitution"
+  IRE_a_socialist_constitution_desc: "We will focus our governing on bettering the lives of anyone who currently calls ireland homes. and any irish nationals still in excile. "
 
-  IRE_a_nationalist_consititution: "TODO"
+  IRE_a_nationalist_constitution: "A Sinn Fein Government"
+  IRE_a_nationalist_constitution_desc: "A government founded on 2 core beliefs \n Ireland for the Irish \n The Economy for the people \n Go maire sibh Poblacht Náisiúnta na hÉireann!"
 
-  # IRISH BUFFS
+  # IRISH IDEAS
+  ## IRISH BUFFS
   IRE_industry_buff: "Industrial Research Subsidies"
   IRE_research_buff: "Electronic Ressearch Buff"
   IRE_military_buff: "IRA Budget Increases"
+  ## IRISH DYNAMIC MODIFIERS
+  IRE_invested_in_resources:0 "Invested in Resources"
+  IRE_sanctions_regime:0 "G20 Sanctions"
+  IRE_sanction_avoidance_via_smuggling:0 "Sanction Avoidance"
+  ## National Ideas
+  ### Political - Nationalist 
+  IRE_PIRA_return_idea:0 "'RA Returns"
+  PIRA_Military_Government:0 "'RA in Government"
+  IRE_PIRA_Friendly:0 "'RA Government Influence"
+  #### Ulster
+  IRE_ulster_unionists_strong:0 "Strong Unionism Support"
+  IRE_ulster_unionists_medium:0 "Ulster Divided"
+  IRE_ulster_unionists_weak:0 "Unionism on the Retreat"
+  IRE_ulster_unionists_crushed:0 "Ulster is Ireland"
+  #### England
+  ##### National Republicaan Resistance
+  IRE_english_republican_army_strong:0 "Republican Resistance"
+  IRE_english_republican_army_medium:0 "Republican Powerbases"
+  IRE_english_republican_army_weak:0 "ERA Weakened"
+  IRE_english_republican_army_crushed:0 "ERA Decimated"
+  ##### Free English (Monarchist) Resistance
+  IRE_free_english_army_strong:0 "Strong Monarchist Resistance"
+  IRE_free_english_army_medium:0 "Monarchist Powerbases"
+  IRE_free_english_army_weak:0 "FEA Weakened"
+  IRE_free_english_army_crushed:0 "FEA Crushed"
+
+  #### Celtic Union
+  IRE_celtic_union:0 "Celtic Union Declared."
+  #### Political - Nat/Fac - Army
+  ##### Militia Army
+  IRE_PIRADF:0 "A Civilian TA Army"
+  #####Special Forces
+  PIRASF_Reforming:0 "'RA Special Forces Reform"
+  ######Scale
+  PIRASF_1:0 "Medciore Special Forces"
+  PIRASF_2:0 "Average Special Forces"
+  PIRASF_3:0 "'RASF Specialists"
+  ### Migration
+  IRE_migrant_effort:0 "Migrant Effort"
+  ### Economic
+  IRE_rebuild_ireland_idea:0 "Industrialisation"
+  IRE_civil_war_impending:0 "Civilwar Incoming"
+  IRE_civil_war_avoided:0 "Clean Transition"
+
+  IRE_irish_industrial_revolution:0 "The Irish Industrial Revolution"
+  IRE_build_ireland_tall:0 "Build Eire Tall"
+  IRE_foreign_patriot_support:0 "Irish-American Support"
+  IRE_foreign_patriot_investments:0 "Irish-American Investments"
+  IRE_industrial_buildup_idea:0 "Industrial Investments"
+
+  IRE_resource_discovery:0 "Irish Resource Expansions"
+  IRE_industrial_fatigue:0 "Exhausted Economy"
+
+  IRE_first_long_term_plan:0 "The First Five Year Plan"
+
+  IRE_autarky:0 "Autarky"
+  ####Sanctions
+  #####Impact Scale
+  IRE_crippling_impact_from_sanctions:0 "Crippled By Sanctions"
+  IRE_heavily_impacted_from_sanctions:0 "Sanction Recession"
+  IRE_medium_impact_from_sanctions:0 "Stagnant"
+  IRE_selective_impact_from_sanctions:0 "Limited Impact from sanctions"
+  IRE_sanctions_ineffective:0 "Sanctions Ineffective"
+  
+  ##### Resource autarky Scale
+  IRE_strong_public_resources:0 "Strong Public Resource Supply"
+  IRE_self_sufficient_resources:0 "Resource self sufficiency"
+  IRE_sanctioned_resource_industry:0 "Sanctioned Reesource Economy"
+  ##### Resource Trade Scale
+  IRE_strong_resource_market:0 "Essential Resource Player"
+  IRE_blooming_resource_market:0 "Growing Producer"
+  IRE_minor_resource_exporter:0 "Minor Resource Exporter"
+  #####sanction end 
+  IRE_beaten_sanctions:0 "Sanction Proof"
+
+  ### CivilWar
+  #### GOV Support
+  IRE_no_support:0 "No Support for Parliment"
+  IRE_urban_support:0 "Metropolitan Holdouts"
+  IRE_medium_support:0 "Moderate Parliment Support"
+  IRE_popular_support:0 "Full Confidence in Parliment"
+  #### Additional CV Units
+  IRE_british_republican_support:0 "Anglo Republican Volunteers"
+  IRE_american_volunteers:0 "Irish-American Volunteer Corps"
+
+  ### Political/Leader
+  IRE_left_wing_nationalist:0 "Social Nationalist"
+  ### Research 
+  IRE_upgrading_labs:0 "Scientific Investments"
+  IRE_dublin_university_loyalty:0 "Student Republican Loyalty"
+  IRE_belfast_university_loyalty:0 "A Loyal Ulster Scientific Community"
+  # IRISH DECISIONS
+  ## IRISH CIVILWAR
+  IRE_irish_civil_war:0 "Second Irish CivilWar"
+  IRE_imminent_civilwar:0 "Civil War Incoming"
+  IRE_discourage_violence_at_rallies:0 "Discourage violence at rallies"
+  IRE_rally_against_government_policy:0 "Rally Against Government Policies!"
+  IRE_use_the_old_songs_at_rallies:0 "Sing the songs of 1916"
+  IRE_communist_counter_rally:0 "ICA Counter Protests"
+  ## Rebuild Ireland
+  IRE_rebuild_ireland:0 "Rebuild Ireland"
+  IRE_Industrial_Ireland:0 "Industrious Irish"
+  IRE_Modernise_Production_equipment:0 "Invest in future production methods"
+  IRE_get_foreign_patriot_investments:0 "Get Investments from Foreign Irish Nationals"
+  IRE_IRA_Foreign_Supply:0 "IRA Pipeline"
+
+  IRE_Get_random_resource:0 "Prospect for Resource Extraction"
+  IRE_Expand_aluminum_trade:0 "Expand the Aluminum Market"
+  IRE_Expand_steel_trade:0 "Expand the Steel Market"
+  IRE_Expand_oil_trade:0 "More Irish Sea Oil"
+  IRE_Expand_rubber_trade:0 "Expand Domestic Tyre Trade"
+  IRE_Expand_tungsten_trade:0 "Prospect for Tungsten"
+  IRE_Expand_chromium_trade:0 "Expand Chromium cooperation"
+
   # IRISH EVENTS
   ## IRISH POLITICAL INTRODUCTIONS
   ### CHAIN BY FOCUS IRE_political_introduction
@@ -175,28 +307,215 @@
   IRE_political_events.3.desc: "TODO IRA history/info in 2000s, Talk about common right wing issues, and their connection to the left briefly (will be done later in event chain)"
   IRE_political_events.3.a: "Sorry, this is all i could be bothered to do, rest will come when the focus tree is written"
 
-  IRE_political_events.4.t: "TODO"
-  IRE_political_events.4.desc: "TODO"
-  IRE_political_events.4.a: "TODO"
+  IRE_political_events.4.t: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.4.desc: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.4.a: "TODO-When i feel like making chatgpt shit out dialogue"
 
-  IRE_political_events.5.t: "TODO"
-  IRE_political_events.5.desc: "TODO"
-  IRE_political_events.5.a: "TODO"
+  IRE_political_events.5.t: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.5.desc: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.5.a: "TODO-When i feel like making chatgpt shit out dialogue"
 
-  IRE_political_events.6.t: "TODO"
-  IRE_political_events.6.desc: "TODO"
-  IRE_political_events.6.a: "TODO"
+  IRE_political_events.6.t: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.6.desc: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.6.a: "TODO-When i feel like making chatgpt shit out dialogue"
 
-  IRE_political_events.7.t: "TODO"
-  IRE_political_events.7.desc: "TODO"
-  IRE_political_events.7.a: "TODO"
+  IRE_political_events.7.t: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.7.desc: "TODO-When i feel like making chatgpt shit out dialogue"
+  IRE_political_events.7.a: "TODO-When i feel like making chatgpt shit out dialogue"
 
   ##IRISH CIVIL WAR EVENTS - NAT/COM
   IRE_civilwar_events.1.t: "Government Support Dropping!"
   IRE_civilwar_events.1.desc: "The nationalists are slowly winning the people over..."
   IRE_civilwar_events.1.a: "This is concerning"
 
-  IRE_civilwar_events.4.t: "Nationalist Coup"
-  IRE_civilwar_events.4.desc: "Following a successful plot on our Taoiseach, The IRA and other nationalist elements have siezed control of the republic in a coup. The Republic breathes its final breathe. "
-  IRE_civilwar_events.4.a: "Nationalist Militias hand the government over to sinn fein"
+  IRE_civilwar_events.2.t: "Munster Secured"
+  IRE_civilwar_events.2.desc: "With Munster firmly under our control. we are on more step towards our goal."
+  IRE_civilwar_events.2.a: "Excellent. onwards!"
 
+  IRE_civilwar_events.3.t: "Connanaugnt Secured"
+  IRE_civilwar_events.3.desc: "With Rural Ireland Rallied Together, The Metropolitans do not stand a chance. we are in a good negotionaing Position"
+  IRE_civilwar_events.3.a: "Excellent. It is Inevtiable."
+
+  IRE_civilwar_events.4.t: "PM Assinated"
+  IRE_civilwar_events.4.desc: "Following a successful plot on our Taoiseach, The Republic has never been weaker. Nationalists are moving on the Capital. the fate of the republic hangs in the balance"
+  IRE_civilwar_events.4.a: "Nationalist Militias hand the government over to sinn fein"
+  IRE_civilwar_events.4.b: "The 'RA should take direct control for the coming fight"
+  IRE_civilwar_events.4.c: "Now is not the time"
+
+  IRE_civilwar_events.5.t: "The Republic has Fallen into Conflict"
+  IRE_civilwar_events.5.desc: "Nationalists have made moves. securing rural Ireland. they are preparing to move on dublin to collapse the republic. "
+  IRE_civilwar_events.5.a: "The 'Ra Mobilises, and declares open armed rebellion"
+
+  IRE_civilwar_events.6.t: "Sporadic Violence sweeps the nation"
+  IRE_civilwar_events.6.desc: "Random riots. and acts of sectarian Violence. With both law enforcement, and the gangs refusing the back down. this has escalated into a staate of emergency, the troubles have finally exploded. "
+  IRE_civilwar_events.6.a: "The 'RA Mobilise to meet the esclation. This means war."
+  IRE_civilwar_events.7.t: "Transfer the Civilian Administration to Gerry Adams. "
+  IRE_civilwar_events.7.desc: "A power agreement has been agreed between the 'Ra Interim Government and the Sinn Fein Party. where Gerry Adams would take up Taoiseach and lead the Dáil Éireann. While the 'RA and republican Loyalists/Academics will run the Seanad Éireann as a Technocratic Chamber, under Ceannaire Billy McKee, mostly in an advisory role. for military control"
+  IRE_civilwar_events.7.a: "Gerry Adams Forms Majority Government with other Nationalist Factions"
+
+## boring shit no one gaf about
+# Freedom
+IRE_Path_to_Freedom:0 "Path to Freedom"
+ 
+IRE_Path_of_Democratic_Progress:0 "Path of Democratic Progress"
+IRE_Path_of_Democratic_Freedoms:0 "Path of Democratic Freedoms"
+IRE_Path_of_Democratic_Values:0 "Path of Democratic Values"
+ 
+# Democratic Progress
+IRE_Socialism:0 "Socialism"
+IRE_Redistribution_of_Wealth:0 "Redistribution of Wealth"
+IRE_Nationalize_All_Industries:0 "Nationalise All Industries"
+ 
+IRE_Social_Democracy:0 "Social Democracy"
+ 
+IRE_Progressivism:0 "Progressivism"
+IRE_Environmental_Policy:0 "Environmental Policy"
+IRE_Net-Zero_Emissions:0 "Net-Zero Emissions"
+ 
+IRE_Strengthen_Unions:0 "Strengthen Unions"
+IRE_Protect_Workers_Rights:0 "Protect Workers Rights"
+ 
+IRE_Reckless_Progress:0 "Reckless Progress"
+# Democratic Progress
+ 
+# Democratic Freedoms
+IRE_Path_of_Democratic_Freedoms:0 "Path of Democratic Freedoms"
+ 
+IRE_Social_Liberalism:0 "Social Liberalism"
+IRE_Social_Freedoms:0 "Social Freedoms"
+IRE_Social_Programs:0 "Social Programs"
+ 
+IRE_Liberalism:0 "Liberalism"
+IRE_Economic_Freedom:0 "Economic Freedom"
+IRE_Free_Market_Driven_Economy:0 "Free Market Driven Economy"
+ 
+IRE_Commerce_Efficiency:0 "Commerce Efficiency"
+# Democratic Freedoms
+ 
+# Democratic Values
+IRE_Conservatism:0 "Conservatism"
+IRE_Family_Values:0 "Family Values"
+IRE_Oppose_Progressives:0 "Oppose Progressives"
+ 
+IRE_Reactionary_Democracy:0 "Reactionary Democracy"
+IRE_Make_Deals_with_the_Oligarchs:0 "Make Deals with the Oligarchs"
+IRE_National_Security:0 "National Security"
+ 
+IRE_Realpolitik:0 "Realpolitik"
+# Democratic Values
+ 
+
+# Political Policies
+IRE_Political_Policies:0 "Political Policies"
+ 
+# Internal Policies
+IRE_Internal_Politics:0 "Internal Politics"
+ 
+IRE_Demographic_Studies:0 "Demographic Studies"
+IRE_Secure_National_Unity:0 "Secure National Unity"
+ 
+IRE_Traditional_Values:0 "Traditional Values"
+IRE_Crackdown_on_Contraceptive:0 "Crackdown on Contraceptive"
+ 
+IRE_Mobilize_the_Female_Workforce:0 "Mobilise the Female Workforce"
+IRE_Birth_Control_Programs:0 "Birth Control Programs"
+ 
+IRE_Recruit_more_Administrators:0 "Recruit more Administrators"
+ 
+IRE_Invest_in_Public_Services:0 "Invest in Public Services"
+IRE_Education_Reform:0 "Education Reform"
+IRE_Research_Incentives:0 "Research Incentives"
+IRE_Expand_the_Secret_Service:0 "Expand the Secret Service"
+ 
+IRE_Expand_Research_Complexs:0 "Expand Research Complexes"
+ 
+IRE_Encourage_Immigration:0 "Encourage Immigration"
+IRE_Jobs_for_Immigrants:0 "Jobs for Immigrants"
+ 
+IRE_Expand_Private_Industries:0 "Expand Private Industries"
+IRE_Market_Driven_Economy:0 "Cut Red Tape"
+ 
+IRE_Reduce_Government_Spending:0 "Reduce Government Spending"
+IRE_Increase_Military_Spending:0 "Increase Military Spending"
+
+# Foreign Policy
+IRE_Foreign_Policy:0 "Foreign Policy"
+ 
+IRE_Recruit_more_Diplomats:0 "Recruit more Diplomats"
+IRE_International_Alliances:0 "International Alliances"
+ 
+IRE_Isolationism:0 "Isolationism"
+IRE_Reduce_Foreign_Influence:0 "Reduce Foreign Influence"
+IRE_Defensive_Constructions:0 "Defensive Constructions"
+ 
+IRE_Interventionism:0 "Interventionism"
+IRE_Volunteer_Corps:0 "Volunteer Corps"
+IRE_Political_Influence_Abroad:0 "Political Influence Abroad"
+
+IREGEN_Invite_European_Investors:0 "Invite European Investors"
+IREGEN_Invite_European_Investors_desc:0 ""
+IREGEN_european_administrators:0 "Request European Administrators"
+IREGEN_european_administrators_desc:0 ""
+IREGEN_European_Technology_exchanges:0 "European Technology Exchanges"
+IREGEN_European_Technology_exchanges_desc:0 ""
+IREGEN_Invite_european_banks:0 "Invite European Banks"
+IREGEN_Invite_european_banks_desc:0 ""
+IREGEN_european_auto_industry:0 "European Auto-Industry"
+IREGEN_european_auto_industry_desc:0 ""
+IREGEN_european_high_speed_rail:0 "Invest in European High-Speed Rail"
+IREGEN_european_high_speed_rail_desc:0 ""
+IREGEN_a_new_economy_for_a_new_millenium:0 "A New Economy For A New Millenium"
+IREGEN_a_new_economy_for_a_new_millenium_desc:0 "The new millennium has begun. Other countries have started to modernise. And so must we! We'll start a program of modernising our industry and making it suitable for the changing times."
+IREGEN_domestic_industry:0 "Domestic Focus"
+IREGEN_domestic_industry_desc:0 ""
+IREGEN_free_market_based_economy:0 "Free Market Based Economy"
+IREGEN_a_free_market_economy:0 "A Free Market Economy"
+IREGEN_a_free_market_economy_desc:0 "An economy which is based on free market rules is clearly better than a centrally planned economy as it costs much and will lead to failure. Thus we will make a great and free economy! "
+IREGEN_invite_foreign_investors:0 "Invite Foreign Investors"
+IREGEN_invite_foreign_investors_desc:0 "Our economy is underdeveloped. To develop our economy without much cost, we can support foreign firms that want to start their business in our nation."
+IREGEN_foreign_arms_manufacturers:0 "Foreign Arms Manufacturers"
+IREGEN_foreign_arms_manufacturers_desc:0 "We do not have a large military industry, and we are mostly buying our weapons from other nations. That costs a lot of money which we don't want to waste. To fix this we will invite arms manufacturers from other nations to create weapons in our nation."
+IREGEN_free_trade:0 "Free Trade"
+IREGEN_free_trade_desc:0 "To have a free economy, we also must have free trade. This is to expand what we export and import."
+IREGEN_anti_monopoly_laws:0 "Anti-Monopoly Laws"
+IREGEN_anti_monopoly_laws_desc:0 "No matter on which side is liberalism, conservative or even communist, we can all agree that monopolies don't bring anything good for the people and for our nation as well. Let's make some laws that will stop monopolies from gaining even more power. "
+IREGEN_sell_goverment_shares_in_companies:0 "Privatisation"
+IREGEN_sell_goverment_shares_in_companies_desc:0 "Now that our economy is stable, we can start focusing on earning money and freeing the market at the same time. To do this we will sell shares in companies we own to some random people."
+IREGEN_sold_shares:0 "Sold Shares"
+IREGEN_the_teachings_of_the_austrain_shcool:0 "Teachings Of The Austrian School"
+IREGEN_the_Austrian_school:0 "The Austrian School"
+IREGEN_the_Austrian_school_desc:0 "The Austrian school believes in a truly free market which direction that we are going in right now. Let's just learn from their teachings and apply them to our economy. "
+IREGEN_Institutional_economic_school:0 "The Institutional School"
+IREGEN_Institutional_economic_school_desc:0 "The Austrian school is outdated. We must go with the modern ways of institutionalist economic school and implement its policies into our economy."
+IREGEN_the_teachings_of_the_Institutional_shcool:0 "Teachings Of The Institutional School"
+IREGEN_centraly_planned_economy:0 "Centrally Planned Economy"
+IREGEN_centraly_planned_economy_desc:0 "It's clear that an economy based on freedom will lead to failure and rule of corporations. Thus the only logical option left is to create an economy that would be totally controlled by the government. "
+IREGEN_economy_central_planned:0 "Centrally Planned Economy"
+IREGEN_increase_investments_over_industry:0 "State Monopolies"
+IREGEN_increase_investments_over_industry_desc:0 "As we have chosen to go with a centrally planned economy, we must take care of investing in and expanding our industry. So let's spend more money on further expanding our industry."
+IREGEN_export_arms_industry:0 "Export Oriented Arms Industry"
+IREGEN_export_arms_industry_desc:0 ""
+IREGEN_state_owned_armories:0 "State-Owned Armouries"
+IREGEN_state_owned_armories_desc:0 "We have already invested in the growth of our economy, but we cannot forget about the military industry. We'll start funding construction of new military factories that will be owned directly by our nation. "
+IREGEN_funding_public_schools:0 "Funding Public Schools"
+IREGEN_fund_public_schools:0 "Fund Public Schools"
+IREGEN_fund_public_schools_desc:0 "Education is a powerful tool. It gives us more experts, allows us to spread more of our propaganda. It's generally great. However many public schools in our country lack funding. Thus to have more educated population we have to spend more money on our education system."
+IREGEN_fill_the_road_gaps:0 "Fill The Road Gaps"
+ GEN_fill_the_road_gaps_desc:0 "Many roads in our nation have holes in them which leads to many accidents, and it makes us look bad on the world stage. Thus we need to fill these gaps."
+IREGEN_encourage_urbanization:0 "Encourage Urbanisation"
+IREGEN_encourage_urbanization_desc:0 "Many people who live in the countryside want to go to big cities so they can earn more money and they work more effectively. Let's start a campaign to get even more people into our cities and expand them for the new people who will be there."
+IREGEN_automative_mines_idea:0 "Automotive Mines"
+IREGEN_automoative_mines:0 "Automotive Mines"
+IREGEN_automoative_mines_desc:0 "Miners might work very hard in mines, but automotive mines are even more 
+IREGEN_develop_consumer_goods_industry:0 "Develop Consumer Goods Industry"
+IREGEN_develop_consumer_goods_industry_desc:0 "Many products can be produced in our nation. So let's expand production of it."
+IREGEN_root_steel_works:0 "[Root.GetAdjective] Steel"
+IREGEN_root_steel_works_desc:0 "Have we digged the whole country looking for steel yet? No, so let's do it!"
+IREGEN_subside_our_farmers:0 "Subside Our Farmers"
+IREGEN_subside_our_farmers_desc:0 "Many of our farmers could use some help to expand their farms. If we did it, that would be great for the growth of the countryside."
+IREGEN_expand_university:0 "Fund The University Of [Root.Capital.GetName]"
+IREGEN_expand_university_desc:0 "To expand our research we must expand IREfunding of the [Root.Capital.GetName] university."
+IREGEN_housing_program:0 "Housing Program"
+IREGEN_housing_program_desc:0 "Many people in our country are too poor to be able to afford a house. To fix this we will make some cheap houses for these people. "
+IREGEN_modern_construction_methods:0 "Modern Construction Methods"
+IREGEN_modern_construction_methods_desc:0 "Our construction tools are mostly outdated. If we want to create a big and strong economy, we must invest in modernising our tools."

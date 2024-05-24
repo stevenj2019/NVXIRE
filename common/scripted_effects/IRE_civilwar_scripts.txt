@@ -1,0 +1,180 @@
+set_popularity = {
+	if = { 	limit = { has_idea = IRE_popular_support }
+			set_variable = { var = IRE_civilwar_strength value = 0.3}}
+	if = { 	limit = { has_idea = IRE_medium_support }
+			set_variable = { var = IRE_civilwar_strength value = 0.4}}
+	if = { 	limit = { has_idea = IRE_urban_support }
+			set_variable = { var = IRE_civilwar_strength value = 0.5}}
+	if = { 	limit = { has_idea = IRE_no_support }
+			set_variable = { var = IRE_civilwar_strength value = 0.6}}	
+	}
+start_civilwar = {
+	if = { 	limit = { has_country_flag = has_secured_munster }
+			if = { 	limit = { has_country_flag = has_secured_connanaught }
+					start_civil_war = { #CIVILWAR
+						ruling_party = nationalist
+						ideology = ROOT
+						states = { 113 134 }
+						size = 0.6 
+					}
+				}
+			else = {
+				start_civil_war = { #CIVILWAR
+				ruling_party = nationalist
+				ideology = ROOT
+				states = { 113 }
+				size = 0.45 
+				}
+			}
+			}
+	else = {
+		set_popularity = yes
+		subtract_from_variable = { var = IRE_civilwar_strength value = -0.15}
+		start_civil_war = { #CIVILWAR
+			ruling_party = nationalist
+			ideology = ROOT
+			states = { 113 }
+			size = IRE_civilwar_strength
+			}
+	}
+	
+}
+recruit_civilwar_commanders = {
+	if = { 	limit = { NOT = { has_country_flag = has_civilwar_generals }}
+			set_country_flag = has_civilwar_generals
+			create_field_marshal = { #"Michael McKevitt"
+				name = "Michael McKevitt"
+				picture = "generals/michael_mckevitt.dds"
+				skill = 2
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 5
+				traits = { politically_connected infantry_leader commando organisational_leader }
+			}
+
+			create_corps_commander = { #Liam Campbell
+				name = "Liam Campbell"
+				picture = "generals/liam_campbell.dds"
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+				traits = { politically_connected infantry_leader }
+			}
+		}
+}
+troops_for_civilwar = {
+	load_oob = ire_cv_template
+	add_manpower = 100000
+	if = { 	limit = { has_idea = IRE_british_republican_support }
+			random_core_state = {
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }	
+			}
+	}		
+	if = {	limit = {has_idea = IRE_american_volunteers}
+			random_core_state = {
+			create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+							owner = ROOT }
+			}
+	}
+	if = {	limit = {has_completed_focus = IRE_pira_recruitment_drive}
+			random_core_state = {
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+			}
+	}
+	if = {	limit = {has_completed_focus = IRE_pira_whip_up_nationalism}
+			random_core_state = {
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+			}
+	}
+	if = {	limit = {has_completed_focus = IRE_pira_arm_militias}
+			random_core_state = {
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+			}
+	}
+	if = {	limit = {has_completed_focus = IRE_pira_raid_government_armories}
+			random_core_state = {
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+				create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+								owner = ROOT }
+			}
+	}
+}
+IRA_coup = {
+	create_country_leader = { #IRA government
+				name = "IRA Council"
+				picture = "gfx/leaders/IRE/ira_council.dds"
+				expire = "1.1.1.1"
+				ideology = military_junta
+			}
+	set_cosmetic_tag = PRI
+	swap_ideas = { #IRA government
+		remove_idea = IRE_PIRA_return_idea
+		add_idea = IRE_PIRA_Military_Government_idea
+	}
+	start_civilwar = yes
+}
+lower_government_support = {
+	if = { 	limit = { has_idea = IRE_no_support }
+			add_political_power = 300
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.02
+			}
+		}
+	if = { 	limit = { has_idea = IRE_urban_support }
+			swap_ideas = {
+				remove_idea = IRE_urban_support
+				add_idea = IRE_no_support
+			}
+		}
+	if = { 	limit = { has_idea = IRE_medium_support }
+			swap_ideas = {
+				remove_idea = IRE_medium_support
+				add_idea = IRE_urban_support
+			}
+		}
+	if = { 	limit = { has_idea = IRE_popular_support }
+			swap_ideas = {
+					remove_idea = IRE_popular_support
+					add_idea = IRE_medium_support
+			}
+		}
+}
+sinn_fein_take_power = {
+	if = {	limit = { has_idea = IRE_no_support }
+			set_country_flag = IRE_republic_overthrown
+			add_political_power = 500	
+			remove_ideas = { IRE_british_republican_support IRE_american_volunteers IRE_civil_war_impending}
+			add_ideas = { IRE_left_wing_nationalist IRE_PIRA_Friendly }
+			create_country_leader = { #IRA government
+				name = "Gerry Adams"
+				picture = "gfx/leaders/IRE/gerry_adams.dds"
+				expire = "1.1.1.1"
+				ideology = national_democrat
+			}
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = yes
+				election_frequency = 60
+				name = "Sinn Féin[R]"
+			}
+			set_cosmetic_tag = ROI
+}}

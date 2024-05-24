@@ -20,7 +20,7 @@ IRE_irish_civil_war = {
 			country_event = {days = 0 id = IRE_civilwar_events.6 }
 		}
 	}
-	discourage_violence_at_rallies = {
+	IRE_discourage_violence_at_rallies = {
 		icon = GFX_decision_generic_speech
 		cost = 30
 		days_remove = 20
@@ -32,7 +32,7 @@ IRE_irish_civil_war = {
 			}
 		}
 	}
-	rally_against_government_policy = {
+	IRE_rally_against_government_policy = {
 		icon = GFX_decision_generic_political_rally
 		cost = 50
 		days_remove = 30
@@ -48,7 +48,7 @@ IRE_irish_civil_war = {
 			}
 		}
 	}
-	use_the_old_songs_at_rallies = {
+	IRE_use_the_old_songs_at_rallies = {
 		icon = GFX_decision_hol_radio_oranje
 		cost = 20
 		days_remove = 45
@@ -56,7 +56,7 @@ IRE_irish_civil_war = {
 			add_stability = -0.05
 		}
 	}
-	communist_counter_rally = {
+	IRE_communist_counter_rally = {
 		icon = GFX_decision_generic_political_rally
 		cost = 50
 		days_remove = 30

@@ -1,5 +1,5 @@
 IRE_rebuild_ireland = {
-	Industrial_Ireland = {
+	IRE_Industrial_Ireland = {
         visible = { has_completed_focus = IRE_industrial_buildup }
 		available = { has_idea = IRE_build_ireland_tall }
 		icon = generic_major_decision
@@ -33,7 +33,7 @@ IRE_rebuild_ireland = {
 			}
 		}
 	}
-	Modernise_Production_equipment = {
+	IRE_Modernise_Production_equipment = {
 		visible = { has_completed_focus = IRE_long_term_industrial_plan }
 		fire_only_once = yes
 		icon = GFX_decision_unknown
@@ -99,11 +99,11 @@ IRE_rebuild_ireland = {
 			}
 		}
 	}
-	IRA_Foreign_Supply = {
+	IRE_IRA_Foreign_Supply = {
         visible = { original_tag = "IRE" 
 					has_idea = IRE_foreign_patriot_support
-					OR = {	has_idea = PIRA_Military_Government
-							has_idea = PIRA_Friendly
+					OR = {	has_idea = IRE_PIRA_Military_Government_idea
+							has_idea = IRE_PIRA_Friendly
 						}
 					}
 		icon = generic_major_decision
@@ -135,7 +135,7 @@ IRE_rebuild_ireland = {
 		}
 	}
 	### Resource Decisions
-	Get_random_resource = {
+	IRE_Get_random_resource = {
 		visible = { has_completed_focus = IRE_survey_for_resources }
 		available = { has_idea = IRE_resource_discovery }
 		icon = GFX_decision_gre_investment_decisions
@@ -269,7 +269,7 @@ IRE_rebuild_ireland = {
 				}
 			}
 		}
-	Expand_aluminum_trade = {
+	IRE_Expand_aluminum_trade = {
 		visible = { has_completed_focus = IRE_survey_for_resources }
 		available = { has_completed_focus = IRE_subsidies_aluminum }
 		icon = GFX_decision_aluminium
@@ -309,7 +309,7 @@ IRE_rebuild_ireland = {
 				}
 			}
 		}
-	Expand_steel_trade = {
+	IRE_Expand_steel_trade = {
 		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
 		available = { 	has_completed_focus = IRE_subsidies_steel } 
 		icon = GFX_decision_steel
@@ -349,7 +349,7 @@ IRE_rebuild_ireland = {
 				}
 			}
 		}
-	Expand_oil_trade = {
+	IRE_Expand_oil_trade = {
 		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
 		available = { 	has_completed_focus = IRE_subsidies_oil }
 		icon = GFX_decision_oil
@@ -389,7 +389,7 @@ IRE_rebuild_ireland = {
 				}
 			}
 		}
-	Expand_rubber_trade = {
+	IRE_Expand_rubber_trade = {
 		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
 		available = { 	has_completed_focus = IRE_subsidies_rubber }
 		icon = GFX_decision_rubber
@@ -430,7 +430,7 @@ IRE_rebuild_ireland = {
 			}
 		}
 
-	Expand_tungsten_trade = {
+	IRE_Expand_tungsten_trade = {
 		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
 		available = { 	has_completed_focus = IRE_expand_tungsten } 
 		icon = GFX_decision_tungsten
@@ -471,7 +471,7 @@ IRE_rebuild_ireland = {
 				}
 			}
 		
-	Expand_chromium_trade = {
+	IRE_Expand_chromium_trade = {
 		visible = { original_tag = "IRE" has_completed_focus = IRE_survey_for_resources }
 		available = { has_completed_focus = IRE_expand_chromium }
 		icon = GFX_decision_tungsten

@@ -6,7 +6,7 @@ tags={
 	"National Focuses"
 }
 dependencies={
-	"Novum Vexillum Global Conflict"
+	"Novum Vexillum"
 }
 name="[NovVex]Ireland"
 supported_version="1.14.*"
