@@ -1,0 +1,217 @@
+shared_focus = { 
+	id = IRE_a_socialist_constitution
+	icon = GFX_focus_SWE_socialist_reforms
+	x = -30
+	y = 4
+	relative_position_id = IRE_pira_we_want_our_republic_back
+	cost = 1000 
+	available = { 	has_country_flag = IRE_deal_with_the_moderate_socialists
+					NOT = { has_country_flag = IRE_nationalist_path } }
+	allow_branch = {}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		set_country_flag = IRE_socialist_path
+	}
+}
+#ANARCHIST BRANCH
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_worker_cooperatives
+	icon = GFX_focus_ITA_workers_unions
+	prerequisite = { focus = IRE_a_socialist_constitution }
+	mutually_exclusive = {	focus = IRE_centralise_control
+							focus = IRE_centralise_essentials_only }
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	x = -2
+	y = 1
+	relative_position_id = IRE_a_socialist_constitution 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_worker_miltias
+	icon = GFX_focus_generic_workers_and_farmers_rise
+	prerequisite = { 	focus = IRE_worker_cooperatives
+						focus = IRE_centralise_control
+						focus = IRE_centralise_essentials_only }
+	mutually_exclusive = {	focus = IRE_a_red_army
+							focus = IRE_a_sustainable_army }
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	x = 0
+	y = 1
+	relative_position_id = IRE_worker_cooperatives 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_torchbearers_of_revolution
+	icon = GFX_focus_spr_torchbearers_of_tomorrow
+	prerequisite = { 	focus = IRE_worker_miltias
+						focus = IRE_a_red_army
+						focus = IRE_a_sustainable_army }
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	mutually_exclusive = {	focus = IRE_look_for_friends
+							focus = IRE_isolationism }
+	x = 0
+	y = 1
+	relative_position_id = IRE_worker_miltias 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+
+#COMMUNIST BRANCH 
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_centralise_control
+	icon = GFX_goal_generic_soviet_construction
+	mutually_exclusive = {	focus = IRE_worker_cooperatives
+							focus = IRE_centralise_essentials_only }
+	prerequisite = { focus = IRE_a_socialist_constitution }
+	x = 0
+	y = 1
+	relative_position_id = IRE_a_socialist_constitution 
+	cost = 5
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_a_red_army
+	icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+	prerequisite = { 	focus = IRE_worker_cooperatives
+						focus = IRE_centralise_control
+						focus = IRE_centralise_essentials_only }
+	available = { NOT = { has_country_flag = IRE_radical_socialists_allowed }}
+	mutually_exclusive = {	focus = IRE_worker_miltias
+							focus = IRE_a_sustainable_army }
+	x = 0
+	y = 1
+	relative_position_id = IRE_centralise_control 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_look_for_friends
+	icon = GFX_focus_ger_great_red_menace
+	prerequisite = { 	focus = IRE_worker_miltias
+						focus = IRE_a_red_army
+						focus = IRE_a_sustainable_army }
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	mutually_exclusive = {	focus = IRE_torchbearers_of_revolution
+							focus = IRE_isolationism }
+	x = 0
+	y = 1
+	relative_position_id = IRE_a_red_army 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+		set_country_flag = IRE_open_to_diplomacy
+	}
+	}
+
+#STATE CAPITALISM
+#COMMUNIST BRANCH 
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_centralise_essentials_only
+	icon = GFX_goal_generic_positive_trade_relations
+	mutually_exclusive = {	focus = IRE_worker_cooperatives
+							focus = IRE_centralise_control }
+	prerequisite = { focus = IRE_a_socialist_constitution }
+	x = 2
+	y = 1
+	relative_position_id = IRE_a_socialist_constitution 
+	cost = 5
+	available = { 	NOT = { has_country_flag = IRE_radical_socialists_allowed }}
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_a_sustainable_army
+	icon = GFX_focus_generic_combined_arms
+	prerequisite = { 	focus = IRE_worker_cooperatives
+						focus = IRE_centralise_control
+						focus = IRE_centralise_essentials_only }
+	mutually_exclusive = {	focus = IRE_worker_miltias
+							focus = IRE_a_red_army }
+	x = 0
+	y = 1
+	relative_position_id = IRE_centralise_essentials_only 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_isolationism
+	icon = GFX_goal_generic_defence
+	prerequisite = { 	focus = IRE_worker_miltias
+						focus = IRE_a_red_army
+						focus = IRE_a_sustainable_army }
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	mutually_exclusive = {	focus = IRE_torchbearers_of_revolution
+							focus = IRE_look_for_friends }
+	x = 0
+	y = 1
+	relative_position_id = IRE_a_sustainable_army 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+
+## anarchst tree (ronan bennet)
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_ronan_bennet_leads_the_way
+	icon = GFX_focus_ITA_devaluate_the_lire
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	allow_branch = { has_country_flag = IRE_anarchists_dominant }
+	x = 0
+	y = 1
+	relative_position_id = IRE_look_for_friends 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+## communist tree (Seán Garland)
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_sean_garland_ascends
+	icon = GFX_focus_ITA_devaluate_the_lire
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	allow_branch = { has_country_flag = IRE_communists_dominant }
+	x = 0
+	y = 1
+	relative_position_id = IRE_look_for_friends 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}
+## socialist tree (Tony Gregory)
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_tony_gregory_reforms_parliment
+	icon = GFX_focus_ITA_devaluate_the_lire
+	available = { NOT = { has_country_flag = IRE_moderate_socialists_dominant }}
+	allow_branch = { has_country_flag = IRE_moderates_keep_control }
+	x = 0
+	y = 1
+	relative_position_id = IRE_look_for_friends 
+	cost = 5
+	ai_will_do = { factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {}
+	}

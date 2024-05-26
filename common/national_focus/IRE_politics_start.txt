@@ -1,0 +1,2463 @@
+shared_focus = {
+	id = IRE_political_introduction
+	icon = GFX_focus_generic_concessions
+	x = 50
+	y = 0
+	cost = 0.14
+	ai_will_do = {	factor = 20 }
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	completion_reward = {
+			IRE = {country_event = { days = 1 id = IRE_political_events.1} }
+	}
+}
+shared_focus = { #NAT/COM CW
+	id = IRE_pira_return
+	icon = GFX_focus_generic_military_dictatorship
+	prerequisite = { focus = IRE_political_introduction }
+	mutually_exclusive = { focus = IRE_status_quo }
+	x = 0
+	y = 1
+	relative_position_id = IRE_political_introduction
+	cost = 4 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL 
+	}
+	completion_reward = {
+		activate_mission = IRE_imminent_civilwar
+		random_mission_event_trigger = yes
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.01
+		}
+		country_event = { days = 1 id = IRE_civilwar_events.8 }
+		add_ideas = { IRE_PIRA_return_idea IRE_popular_support IRE_civil_war_impending }
+	}
+}
+### OTHER IDEOLOGIES HERE WHEN I CAN BE ARSED
+shared_focus = { #NAT/COM CW
+	id = IRE_secure_munster
+	icon = GFX_secure_munster_focus
+	prerequisite = { focus = IRE_pira_return }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = -4
+	y = 1
+	relative_position_id = IRE_pira_return
+	cost = 2
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = { 
+		set_country_flag = has_secured_munster
+		custom_effect_tooltip = IRE_secure_munster_tt 
+		country_event = {days = 1 id = IRE_civilwar_events.2}
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_secure_connanaught
+	icon = GFX_secure_connanaught_focus
+	prerequisite = { focus = IRE_secure_munster }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_secure_munster
+	cost = 5
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		set_country_flag = has_secured_connanaught
+		custom_effect_tooltip = IRE_secure_connanaught_tt
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = -10
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+		add_stability = -0.1
+		country_event = {days = 3 id = IRE_civilwar_events.3}
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_recruitment_drive
+	icon = GFX_goal_continuous_def_against_influence
+	prerequisite = { focus = IRE_pira_return }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 1
+	y = 1
+	relative_position_id = IRE_pira_return
+	cost = 5
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = -5
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_stability = -0.1
+		army_experience = 50
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_whip_up_nationalism
+	icon = GFX_focus_FIN_national_fanatism
+	prerequisite = { focus = IRE_pira_recruitment_drive }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_recruitment_drive
+	cost = 5
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = 5
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+		add_stability = -0.1
+		country_event = { days = 0 id = IRE_civilwar_events.1 }
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_arm_militias
+	icon = GFX_focus_generic_military_dictatorship
+	prerequisite 		=	{ focus = IRE_pira_return }
+	bypass             	= 	{ has_idea = IRE_civil_war_avoided }
+	mutually_exclusive 	= {}
+	x = -1
+	y = 1
+	relative_position_id = IRE_pira_return
+	cost = 5
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = -5
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+		add_stability = -0.1
+		army_experience = 50
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_raid_government_armories
+	icon = GFX_focus_generic_women_in_military
+	prerequisite = { focus = IRE_pira_arm_militias }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_arm_militias
+	cost = 5
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = -10
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+		add_stability = -0.1
+		army_experience = 50
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_assassinate_the_pm
+	icon = GFX_focus_kill_pm
+	prerequisite = { focus = IRE_pira_whip_up_nationalism
+					focus = IRE_pira_raid_government_armories }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 4
+	relative_position_id = IRE_pira_return
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Mary O'Rourke"
+			picture = "gfx/leaders/IRE/mary_orourke.dds"
+			ideology = centrist
+		}
+		if = { 	limit = { AND = { 	has_idea = IRE_no_support 
+									has_completed_focus = IRE_secure_connanaught}}
+				country_event = { days = 1 id = IRE_civilwar_events.4 }}
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_pr
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = IRE_pira_return }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 4
+	y = 1
+	relative_position_id = IRE_pira_return
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = 30
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.03
+		}
+		add_stability = -0.05
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_interview_in_an_phoblacht
+	icon = GFX_ap_focus
+	prerequisite = { focus = IRE_pira_pr }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_pira_pr
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = 30
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+		add_stability = -0.1
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_interview_on_rte
+	icon = GFX_rte_focus
+	prerequisite = { focus = IRE_interview_in_an_phoblacht }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_interview_in_an_phoblacht
+	cost = 4
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = 25
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.02
+		}
+		add_stability = -0.2
+		country_event = { days = 0 id = IRE_civilwar_events.1 }
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_interview_on_fox
+	icon = GFX_fox_focus
+	prerequisite = { focus = IRE_interview_on_rte }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = 1
+	y = 1
+	relative_position_id = IRE_interview_on_rte
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = 5
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.1
+		}
+		add_ideas = { IRE_american_volunteers }
+		add_stability = -0.2
+		add_manpower = 500000
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_interview_on_bbc
+	icon = GFX_bbc_focus
+	prerequisite = { focus = IRE_interview_on_rte }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	mutually_exclusive = { 	}
+	x = -1
+	y = 1
+	relative_position_id = IRE_interview_on_rte
+	cost = 3
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_days_mission_timeout = {
+			mission = IRE_imminent_civilwar
+			days = -5
+		}
+		add_political_power = 200
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.1
+		}
+		add_ideas = { IRE_british_republican_support }
+		add_stability = -0.2
+		add_manpower = 500000
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST/SOCDEM-CIVILWAR!!!
+	id = IRE_pira_we_want_our_republic_back
+	icon = GFX_focus_ETH_freedom_at_gunpoint
+	prerequisite = { focus = IRE_assassinate_the_pm }
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	available = { has_completed_focus = IRE_secure_munster }
+	mutually_exclusive = { 	}
+	x = 0
+	y = 1
+	relative_position_id = IRE_assassinate_the_pm
+	cost = 1
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		country_event = { days = 0 id = IRE_civilwar_events.5 }
+	}
+}
+### OTHER IDEOLOGIES HERE WHEN I CAN BE ARSED
+### NATIONALIST POLITICS
+shared_focus = { #POLITICAL-Democracy
+	id = IRE_status_quo
+	icon = GFX_goal_unknown
+	prerequisite = { focus = IRE_political_introduction }
+	mutually_exclusive = {	focus = IRE_pira_return }
+	x = 30
+	y = 1
+	relative_position_id = IRE_political_introduction
+	cost = 1000 
+	available = {
+	}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		add_political_power = 300
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 20
+		}
+	}
+}
+shared_focus = {
+	id = IRE_Path_to_Freedom
+	icon = GFX_goal_support_democracy
+	x = 0
+	y = 2
+	cost = @Time_45_days
+	relative_position_id = IRE_status_quo
+	prerequisite = {
+		focus = IRE_status_quo
+	}
+	completion_reward = {
+			add_timed_idea = {
+				idea = idea_focus_generic_individual_freedom
+				days = 365
+			}
+			if = {
+				limit = { has_democratic_form_of_government = yes }
+				add_stability = 0.03
+			}
+			if = {
+				limit = { has_democratic_form_of_government = no }
+				add_stability = -0.03
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+			
+			modifier = {
+				add = 150
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = FIVE_PERCENT
+				}
+				OR = {
+					has_government = reactionary
+					has_government = conservative
+					has_government = market_liberal
+					has_government = social_liberal
+					has_government = social_democrat
+					has_government = progressive
+					has_government = democratic_socialist
+				}
+			}
+			modifier = {
+				add = 10
+				is_historical_focus_on = no
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = FIVE_PERCENT
+				}
+				OR = {
+					has_government = islamist
+					has_government = fascist
+					has_government = nationalist
+					has_government = monarchist
+					has_government = communist
+				}
+			}
+			modifier = {
+				add = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = FIVE_PERCENT
+				}
+				OR = {
+					has_government = islamist
+					has_government = fascist
+					has_government = nationalist
+					has_government = monarchist
+					has_government = communist
+				}
+			}
+			modifier = {
+				add = 75
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = TEN_PERCENT
+				}
+				OR = {
+					has_government = reactionary
+					has_government = conservative
+					has_government = market_liberal
+					has_government = social_liberal
+					has_government = social_democrat
+					has_government = progressive
+					has_government = democratic_socialist
+				}
+			}
+			modifier = {
+				add = 10
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = TEN_PERCENT
+				}
+				OR = {
+					has_government = islamist
+					has_government = fascist
+					has_government = nationalist
+					has_government = monarchist
+					has_government = communist
+				}
+			}
+			modifier = {
+				add = 34
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = TWENTY_PERCENT
+				}
+				OR = {
+					has_government = reactionary
+					has_government = conservative
+					has_government = market_liberal
+					has_government = social_liberal
+					has_government = social_democrat
+					has_government = progressive
+					has_government = democratic_socialist
+				}
+			}
+			modifier = {
+				add = 10
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = TWENTY_PERCENT
+				}
+				OR = {
+					has_government = islamist
+					has_government = fascist
+					has_government = nationalist
+					has_government = monarchist
+					has_government = communist
+				}
+			}
+			modifier = {
+				add = 20
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = THIRTY_PERCENT
+				}
+				OR = {
+					has_government = reactionary
+					has_government = conservative
+					has_government = market_liberal
+					has_government = social_liberal
+					has_government = social_democrat
+					has_government = progressive
+					has_government = democratic_socialist
+				}
+			}
+			modifier = {
+				add = 10
+				has_game_rule = {
+					rule = XXX_AI_BEHAVIOR
+					option = THIRTY_PERCENT
+				}
+				OR = {
+					has_government = islamist
+					has_government = fascist
+					has_government = nationalist
+					has_government = monarchist
+					has_government = communist
+				}
+			}
+		}
+}
+#################
+### Socialism ###
+#################
+
+shared_focus = {
+	id = IRE_Socialism
+	icon = GFX_goal_Ideology_Democratic_Socialist
+	x = -2
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Social_Democracy
+	}
+	mutually_exclusive = {
+		focus = IRE_Progressivism
+	}
+	relative_position_id = IRE_Path_to_Freedom
+	prerequisite = {
+		focus = IRE_Path_to_Freedom
+	}
+
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEF_Leftist_Doctrine
+			days = 1095
+		}
+		fourth_estate_democratic_socialist_increase = yes
+	}
+
+	ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				add = 5
+				is_historical_focus_on = yes
+				has_government = democratic_socialist
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_ORDER
+				}
+				OR = {
+					has_government = democratic_socialist
+					has_government = communist
+					has_government = fascist
+				}
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_DISORDER
+				}
+			}
+		}
+}
+shared_focus = {
+	id = IRE_Redistribution_of_Wealth
+	icon = GFX_goal_Overthrow_Bourgeosie
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Socialism
+	}
+
+	relative_position_id = IRE_Socialism
+	completion_reward = {
+		fourth_estate_democratic_socialist_increase = yes
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.10
+		}
+		add_ideas = GEF_Redistribution_of_Wealth
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Nationalize_All_Industries
+	icon = GFX_goal_generic_soviet_construction
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Redistribution_of_Wealth
+	}
+
+	relative_position_id = IRE_Redistribution_of_Wealth
+	completion_reward = {
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		fourth_estate_democratic_socialist_increase = yes
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+########################
+### Social Democracy ###
+########################
+
+shared_focus = {
+	id = IRE_Social_Democracy
+	icon = GFX_goal_Ideology_Social_Democracy
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Socialism
+	}
+	mutually_exclusive = {
+		focus = IRE_Progressivism
+	}
+	relative_position_id = IRE_Path_to_Freedom
+	prerequisite = {
+		focus = IRE_Path_to_Freedom
+	}
+
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEF_Social_Democratic_Doctrine
+			days = 1095
+		}
+		fourth_estate_social_democrat_increase = yes
+	}
+
+	ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				add = 5
+				is_historical_focus_on = yes
+				has_government = social_democrat
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_ORDER
+				}
+				has_government = social_democrat
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_DISORDER
+				}
+			}
+		}
+}
+shared_focus = {
+	id = IRE_Strengthen_Unions
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
+	x = 0
+	y = 1
+	cost = @Time_70_days
+	relative_position_id = IRE_Social_Democracy
+	prerequisite = {
+		focus = IRE_Socialism
+		focus = IRE_Social_Democracy
+		focus = IRE_Progressivism
+	}
+
+
+	completion_reward = {
+		fourth_estate_social_democrat_increase = yes
+		add_stability = -0.05
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.10
+		}
+		add_ideas = GEF_Strong_Unions
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Protect_Workers_Rights
+	icon = GFX_goal_Workers_Rights
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Strengthen_Unions
+	}
+
+	relative_position_id = IRE_Strengthen_Unions
+	completion_reward = {
+		add_ideas = GEF_Protect_Workers_Rights
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#####################
+### Progressivism ###
+#####################
+
+shared_focus = {
+	id = IRE_Progressivism
+	icon = GFX_goal_Ideology_Progressive
+	x = 2
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Socialism
+	}
+	mutually_exclusive = {
+		focus = IRE_Social_Democracy
+	}
+	relative_position_id = IRE_Path_to_Freedom
+	prerequisite = {
+		focus = IRE_Path_to_Freedom
+	}
+
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEF_Progressive_Doctrine
+			days = 1095
+		}
+		fourth_estate_progressive_increase = yes
+	}
+
+	ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				add = 5
+				is_historical_focus_on = yes
+				has_government = progressive
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_ORDER
+				}
+				OR = {
+					has_government = progressive
+					has_government = nationalist
+				}
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_DISORDER
+				}
+			}
+		}
+}
+shared_focus = {
+	id = IRE_Environmental_Policy
+	icon = GFX_focus_generic_treaty
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Progressivism
+	}
+
+	relative_position_id = IRE_Progressivism
+	completion_reward = {
+		fourth_estate_progressive_increase = yes
+		add_stability = -0.05
+		add_ideas = GEF_Environmental_Policy
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Net-Zero_Emissions
+	icon = GFX_goal_Green_World
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Environmental_Policy
+	}
+
+	relative_position_id = IRE_Environmental_Policy
+	completion_reward = {
+		add_ideas = GEF_Carbon_Tax
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#########################
+### Social Liberalism ###
+#########################
+
+shared_focus = {
+	id = IRE_Social_Liberalism
+	icon = GFX_goal_Ideology_Social_Liberal
+	x = 5
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Liberalism
+	}
+	relative_position_id = IRE_Path_to_Freedom
+	prerequisite = {
+		focus = IRE_Path_to_Freedom
+	}
+
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEF_Liberal_Doctrine
+			days = 1095
+		}
+		fourth_estate_social_liberal_increase = yes
+	}
+
+	ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				add = 5
+				is_historical_focus_on = yes
+				has_government = social_liberal
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_ORDER
+				}
+				OR = {
+					has_government = social_liberal
+					has_government = nationalist
+				}
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_DISORDER
+				}
+			}
+		}
+}
+shared_focus = {
+	id = IRE_Encourage_Immigration
+	icon = GFX_goal_Immigration
+	x = -1
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Social_Democracy
+		focus = IRE_Progressivism
+		focus = IRE_Social_Liberalism
+	}
+	relative_position_id = IRE_Social_Liberalism
+
+	completion_reward = {
+		add_ideas = IRE_Immigrant_Influx
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Jobs_for_Immigrants
+	icon = GFX_goal_Migrant_Worker
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Encourage_Immigration
+	}
+	relative_position_id = IRE_Encourage_Immigration
+
+	completion_reward = {
+		add_stability = -0.05
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Social_Freedoms
+	icon = GFX_focus_spr_torchbearers_of_tomorrow
+	x = 1
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Social_Liberalism
+	}
+
+	relative_position_id = IRE_Social_Liberalism
+
+	completion_reward = {
+		fourth_estate_social_liberal_increase = yes
+		add_stability = -0.05
+		add_popularity = {
+			ideology = social_liberal
+			popularity = 0.10
+		}
+		add_ideas = GEF_Social_Freedoms
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Social_Programs
+	icon = GFX_focus_generic_concessions
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Social_Freedoms
+	}
+	relative_position_id = IRE_Social_Freedoms
+
+	completion_reward = {
+		add_ideas = IRE_Social_Programs
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+##################
+### Liberalism ###
+##################
+
+shared_focus = {
+	id = IRE_Liberalism
+	icon = GFX_goal_Ideology_Market_Liberal
+	x = 9
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Social_Liberalism
+	}
+	relative_position_id = IRE_Path_to_Freedom
+	prerequisite = {
+		focus = IRE_Path_to_Freedom
+	}
+
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEF_Capitalist_Doctrine
+			days = 1095
+		}
+		fourth_estate_market_liberal_increase = yes
+	}
+
+	ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				add = 5
+				is_historical_focus_on = yes
+				has_government = market_liberal
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_ORDER
+				}
+				OR = {
+					has_government = market_liberal
+					has_government = reactionary
+					has_government = conservative
+				}
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_DISORDER
+				}
+			}
+		}
+}
+shared_focus = {
+	id = IRE_Economic_Freedom
+	icon = GFX_goal_Economic_Freedom
+	x = -1
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Liberalism
+	}
+	relative_position_id = IRE_Liberalism
+
+	completion_reward = {
+		fourth_estate_market_liberal_increase = yes
+		add_stability = -0.05
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.10
+		}
+		add_ideas = IRE_Economic_Freedom
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Free_Market_Driven_Economy
+	icon = GFX_goal_generic_positive_trade_relations
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Economic_Freedom
+	}
+	relative_position_id = IRE_Economic_Freedom
+
+	completion_reward = {
+		add_ideas = GEF_Market_Economy
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+####################
+### Conservatism ###
+####################
+
+shared_focus = {
+	id = IRE_Conservatism
+	icon = GFX_goal_Ideology_Conservative
+	x = 12
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Reactionary_Democracy
+	}
+
+	prerequisite = {
+		focus = IRE_Path_to_Freedom
+	}
+	relative_position_id = IRE_Path_to_Freedom
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEF_Conservative_Doctrine
+			days = 1095
+		}
+		fourth_estate_conservative_increase = yes
+	}
+
+	ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				add = 5
+				is_historical_focus_on = yes
+				has_government = conservative
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_ORDER
+				}
+				OR = {
+					has_government = conservative
+					has_government = market_liberal
+				}
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_DISORDER
+				}
+			}
+		}
+}
+shared_focus = {
+	id = IRE_Family_Values
+	icon = GFX_goal_Family_Values_1
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Conservatism
+	}
+	relative_position_id = IRE_Conservatism
+
+	completion_reward = {
+		fourth_estate_conservative_increase = yes
+		add_stability = -0.05
+		add_popularity = {
+			ideology = conservative
+			popularity = 0.10
+		}
+		add_ideas = GEF_Family_Values
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Oppose_Progressives
+	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Family_Values
+	}
+
+	relative_position_id = IRE_Family_Values
+	completion_reward = {
+		add_stability = 0.10
+		fourth_estate_progressive_decrease = yes
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Expand_Private_Industries
+	icon = GFX_goal_Private_Industries
+	x = 1
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Liberalism
+		focus = IRE_Conservatism
+		focus = IRE_Reactionary_Democracy
+	}
+	relative_position_id = IRE_Liberalism
+
+	completion_reward = {
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Market_Driven_Economy
+	icon = GFX_goal_Cut_Taxes
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Expand_Private_Industries
+	}
+	relative_position_id = IRE_Expand_Private_Industries
+
+	completion_reward = {
+		add_ideas = GEF_Market_Driven_Economy
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+####################
+### Conservatism ###
+####################
+
+shared_focus = {
+	id = IRE_Reactionary_Democracy
+	icon = GFX_goal_Ideology_Reactionary
+	x = 16
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Conservatism
+	}
+
+	prerequisite = {
+		focus = IRE_Path_to_Freedom
+	}
+	relative_position_id = IRE_Path_to_Freedom
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = GEF_Reactionary_Doctrine
+			days = 1095
+		}
+		fourth_estate_reactionary_increase = yes
+	}
+
+	ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				add = 5
+				is_historical_focus_on = yes
+				has_government = reactionary
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_ORDER
+				}
+				OR = {
+					has_government = reactionary
+					has_government = market_liberal
+					has_government = nationalist
+				}
+			}
+			modifier = {
+				add = 7
+				has_game_rule = {
+					rule = ZZZ_AI_BEHAVIOR
+					option = LOGIC_DISORDER
+				}
+			}
+		}
+}
+shared_focus = {
+	id = IRE_Reduce_Government_Spending
+	icon = GFX_focus_generic_treaty
+	x = 2
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Conservatism
+		focus = IRE_Reactionary_Democracy
+	}
+	relative_position_id = IRE_Conservatism
+
+	completion_reward = {
+		add_ideas = GEF_Low_Government_Spending
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Increase_Military_Spending
+	icon = GFX_goal_Increase_Military_Spending
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Reduce_Government_Spending
+	}
+	relative_position_id = IRE_Reduce_Government_Spending
+
+	completion_reward = {
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_ideas = GEF_Large_Military_Spending
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Make_Deals_with_the_Oligarchs
+	icon = GFX_goal_Oligarchs_Deals
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Reactionary_Democracy
+	}
+	relative_position_id = IRE_Reactionary_Democracy
+
+	completion_reward = {
+		add_ideas = GEF_Oligarchs_Support
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_National_Security
+	icon = GFX_goal_Military_Guard_1
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Make_Deals_with_the_Oligarchs
+	}
+	relative_position_id = IRE_Make_Deals_with_the_Oligarchs
+
+	completion_reward = {
+		fourth_estate_reactionary_increase = yes
+		add_stability = -0.05
+		add_popularity = {
+			ideology = reactionary
+			popularity = 0.10
+		}
+		add_ideas = GEF_National_Security
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+####################
+###              ###
+### Other People ###
+###              ###
+####################
+
+shared_focus = {
+	id = IRE_Reckless_Progress
+	icon = GFX_focus_research
+	x = 0
+	y = 1
+	cost = @Time_35_days
+
+	prerequisite = {
+		focus = IRE_Nationalize_All_Industries
+		focus = IRE_Protect_Workers_Rights
+		focus = IRE_Net-Zero_Emissions
+	}
+
+	relative_position_id = IRE_Protect_Workers_Rights
+	completion_reward = {
+		add_ideas = GEF_Reckless_Progress
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Commerce_Efficiency
+	icon = GFX_goal_Commerce_Efficiency
+	x = 1
+	y = 1
+	cost = @Time_35_days
+
+	prerequisite = {
+		focus = IRE_Social_Programs
+		focus = IRE_Free_Market_Driven_Economy
+	}
+	relative_position_id = IRE_Social_Programs
+
+	completion_reward = {
+		add_ideas = GEF_Commerce_Efficiency
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Realpolitik
+	icon = GFX_goal_demand_sudetenland
+	x = 0
+	y = 1
+	cost = @Time_35_days
+
+	prerequisite = {
+		focus = IRE_Oppose_Progressives
+		focus = IRE_National_Security
+	}
+	relative_position_id = IRE_Increase_Military_Spending
+
+	completion_reward = {
+		fourth_estate_conservative_increase = yes
+		fourth_estate_reactionary_increase = yes
+		add_political_power = 250
+		add_ideas = GEF_Realpolitik
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+############################
+###                      ###
+### Bonus Political Tree ###
+###                      ###
+############################
+
+shared_focus = {
+	id = IRE_Political_Policies
+	icon = GFX_focus_generic_self_management
+	x = -12
+	y = 1
+	cost = @Time_45_days
+
+	relative_position_id = IRE_status_quo
+	prerequisite = {
+		focus = IRE_status_quo
+	}
+	completion_reward = {
+		add_political_power = 100
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#########################
+### Internal Politics ###
+#########################
+
+shared_focus = {
+	id = IRE_Internal_Politics
+	icon = GFX_goal_generic_improve_relations
+	x = -3
+	y = 1
+	cost = @Time_35_days
+
+	prerequisite = {
+		focus = IRE_Political_Policies
+	}
+
+	relative_position_id  = IRE_Political_Policies
+
+	completion_reward = {
+		add_political_power = 75
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Demographic_Studies
+	icon = GFX_focus_generic_treaty
+	x = -3
+	y = 1
+	cost = @Time_40_days
+
+	prerequisite = {
+		focus = IRE_Internal_Politics
+	}
+
+	relative_position_id  = IRE_Internal_Politics
+
+	completion_reward = {
+		add_political_power = 50
+		add_stability = 0.02
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Secure_National_Unity
+	icon = GFX_goal_generic_national_unity
+	x = -1
+	y = 1
+	cost = @Time_40_days
+
+	prerequisite = {
+		focus = IRE_Internal_Politics
+	}
+
+	relative_position_id  = IRE_Internal_Politics
+
+	completion_reward = {
+		add_war_support = 0.05
+		add_stability = 0.05
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Recruit_more_Administrators
+	icon = GFX_goal_generic_intelligence_exchange
+	x = 1
+	y = 1
+	cost = @Time_40_days
+
+	prerequisite = {
+		focus = IRE_Internal_Politics
+	}
+
+	relative_position_id  = IRE_Internal_Politics
+
+	completion_reward = {
+		add_political_power = 25
+		add_war_support = 0.05
+
+		##########################################################
+		###                                                    ###
+		### Popularity increase depends on the ruling ideology ###
+		###                                                    ###
+		##########################################################
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Traditional_Values
+	icon = GFX_focus_generic_support_the_left_right
+	x = -1
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Mobilize_the_Female_Workforce
+	}
+
+	prerequisite = {
+		focus = IRE_Demographic_Studies
+	}
+
+	relative_position_id  = IRE_Demographic_Studies
+
+	completion_reward = {
+		add_ideas = GEF_Male_Workforce
+		add_popularity = {
+			ideology = conservative
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = reactionary
+			popularity = 0.05
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Mobilize_the_Female_Workforce
+	icon = GFX_goal_Woman_In_The_Workforces
+	x = 1
+	y = 1
+	cost = @Time_70_days
+
+	mutually_exclusive = {
+		focus = IRE_Traditional_Values
+	}
+
+	prerequisite = {
+		focus = IRE_Demographic_Studies
+	}
+	prerequisite = {
+		focus = IRE_Secure_National_Unity
+	}
+
+	relative_position_id  = IRE_Demographic_Studies
+
+	completion_reward = {
+		add_ideas = IRE_Equal_Workforce
+		add_popularity = {
+			ideology = democratic_socialist
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = progressive
+			popularity = 0.05
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Invest_in_Public_Services
+	icon = GFX_goal_reichsautobahn
+	x = -1
+	y = 1
+	cost = @Time_45_days
+
+	prerequisite = {
+		focus = IRE_Recruit_more_Administrators
+	}
+
+	relative_position_id  = IRE_Recruit_more_Administrators
+
+	completion_reward = {
+		add_ideas = GEF_Public_Services_Investment
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Education_Reform
+	icon = GFX_focus_generic_military_academy
+	x = 1
+	y = 1
+	cost = @Time_45_days
+
+	prerequisite = {
+		focus = IRE_Recruit_more_Administrators
+	}
+
+	relative_position_id  = IRE_Recruit_more_Administrators
+
+	completion_reward = {
+		add_ideas = GEF_Education_Reform
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Crackdown_on_Contraceptive
+	icon = GFX_goal_Anti-Birth_Control
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Traditional_Values
+	}
+
+	relative_position_id  = IRE_Traditional_Values
+
+	completion_reward = {
+		add_ideas = GEF_Crackdown_on_Contraceptive
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Birth_Control_Programs
+	icon = GFX_goal_Birth_Control_Program
+	x = 0
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Mobilize_the_Female_Workforce
+	}
+
+	relative_position_id  = IRE_Mobilize_the_Female_Workforce
+
+	completion_reward = {
+		add_ideas = GEF_Steady_Birth_Rate
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Research_Incentives
+	icon = GFX_goal_generic_scientific_exchange
+	x = 0
+	y = 1
+	cost = @Time_45_days
+
+	prerequisite = {
+		focus = IRE_Invest_in_Public_Services
+	}
+
+	relative_position_id  = IRE_Invest_in_Public_Services
+
+	completion_reward = {
+		add_ideas = GEF_Private_Research_and_Census_Reform
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Expand_the_Secret_Service
+	icon = GFX_goal_Secret_Service
+	x = 0
+	y = 1
+	cost = @Time_45_days
+
+	prerequisite = {
+		focus = IRE_Education_Reform
+	}
+
+	relative_position_id = IRE_Education_Reform
+
+	completion_reward = {
+		add_ideas = GEF_Secret_Service_Expansion
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = IRE_Expand_Research_Complexs
+	icon = GFX_focus_research2
+	x = 1
+	y = 1
+	cost = @Time_70_days
+
+	prerequisite = {
+		focus = IRE_Research_Incentives
+	}
+	prerequisite = {
+		focus = IRE_Expand_the_Secret_Service
+	}
+
+	relative_position_id = IRE_Research_Incentives
+
+	completion_reward = {
+		add_research_slot = 1
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+########################
+### Foreign Politics ###
+########################
+
+shared_focus = {
+	id = IRE_Foreign_Policy
+	icon = GFX_goal_generic_major_alliance
+	x = 4
+	y = 1
+	cost = @Time_35_days
+
+	prerequisite = {
+		focus = IRE_Political_Policies
+	}
+
+	relative_position_id  = IRE_Political_Policies
+
+	completion_reward = {
+		add_political_power = 75
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_defend_our_nation
+	icon = defence
+	x = 1
+	y = 1
+	relative_position_id = IRE_Foreign_Policy
+	cost = 10
+
+	mutually_exclusive = {
+		focus = GEN_hire_more_diplomats
+	}
+	mutually_exclusive = {
+		focus = GEN_represent_our_nation
+	}
+	mutually_exclusive = {
+		focus = GEN_prepare_material_aid
+	}
+
+	available = {
+		is_in_faction = no
+		is_subject = no
+	}
+
+	prerequisite = {
+		focus = IRE_Foreign_Policy
+	}
+
+	completion_reward = {
+		add_ideas = GEN_defend_our_lands
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = GEN_represent_our_nation
+	icon = national_greatness
+	x = -1
+	y = 1
+	relative_position_id = IRE_Foreign_Policy
+	cost = 10
+
+	mutually_exclusive = {
+		focus = GEN_hire_more_diplomats
+	}
+	mutually_exclusive = {
+		focus = GEN_defend_our_nation
+	}
+	mutually_exclusive = {
+		focus = GEN_prepare_material_aid
+	}
+	available = {
+		is_in_faction = yes
+		is_faction_leader = yes
+	}
+
+	prerequisite = {
+		focus = IRE_Foreign_Policy
+	}
+
+	completion_reward = {
+		set_rule = { can_create_factions = yes }
+	}
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 100
+			is_faction_leader = yes
+		}
+	}
+}
+shared_focus = {
+	id = GEN_we_rule
+	icon = military_deal
+	x = 0
+	y = 1
+	relative_position_id = GEN_represent_our_nation
+	cost = 10
+
+
+	prerequisite = {
+		focus = GEN_represent_our_nation
+	}
+
+	completion_reward = {
+		add_stability = 0.1
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+shared_focus = {
+	id = GEN_neutrality
+	icon = neutrality
+	x = 0
+	y = 1
+	relative_position_id = GEN_defend_our_nation
+	cost = 10
+
+
+	prerequisite = {
+		focus = GEN_defend_our_nation
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = neutrality_idea
+			}
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+		else_if = {	#Pretty much specific to Austria.
+			limit = {
+				has_idea = austrian_neutrality
+			}
+			remove_ideas = austrian_neutrality
+			add_ideas = neutrality_idea
+		}
+		else = {
+			add_ideas = neutrality_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_build_more_forts
+	text = generic_defensive_constructions
+	icon = city_fort
+	x = 0
+	y = 1
+	relative_position_id = GEN_neutrality
+	cost = 10
+
+	prerequisite = {
+		focus = GEN_neutrality
+	}
+
+	completion_reward = {
+		add_ideas = ENG_defensive_constructions_idea
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_arms_exports
+	icon = small_arms2
+	x = 0
+	y = 1
+	relative_position_id = GEN_build_more_forts
+	cost = 10
+	prerequisite = {
+		focus = GEN_build_more_forts
+	}
+
+	completion_reward = {
+		add_ideas = arms_exports
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_hire_more_diplomats
+	icon = propaganda
+	x = -3
+	y = 1
+	relative_position_id = IRE_Foreign_Policy
+	cost = 10
+
+	mutually_exclusive = {
+		focus = GEN_represent_our_nation
+	}
+	mutually_exclusive = {
+		focus = GEN_defend_our_nation
+	}
+	mutually_exclusive = {
+		focus = GEN_prepare_material_aid
+	}
+
+	prerequisite = {
+		focus = IRE_Foreign_Policy
+	}
+	available = {
+		is_in_faction = yes
+		is_faction_leader = no
+	}
+
+	completion_reward = {
+		add_ideas = GEN_more_diplomats
+	}
+
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+
+
+shared_focus = {
+	id = GEN_military_cooperation
+	icon = entente
+	x = 0
+	y = 1
+	relative_position_id = GEN_we_rule
+	cost = 10
+
+
+	prerequisite = {
+		focus = GEN_we_rule
+	}
+
+	completion_reward = {
+		army_experience = 70
+		every_country = {
+			limit = { is_in_faction_with = ROOT }
+			army_experience = 70
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_invest_in_other_members
+	icon = money
+	x = 0
+	y = 1
+	relative_position_id = GEN_military_cooperation
+	cost = 10
+
+
+	prerequisite = {
+		focus = GEN_military_cooperation
+	}
+
+	completion_reward = {
+		every_country = {
+			limit = {
+				NOT = { original_tag = ROOT }
+				is_in_faction_with = ROOT
+			}
+			random_owned_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_one_of_many
+	icon = major_alliance
+	x = 0
+	y = 1
+	relative_position_id = GEN_hire_more_diplomats
+	cost = 10
+
+
+
+	prerequisite = {
+		focus = GEN_hire_more_diplomats
+	}
+
+	completion_reward = {
+		every_country = {
+			limit = { is_in_faction_with = ROOT }
+			add_opinion_modifier = { target = ROOT modifier = recent_actions_positive }
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_foreign_military_advisors
+	icon = military_mission
+	x = 0
+	y = 1
+	relative_position_id = GEN_one_of_many
+	cost = 10
+
+	prerequisite = {
+		focus = GEN_one_of_many
+	}
+
+	completion_reward = {
+		add_ideas = GEN_foreign_military_advisors_idea
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_airbases_for_us_and_our_allies
+	icon = air_production
+	x = 0
+	y = 1
+	relative_position_id = GEN_foreign_military_advisors
+	cost = 10
+
+	prerequisite = {
+		focus = GEN_foreign_military_advisors
+	}
+
+	completion_reward = {
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = air_base
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = GEN_prepare_material_aid
+	icon = small_arms
+	x = 3
+	y = 1
+	relative_position_id = IRE_Foreign_Policy
+	cost = 10
+
+	mutually_exclusive = {
+		focus = GEN_hire_more_diplomats
+	}
+	mutually_exclusive = {
+		focus = GEN_represent_our_nation
+	}
+	mutually_exclusive = {
+		focus = GEN_defend_our_nation
+	}
+
+	prerequisite = {
+		focus = IRE_Foreign_Policy
+	}
+
+	completion_reward = {
+		add_ideas = GEN_material_aid
+	}
+
+	ai_will_do = {
+		factor = 3
+	}
+}
+
+shared_focus = {
+	id = GEN_participate_in_UN_peacekeeping
+	icon = align_to_united_nations
+	x = 0
+	y = 1
+	relative_position_id = GEN_prepare_material_aid
+	cost = 10
+
+	prerequisite = {
+		focus = GEN_prepare_material_aid
+	}
+
+	completion_reward = {
+		add_ideas = GEN_peacekeeping_efforts1
+		set_rule = {
+			can_send_volunteers = yes
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+shared_focus = {
+	id = GEN_interventionism
+	icon = GFX_goal_generic_political_pressure
+	x = 0
+	y = 2
+	relative_position_id = GEN_prepare_material_aid
+	cost = 10
+
+	prerequisite = {
+		focus = GEN_participate_in_UN_peacekeeping
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = GEN_peacekeeping_efforts2
+			remove_idea = GEN_peacekeeping_efforts1
+		}
+		add_threat = 1
+		if = {
+			limit = {
+				has_idea = neutrality_idea
+			}
+			remove_ideas = neutrality_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+shared_focus = {
+	id = GEN_ensure_global_peace
+	icon = GFX_goal_support_democracy
+	x = 0
+	y = 3
+	relative_position_id = GEN_prepare_material_aid
+	cost = 10
+
+	prerequisite = {
+		focus = GEN_interventionism
+	}
+
+	completion_reward = {
+		swap_ideas = {
+			add_idea = GEN_peacekeeping_efforts3
+			remove_idea = GEN_peacekeeping_efforts2
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+}

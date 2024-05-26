@@ -1,40 +1,110 @@
-set_popularity = {
-	if = { 	limit = { has_idea = IRE_popular_support }
-			set_variable = { var = IRE_civilwar_strength value = 0.3}}
-	if = { 	limit = { has_idea = IRE_medium_support }
-			set_variable = { var = IRE_civilwar_strength value = 0.4}}
-	if = { 	limit = { has_idea = IRE_urban_support }
-			set_variable = { var = IRE_civilwar_strength value = 0.5}}
-	if = { 	limit = { has_idea = IRE_no_support }
-			set_variable = { var = IRE_civilwar_strength value = 0.6}}	
+random_crackdown_event_trigger = {
+	random_list = {
+		5  = { country_event = { days = -21 id = IRE_civilwar_events.8 }}
+		5  = { country_event = { days = -14 id = IRE_civilwar_events.8 }}
+		20 = { country_event = { days = -7  id = IRE_civilwar_events.8 }}
+		20 = { country_event = { days = -5  id = IRE_civilwar_events.8 }}
+		20 = { country_event = { days = -4  id = IRE_civilwar_events.8 }}
+		20 = { country_event = { days = -3  id = IRE_civilwar_events.8 }}}
+}
+random_cv_mission_modifier_negative = {
+	clear_variable = IRE_CVW_mission_days
+	if = { 	limit = {  has_idea = IRE_civil_war_impending }
+			random_list = {
+				30 = { 	add_days_mission_timeout = {
+							mission = IRE_imminent_civilwar
+							days = -3}}
+				30 = { 	add_days_mission_timeout = {
+							mission = IRE_imminent_civilwar
+							days = -4 }}
+				30 = { 	add_days_mission_timeout = {
+							mission = IRE_imminent_civilwar
+							days = -5 }}
+				10 = {  	add_days_mission_timeout = {
+								mission = IRE_imminent_civilwar
+								days = -7 }}}
 	}
+}
+random_cv_mission_modifier_positive = {
+	clear_variable = IRE_CVW_mission_days
+	if = { 	limit = {  has_idea = IRE_civil_war_impending }
+			random_list = {
+				30 = { 	add_days_mission_timeout = {
+						mission = IRE_imminent_civilwar
+						days = 5}}
+				30 = {	add_days_mission_timeout = {
+							mission = IRE_imminent_civilwar
+							days = 6 }}
+				30 = {  add_days_mission_timeout = {
+							mission = IRE_imminent_civilwar
+							days = 7 }}
+				10 = {  add_days_mission_timeout = {
+							mission = IRE_imminent_civilwar
+							days = 10 }}}
+		}
+}
+random_mission_event_trigger = {
+	if = { 	limit = {  has_idea = IRE_civil_war_impending }
+			random_list = {
+				25 = {
+					country_event = {days = 14 id = IRE_civilwar_events.8}
+				}
+				25 = {
+					country_event = {days = 21 id = IRE_civilwar_events.8}
+				}
+				25 = {
+					country_event = {days = 40 id = IRE_civilwar_events.8}
+				}
+				25 = {
+					country_event = {days = 50 id = IRE_civilwar_events.8}
+				}
+			}
+
+		}
+}
+set_popularity = {
+	if = { 	limit = { has_country_flag = unexpected_civilwar }
+			if = { 	limit = { has_idea = IRE_popular_support }
+					set_variable = { var = IRE_civilwar_strength value = 0.7}}
+			if = { 	limit = { has_idea = IRE_medium_support }
+					set_variable = { var = IRE_civilwar_strength value = 0.6}}
+			if = { 	limit = { has_idea = IRE_urban_support }
+					set_variable = { var = IRE_civilwar_strength value = 0.5}}
+			if = { 	limit = { has_idea = IRE_no_support }
+					set_variable = { var = IRE_civilwar_strength value = 0.4}}	
+	}
+	else = {
+		set_variable = { var = IRE_civilwar_strength value = 1}
+		troops_for_government = yes
+	}
+}
 start_civilwar = {
+	remove_mission = IRE_imminent_civilwar
 	if = { 	limit = { has_country_flag = has_secured_munster }
 			if = { 	limit = { has_country_flag = has_secured_connanaught }
 					start_civil_war = { #CIVILWAR
 						ruling_party = nationalist
 						ideology = ROOT
-						states = { 113 134 }
-						size = 0.6 
+						states = { 113 }
+						size = 1
 					}
 				}
 			else = {
 				start_civil_war = { #CIVILWAR
 				ruling_party = nationalist
 				ideology = ROOT
-				states = { 113 }
-				size = 0.45 
+				states = { 113 134 }
+				size = 1
 				}
 			}
 			}
 	else = {
-		set_popularity = yes
 		subtract_from_variable = { var = IRE_civilwar_strength value = -0.15}
 		start_civil_war = { #CIVILWAR
 			ruling_party = nationalist
 			ideology = ROOT
-			states = { 113 }
-			size = IRE_civilwar_strength
+			states = { 113 134}
+			size = 1
 			}
 	}
 	
@@ -64,6 +134,17 @@ recruit_civilwar_commanders = {
 				traits = { politically_connected infantry_leader }
 			}
 		}
+}
+troops_for_government = {
+	load_oob = ire_cv_template
+	create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+	owner = ROOT }	
+	create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+	owner = ROOT }	
+	create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+	owner = ROOT }	
+	create_unit = {	division = "name = \"Cosaint Chríochach Deonach\" division_template = \"Óglaigh na hÉireann\" start_manpower_factor = 1"
+	owner = ROOT }	
 }
 troops_for_civilwar = {
 	load_oob = ire_cv_template
@@ -117,7 +198,7 @@ troops_for_civilwar = {
 			}
 	}
 }
-IRA_coup = {
+IRA_coup_civilwar = {
 	create_country_leader = { #IRA government
 				name = "IRA Council"
 				picture = "gfx/leaders/IRE/ira_council.dds"
@@ -159,23 +240,3 @@ lower_government_support = {
 			}
 		}
 }
-sinn_fein_take_power = {
-	if = {	limit = { has_idea = IRE_no_support }
-			set_country_flag = IRE_republic_overthrown
-			add_political_power = 500	
-			remove_ideas = { IRE_british_republican_support IRE_american_volunteers IRE_civil_war_impending}
-			add_ideas = { IRE_left_wing_nationalist IRE_PIRA_Friendly }
-			create_country_leader = { #IRA government
-				name = "Gerry Adams"
-				picture = "gfx/leaders/IRE/gerry_adams.dds"
-				expire = "1.1.1.1"
-				ideology = national_democrat
-			}
-			set_politics = {
-				ruling_party = nationalist
-				elections_allowed = yes
-				election_frequency = 60
-				name = "Sinn Féin[R]"
-			}
-			set_cosmetic_tag = ROI
-}}

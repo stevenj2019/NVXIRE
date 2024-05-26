@@ -1,5 +1,5 @@
 add_namespace = IRE_civilwar_events
-
+add_namespace = IRE_socialist_civilwar_events
 country_event = {#Civilwar reduced gov support event//
 	id = IRE_civilwar_events.1
 	title = IRE_civilwar_events.1.t
@@ -43,20 +43,20 @@ country_event = {#PM Assassinated
 	desc = IRE_civilwar_events.4.desc
 	picture = GFX_report_event_real_ira
 	is_triggered_only = yes
-	option = { ## hidden coup option, puts sinn fein in power immediatly, bypassing up to the nationalist constitution focus
+	option = { ## hidden coup option, the 'RA takes control of the government, establishing a junta while discussions are held
 		trigger = { if = { 	limit = { has_idea = IRE_no_support }}}
 		name = IRE_civilwar_events.4.a
 		add_ideas = IRE_civil_war_avoided
-		sinn_fein_take_power = yes
+		IRA_coup = yes
 		}
 	option = { ## Start the civil War now!
 		name = IRE_civilwar_events.4.b
 		lower_government_support = yes
-		IRA_coup = yes
+		IRA_coup_civilwar = yes
 		troops_for_civilwar = yes
 	}
 }
-country_event = {#Civilwar Begins Works 
+country_event = {#Civilwar Begins
 	id = IRE_civilwar_events.5
 	title = IRE_civilwar_events.5.t
 	desc = IRE_civilwar_events.5.desc
@@ -65,7 +65,7 @@ country_event = {#Civilwar Begins Works
 	option = {
 		name = IRE_civilwar_events.5.a
 		lower_government_support = yes
-		IRA_coup = yes
+		IRA_coup_civilwar = yes
 		troops_for_civilwar = yes
 	}
 }
@@ -77,9 +77,10 @@ country_event = {#Civilwar Begins - unexpectedly
 	is_triggered_only = yes
 	option = {
 		name = IRE_civilwar_events.6.a
+		set_country_flag = unexpected_civilwar
 		lower_government_support = yes
+		IRA_coup_civilwar = yes
 		troops_for_civilwar = yes
-		IRA_coup = yes
 	}}
 
 country_event = {#Transfer of Power to Sinn Fein - Needs event picturee
@@ -93,3 +94,84 @@ country_event = {#Transfer of Power to Sinn Fein - Needs event picturee
 		sinn_fein_take_power = yes
 	}
 }
+country_event = {#random ish event to interfere with mission good
+	id = IRE_civilwar_events.8
+	title = IRE_civilwar_events.8.t
+	desc = IRE_civil_war_events.8.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	trigger = { has_idea = IRE_civil_war_impending }
+	option = {
+		name = IRE_civilwar_events.8.a
+		random_cv_mission_modifier_negative = yes
+		random_mission_event_trigger = yes
+		random_crackdown_event_trigger = yes
+	}
+}
+country_event = {#clash with socialists
+	id = IRE_socialist_civilwar_events.1
+	title = IRE_socialist_civilwar_events.1.t
+	desc = IRE_socialist_civilwar_events.1.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = {
+		name = IRE_socialist_civilwar_events.1.a
+		set_country_flag = IRE_clashed_with_socialists
+	}
+	option = {
+		name = IRE_socialist_civilwar_events.1.b
+	}
+}
+country_event = {#they back down
+	id = IRE_socialist_civilwar_events.2
+	title = IRE_socialist_civilwar_events.2.t
+	desc = IRE_socialist_civilwar_events.2.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = { name = IRE_socialist_civilwar_events.2.a }
+}
+country_event = {#deal with socialists
+	id = IRE_socialist_civilwar_events.3
+	title = IRE_socialist_civilwar_events.3.t
+	desc = IRE_socialist_civilwar_events.3.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = {
+		name = IRE_socialist_civilwar_events.3.a
+		set_country_flag = IRE_deal_with_the_moderate_socialists # will open normal paths
+		lower_government_support = yes
+	}
+	option = { name = IRE_socialist_civilwar_events.3.b }
+}
+country_event = {#socialist ignore our calls
+	id = IRE_socialist_civilwar_events.4
+	title = IRE_socialist_civilwar_events.4.t
+	desc = IRE_socialist_civilwar_events.4.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = { name = IRE_socialist_civilwar_events.4.a }
+}
+country_event = {#deal with socialists
+	id = IRE_socialist_civilwar_events.5
+	title = IRE_socialist_civilwar_events.5.t
+	desc = IRE_socialist_civilwar_events.5.desc
+	picture = GFX_report_event_DEN_Irish_Introduction
+	is_triggered_only = yes
+	option = { #embrace our radical brother
+		name = IRE_socialist_civilwar_events.5.a
+		set_country_flag = IRE_radical_socialists_allowed # will open all socialist paths
+	}
+	option = { #a puritan socialist, but conservative party
+		name = IRE_socialist_civilwar_events.5.b
+		set_country_flag = IRE_communist_puritans_only  #stuck to socialist side, bust most choices
+	}
+	option = { #moderate socialists only
+		name = IRE_socialist_civilwar_events.5.c
+		set_country_flag = IRE_moderate_socialists_dominant #could go either way
+	}
+	option = { #ack, this can never work
+		name = IRE_socialist_civilwar_events.5.d #remain locked to the nationalist paths
+		set_country_flag = IRE_nationalists_only
+	}
+}
+

@@ -1,0 +1,35 @@
+IRA_coup = {
+	create_country_leader = { #IRA government
+				name = "IRA Council"
+				picture = "gfx/leaders/IRE/ira_council.dds"
+				expire = "1.1.1.1"
+				ideology = military_junta
+			}
+	set_cosmetic_tag = PRI
+	swap_ideas = { #IRA government
+		remove_idea = IRE_PIRA_return_idea
+		add_idea = IRE_PIRA_Military_Government_idea
+	}
+	recruit_civilwar_commanders = yes	
+}
+sinn_fein_take_power = {
+	if = {	limit = { has_idea = IRE_no_support }
+			set_country_flag = IRE_republic_overthrown
+			add_political_power = 500	
+			remove_ideas = { IRE_british_republican_support IRE_american_volunteers IRE_civil_war_impending}
+			add_ideas = { IRE_left_wing_nationalist IRE_PIRA_Friendly }
+			create_country_leader = { #IRA government
+				name = "Gerry Adams"
+				picture = "gfx/leaders/IRE/gerry_adams.dds"
+				expire = "1.1.1.1"
+				ideology = national_democrat
+			}
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = yes
+				election_frequency = 60
+				long_name = "Sinn Féin[R]" #TODO make sure this works
+				name = "Sinn Féin[R]"
+			}
+			set_cosmetic_tag = ROI
+}}

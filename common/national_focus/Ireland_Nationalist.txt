@@ -1,0 +1,117 @@
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_a_nationalist_constitution
+	icon = GFX_goal_support_fascism
+	bypass       = { has_idea = IRE_civil_war_avoided }
+	x = 25
+	y = 0
+	relative_position_id = IRE_a_socialist_constitution
+	cost = 10 
+	available = { NOT = { has_country_flag = IRE_socialist_path }}
+	allow_branch = {
+	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		set_country_flag = IRE_nationalist_path
+		country_event = {days = 0 id = IRE_civilwar_events.5}
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_centralisation_of_power
+	icon = GFX_goal_support_fascism
+	x = -5
+	y = 1
+	relative_position_id = IRE_a_nationalist_constitution
+	cost = 10 
+	prerequisite = { focus = IRE_a_nationalist_constitution	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		country_event = {days = 0 id = IRE_civilwar_events.5}
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_cult_of_personality
+	icon = GFX_goal_support_fascism
+	x = -4
+	y = 1
+	relative_position_id = IRE_centralisation_of_power
+	cost = 10 
+	prerequisite = { focus = IRE_centralisation_of_power	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		country_event = {days = 0 id = IRE_civilwar_events.5}
+		set_country_flag = IRE_open_to_diplomacy
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_corporate_fascism
+	icon = GFX_goal_support_fascism
+	x = 0
+	y = 1
+	relative_position_id = IRE_centralisation_of_power
+	cost = 10 
+	prerequisite = { focus = IRE_centralisation_of_power	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		country_event = {days = 0 id = IRE_civilwar_events.5}
+		set_country_flag = IRE_open_to_diplomacy
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_clerical_fascism
+	icon = GFX_goal_support_fascism
+	x = 4
+	y = 1
+	relative_position_id = IRE_centralisation_of_power
+	cost = 10 
+	prerequisite = { focus = IRE_centralisation_of_power	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		country_event = {days = 0 id = IRE_civilwar_events.5}
+		set_country_flag = IRE_open_to_diplomacy
+	}
+}
+shared_focus = { #POLITICAL-NATIONALIST
+	id = IRE_nationalist_not_dictatorship
+	icon = GFX_goal_support_fascism
+	x = 5
+	y = 1
+	relative_position_id = IRE_a_nationalist_constitution
+	cost = 10 
+	prerequisite = { focus = IRE_a_nationalist_constitution	}
+	ai_will_do = {
+		factor = 20
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
+	}
+	completion_reward = {
+		country_event = {days = 0 id = IRE_civilwar_events.7}
+		set_country_flag = IRE_open_to_diplomacy
+		sinn_fein_take_power = yes
+	}
+}

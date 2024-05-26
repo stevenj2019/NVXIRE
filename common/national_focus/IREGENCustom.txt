@@ -34,7 +34,7 @@
  @Time_175_days = 25
 
  shared_focus = {
- 	id = IREGEN_a_new_economy_for_a_new_millenium
+ 	id = IRE_a_new_economy_for_a_new_millenium
  	icon = GFX_goal_generic_construction
  	x = 6
  	y = 0
@@ -55,16 +55,16 @@
  }
 
  shared_focus = {
- 	id = IREGEN_attract_investment
+ 	id = IRE_attract_investment
  	text = GEF_Attract_Foreign_Investors
  	icon = GFX_focus_mex_privatisation
  	x = 14
  	y = 1
- 	relative_position_id = IREGEN_a_new_economy_for_a_new_millenium
+ 	relative_position_id = IRE_a_new_economy_for_a_new_millenium
  	cost = 5
 
  	prerequisite = {
- 		focus = IREGEN_a_new_economy_for_a_new_millenium
+ 		focus = IRE_a_new_economy_for_a_new_millenium
  	}
 
  	available = {
@@ -76,7 +76,7 @@
  }
 #American
  shared_focus = {
- 	id = IREGEN_Invite_American_Investors
+ 	id = IRE_Invite_American_Investors
  	text = GEF_Invite_American_Investors
  	icon = GFX_Align_to_America
  	x = -6
@@ -87,23 +87,23 @@
  		country_exists = USA
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Japanese_Investors
+ 		focus = IRE_Invite_Japanese_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_European_Investors
+ 		focus = IRE_Invite_European_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Russian_Planners
+ 		focus = IRE_Invite_Russian_Planners
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Chinese_Planners
+ 		focus = IRE_Invite_Chinese_Planners
  	}
 
  	prerequisite = {
- 		focus = IREGEN_attract_investment
+ 		focus = IRE_attract_investment
  	}
 
- 	relative_position_id  = IREGEN_attract_investment
+ 	relative_position_id  = IRE_attract_investment
 
  	completion_reward = {
  		add_offsite_building = {
@@ -137,7 +137,7 @@
  }
 
  shared_focus = {
- 	id = IREGEN_Invite_US_Tech_Companies
+ 	id = IRE_Invite_US_Tech_Companies
  	text = GEF_Invite_US_Tech_Companies
  	icon = GFX_goal_generic_scientific_exchange
  	x = -1
@@ -145,10 +145,10 @@
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_American_Investors
+ 		focus = IRE_Invite_American_Investors
  	}
 
- 	relative_position_id  = IREGEN_Invite_American_Investors
+ 	relative_position_id  = IRE_Invite_American_Investors
 
  	completion_reward = {
  		random_owned_state = {
@@ -172,7 +172,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Invite_American_Industries
+ 	id = IRE_Invite_American_Industries
  	text = GEF_Invite_American_Industries
  	icon = GFX_goal_American_Manufacturing
  	x = 1
@@ -180,10 +180,10 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_US_Tech_Companies
+ 		focus = IRE_Invite_US_Tech_Companies
  	}
 
- 	relative_position_id  = IREGEN_Invite_US_Tech_Companies
+ 	relative_position_id  = IRE_Invite_US_Tech_Companies
 
  	completion_reward = {
  		random_owned_state = {
@@ -215,7 +215,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_American_Air_Industry_Expansion
+ 	id = IRE_American_Air_Industry_Expansion
  	text = GEF_American_Air_Industry_Expansion
  	icon = GFX_Raytheon_Technologies
  	x = 0
@@ -223,13 +223,13 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_US_Tech_Companies
+ 		focus = IRE_Invite_US_Tech_Companies
  	}
  	prerequisite = {
- 		focus = IREGEN_Invite_American_Industries
+ 		focus = IRE_Invite_American_Industries
  	}
 
- 	relative_position_id  = IREGEN_Invite_US_Tech_Companies
+ 	relative_position_id  = IRE_Invite_US_Tech_Companies
 
  	completion_reward = {
  		custom_effect_tooltip = available_designer
@@ -250,7 +250,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Invite_Japanese_Investors
+ 	id = IRE_Invite_Japanese_Investors
  	text = GEF_Invite_Japanese_Investors
  	icon = GFX_Align_to_Japan
  	x = -3
@@ -261,23 +261,23 @@
  		country_exists = JAP
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_American_Investors
+ 		focus = IRE_Invite_American_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_European_Investors
+ 		focus = IRE_Invite_European_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Russian_Planners
+ 		focus = IRE_Invite_Russian_Planners
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Chinese_Planners
+ 		focus = IRE_Invite_Chinese_Planners
  	}
 
  	prerequisite = {
- 		focus = IREGEN_attract_investment
+ 		focus = IRE_attract_investment
  	}
 
- 	relative_position_id = IREGEN_attract_investment 
+ 	relative_position_id = IRE_attract_investment 
 
  	completion_reward = {
  		add_offsite_building = {
@@ -311,7 +311,7 @@
  }
 
  shared_focus = {
- 	id = IREGEN_Invite_Japanese_Tech_Companies
+ 	id = IRE_Invite_Japanese_Tech_Companies
  	text = GEF_Invite_Japanese_Tech_Companies
  	icon = GFX_goal_generic_scientific_exchange
  	x = 0
@@ -319,10 +319,10 @@
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Japanese_Investors
+ 		focus = IRE_Invite_Japanese_Investors
  	}
 
- 	relative_position_id  = IREGEN_Invite_Japanese_Investors
+ 	relative_position_id  = IRE_Invite_Japanese_Investors
 
  	completion_reward = {
  		random_owned_state = {
@@ -346,7 +346,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Invite_Japanese_Industries
+ 	id = IRE_Invite_Japanese_Industries
  	text = GEF_Invite_Japanese_Industries
  	icon = GFX_goal_Japanese_Manufacturing
  	x = -1
@@ -354,10 +354,10 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Japanese_Tech_Companies
+ 		focus = IRE_Invite_Japanese_Tech_Companies
  	}
 
- 	relative_position_id  = IREGEN_Invite_Japanese_Tech_Companies
+ 	relative_position_id  = IRE_Invite_Japanese_Tech_Companies
 
  	completion_reward = {
  		random_owned_state = {
@@ -381,7 +381,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Japanese_Heavy_Industries
+ 	id = IRE_Japanese_Heavy_Industries
  	text = GEF_Japanese_Heavy_Industries
  	icon = GFX_goal_Japan_Factory
  	x = 0
@@ -389,13 +389,13 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Japanese_Tech_Companies
+ 		focus = IRE_Invite_Japanese_Tech_Companies
  	}
  	prerequisite = {
- 		focus = IREGEN_Invite_Japanese_Industries
+ 		focus = IRE_Invite_Japanese_Industries
  	}
 
- 	relative_position_id  = IREGEN_Invite_Japanese_Tech_Companies
+ 	relative_position_id  = IRE_Invite_Japanese_Tech_Companies
 
  	completion_reward = {
  		random_owned_state = {
@@ -423,7 +423,7 @@
 
   #European
  shared_focus = {
- 	id = IREGEN_Invite_European_Investors
+ 	id = IRE_Invite_European_Investors
  	icon = GFX_goal_EU_Agreement
  	x = 0
  	y = 1
@@ -449,23 +449,23 @@
  		}
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_American_Investors
+ 		focus = IRE_Invite_American_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Japanese_Investors
+ 		focus = IRE_Invite_Japanese_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Russian_Planners
+ 		focus = IRE_Invite_Russian_Planners
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Chinese_Planners
+ 		focus = IRE_Invite_Chinese_Planners
  	}
 
  	prerequisite = {
- 		focus = IREGEN_attract_investment
+ 		focus = IRE_attract_investment
  	}
 
- 	relative_position_id  = IREGEN_attract_investment
+ 	relative_position_id  = IRE_attract_investment
 
  	completion_reward = {
  		add_political_power = 100
@@ -477,17 +477,17 @@
  }
 
  shared_focus = {
- 	id = IREGEN_Invite_european_banks
+ 	id = IRE_Invite_european_banks
  	icon = GFX_goal_EU_Business_Deal
  	x = 1
  	y = 1
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_European_Investors
+ 		focus = IRE_Invite_European_Investors
  	}
 
- 	relative_position_id  = IREGEN_Invite_European_Investors
+ 	relative_position_id  = IRE_Invite_European_Investors
 
  	completion_reward = {
  		random_owned_state = {
@@ -507,17 +507,17 @@
 
 
  shared_focus = {
- 	id = IREGEN_European_Technology_exchanges
+ 	id = IRE_European_Technology_exchanges
  	icon = GFX_goal_generic_scientific_exchange
  	x = -1
  	y = 1
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_European_Investors
+ 		focus = IRE_Invite_European_Investors
  	}
 
- 	relative_position_id  = IREGEN_Invite_European_Investors
+ 	relative_position_id  = IRE_Invite_European_Investors
 
  	completion_reward = {
  		random_owned_state = {
@@ -535,20 +535,20 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_european_auto_industry
+ 	id = IRE_european_auto_industry
  	icon = GFX_GER_Volkswagen
  	x = 0
  	y = 1
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_European_Technology_exchanges
+ 		focus = IRE_European_Technology_exchanges
  	}
  	prerequisite = {
- 		focus = IREGEN_Invite_european_banks
+ 		focus = IRE_Invite_european_banks
  	}
 
- 	relative_position_id  = IREGEN_European_Technology_exchanges
+ 	relative_position_id  = IRE_European_Technology_exchanges
 
  	completion_reward = {
  		random_owned_state = {
@@ -566,20 +566,20 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_european_administrators
+ 	id = IRE_european_administrators
  	icon = GFX_focus_generic_diplomatic_treaty
  	x = 0
  	y = 1
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_European_Technology_exchanges
+ 		focus = IRE_European_Technology_exchanges
  	}
  	prerequisite = {
- 		focus = IREGEN_Invite_european_banks
+ 		focus = IRE_Invite_european_banks
  	}
 
- 	relative_position_id  = IREGEN_Invite_european_banks
+ 	relative_position_id  = IRE_Invite_european_banks
 
  	completion_reward = {
 
@@ -590,18 +590,18 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_european_high_speed_rail
+ 	id = IRE_european_high_speed_rail
  	icon = GFX_Renfe_AVE
  	x = 1
  	y = 1
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_european_auto_industry
- 		focus = IREGEN_european_administrators
+ 		focus = IRE_european_auto_industry
+ 		focus = IRE_european_administrators
  	}
 
- 	relative_position_id  = IREGEN_european_auto_industry
+ 	relative_position_id  = IRE_european_auto_industry
 
  	completion_reward = {
  		random_owned_state = {
@@ -620,7 +620,7 @@
  }
   #Russia
  shared_focus = {
- 	id = IREGEN_Invite_Russian_Planners
+ 	id = IRE_Invite_Russian_Planners
  	text = GEF_Invite_Russian_Planners
  	icon = GFX_Align_to_Russia
  	x = 3
@@ -631,23 +631,23 @@
  		country_exists = SOV
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_American_Investors
+ 		focus = IRE_Invite_American_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Japanese_Investors
+ 		focus = IRE_Invite_Japanese_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_European_Investors
+ 		focus = IRE_Invite_European_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Chinese_Planners
+ 		focus = IRE_Invite_Chinese_Planners
  	}
 
  	prerequisite = {
- 		focus = IREGEN_attract_investment
+ 		focus = IRE_attract_investment
  	}
 
- 	relative_position_id   = IREGEN_attract_investment
+ 	relative_position_id   = IRE_attract_investment
 
  	completion_reward = {
  		add_offsite_building = {
@@ -681,7 +681,7 @@
  }
 
  shared_focus = {
- 	id = IREGEN_Invite_Russian_Oil_Industry
+ 	id = IRE_Invite_Russian_Oil_Industry
  	text = GEF_Invite_Russian_Oil_Industry
  	icon = GFX_goal_Oil_Excavation
  	x = 0
@@ -689,10 +689,10 @@
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Russian_Planners
+ 		focus = IRE_Invite_Russian_Planners
  	}
 
- 	relative_position_id  = IREGEN_Invite_Russian_Planners
+ 	relative_position_id  = IRE_Invite_Russian_Planners
 
  	completion_reward = {
  		random_owned_state = {
@@ -716,7 +716,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Invite_Russian_Aerospace_Company
+ 	id = IRE_Invite_Russian_Aerospace_Company
  	text = GEF_Invite_Russian_Aerospace_Company
  	icon = GFX_focus_rocketry
  	x = 1
@@ -724,10 +724,10 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Russian_Oil_Industry
+ 		focus = IRE_Invite_Russian_Oil_Industry
  	}
 
- 	relative_position_id  = IREGEN_Invite_Russian_Oil_Industry
+ 	relative_position_id  = IRE_Invite_Russian_Oil_Industry
 
  	completion_reward = {
  		random_owned_state = {
@@ -759,7 +759,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Russian_Heavy_Industry
+ 	id = IRE_Russian_Heavy_Industry
  	text = GEF_Russian_Heavy_Industry
  	icon = GFX_goal_Russia_Factory
  	x = 0
@@ -767,13 +767,13 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Russian_Oil_Industry
+ 		focus = IRE_Invite_Russian_Oil_Industry
  	}
  	prerequisite = {
- 		focus = IREGEN_Invite_Russian_Aerospace_Company
+ 		focus = IRE_Invite_Russian_Aerospace_Company
  	}
 
- 	relative_position_id  = IREGEN_Invite_Russian_Oil_Industry
+ 	relative_position_id  = IRE_Invite_Russian_Oil_Industry
 
  	completion_reward = {
  		custom_effect_tooltip = available_designer
@@ -794,7 +794,7 @@
  }
   #China
  shared_focus = {
- 	id = IREGEN_Invite_Chinese_Planners
+ 	id = IRE_Invite_Chinese_Planners
  	text = GEF_Invite_Chinese_Planners
  	icon = GFX_Align_to_China
  	x = 7
@@ -809,23 +809,23 @@
  		y = 0
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_American_Investors
+ 		focus = IRE_Invite_American_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Japanese_Investors
+ 		focus = IRE_Invite_Japanese_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_European_Investors
+ 		focus = IRE_Invite_European_Investors
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_Invite_Russian_Planners
+ 		focus = IRE_Invite_Russian_Planners
  	}
 
  	prerequisite = {
- 		focus = IREGEN_attract_investment
+ 		focus = IRE_attract_investment
  	}
 
- 	relative_position_id   = IREGEN_attract_investment  
+ 	relative_position_id   = IRE_attract_investment  
 
  	completion_reward = {
  		add_offsite_building = {
@@ -860,7 +860,7 @@
 
 
  shared_focus = {
- 	id = IREGEN_Invite_Chinese_Tech_Companies
+ 	id = IRE_Invite_Chinese_Tech_Companies
  	text = GEF_Invite_Chinese_Tech_Companies
  	icon = GFX_goal_Coal_Mine
  	x = 0
@@ -868,10 +868,10 @@
  	cost = @Time_45_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Chinese_Planners
+ 		focus = IRE_Invite_Chinese_Planners
  	}
 
- 	relative_position_id  = IREGEN_Invite_Chinese_Planners
+ 	relative_position_id  = IRE_Invite_Chinese_Planners
 
  	completion_reward = {
  		random_owned_state = {
@@ -895,7 +895,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Invite_Chinese_Industries
+ 	id = IRE_Invite_Chinese_Industries
  	text = GEF_Invite_Chinese_Industries
  	icon = GFX_goal_Chinese_Manufacturing
  	x = -1
@@ -903,10 +903,10 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Chinese_Tech_Companies
+ 		focus = IRE_Invite_Chinese_Tech_Companies
  	}
 
- 	relative_position_id  = IREGEN_Invite_Chinese_Tech_Companies
+ 	relative_position_id  = IRE_Invite_Chinese_Tech_Companies
 
  	completion_reward = {
  		random_owned_state = {
@@ -946,7 +946,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Chinese_Heavy_Industry
+ 	id = IRE_Chinese_Heavy_Industry
  	text = GEF_Chinese_Heavy_Industry
  	icon = GFX_goal_PRC_Factory
  	x = 0
@@ -954,13 +954,13 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Chinese_Tech_Companies
+ 		focus = IRE_Invite_Chinese_Tech_Companies
  	}
  	prerequisite = {
- 		focus = IREGEN_Invite_Chinese_Industries
+ 		focus = IRE_Invite_Chinese_Industries
  	}
 
- 	relative_position_id =  IREGEN_Invite_Chinese_Tech_Companies
+ 	relative_position_id =  IRE_Invite_Chinese_Tech_Companies
 
  	completion_reward = {
  		random_owned_state = {
@@ -991,7 +991,7 @@
  }
 
  shared_focus = {
- 	id = IREGEN_Automobile_Industries
+ 	id = IRE_Automobile_Industries
  	text = GEF_Automobile_Industries
  	icon = GFX_goal_generic_army_motorized
  	x = 1
@@ -999,11 +999,11 @@
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_Invite_American_Investors
- 		focus = IREGEN_Invite_Japanese_Investors
+ 		focus = IRE_Invite_American_Investors
+ 		focus = IRE_Invite_Japanese_Investors
  	}
 
- 	relative_position_id  = IREGEN_Invite_American_Investors
+ 	relative_position_id  = IRE_Invite_American_Investors
 
  	completion_reward = {
  		random_owned_state = {
@@ -1025,7 +1025,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Rare_Earth_Refining
+ 	id = IRE_Rare_Earth_Refining
  	text = GEF_Rare_Earth_Refining
  	icon = GFX_goal_generic_production2
  	x = 2
@@ -1033,11 +1033,11 @@
  	cost = @Time_100_days
 
  	prerequisite = {
- 		focus = IREGEN_Invite_Russian_Planners
- 		focus = IREGEN_Invite_Chinese_Planners
+ 		focus = IRE_Invite_Russian_Planners
+ 		focus = IRE_Invite_Chinese_Planners
  	}
 
- 	relative_position_id  = IREGEN_Invite_Russian_Planners
+ 	relative_position_id  = IRE_Invite_Russian_Planners
 
  	completion_reward = {
  		random_owned_state = {
@@ -1058,7 +1058,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Purchase_Foreign_Licences
+ 	id = IRE_Purchase_Foreign_Licences
  	text = GEF_Purchase_Foreign_Licences
  	icon = GFX_focus_generic_license_production
  	x = 0
@@ -1066,14 +1066,14 @@
  	cost = @Time_70_days
 
  	prerequisite = {
- 		focus = IREGEN_American_Air_Industry_Expansion
- 		focus = IREGEN_Japanese_Heavy_Industries
- 		focus = IREGEN_european_high_speed_rail
- 		focus = IREGEN_Russian_Heavy_Industry
- 		focus = IREGEN_Chinese_Heavy_Industry
+ 		focus = IRE_American_Air_Industry_Expansion
+ 		focus = IRE_Japanese_Heavy_Industries
+ 		focus = IRE_european_high_speed_rail
+ 		focus = IRE_Russian_Heavy_Industry
+ 		focus = IRE_Chinese_Heavy_Industry
  	}
 
- 	relative_position_id  = IREGEN_european_high_speed_rail
+ 	relative_position_id  = IRE_european_high_speed_rail
 
  	completion_reward = {
  		add_ideas = GEF_Purchase_Foreign_Licences
@@ -1099,15 +1099,15 @@
   #Domestic 
 
  shared_focus = {
- 	id = IREGEN_domestic_industry
+ 	id = IRE_domestic_industry
  	icon = GFX_focus_generic_population_growth
  	x = -2
  	y = 1
- 	relative_position_id = IREGEN_a_new_economy_for_a_new_millenium
+ 	relative_position_id = IRE_a_new_economy_for_a_new_millenium
  	cost = 5
 
  	prerequisite = {
- 		focus = IREGEN_a_new_economy_for_a_new_millenium
+ 		focus = IRE_a_new_economy_for_a_new_millenium
  	}
 
  	available = {
@@ -1119,15 +1119,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_modern_construction_methods
+ 	id = IRE_modern_construction_methods
  	icon = construction3
  	x = 0
  	y = 1
- 	relative_position_id = IREGEN_domestic_industry
+ 	relative_position_id = IRE_domestic_industry
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_domestic_industry
+ 		focus = IRE_domestic_industry
  	}
 
  	available = {
@@ -1148,15 +1148,15 @@
 
 
  shared_focus = {
- 	id = IREGEN_fill_the_road_gaps
+ 	id = IRE_fill_the_road_gaps
  	icon = infrastructure
  	x = 5
  	y = 1
- 	relative_position_id = IREGEN_domestic_industry
+ 	relative_position_id = IRE_domestic_industry
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_domestic_industry
+ 		focus = IRE_domestic_industry
  	}
 
  	available = {
@@ -1182,15 +1182,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_encourage_urbanization
+ 	id = IRE_encourage_urbanization
  	icon = GFX_focus_generic_full_employment
  	x = -1
  	y = 1
- 	relative_position_id = IREGEN_fill_the_road_gaps
+ 	relative_position_id = IRE_fill_the_road_gaps
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_fill_the_road_gaps
+ 		focus = IRE_fill_the_road_gaps
  	}
 
  	available = {
@@ -1206,15 +1206,15 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_automoative_mines
+ 	id = IRE_automoative_mines
  	icon = GFX_goal_continuous_non_factory_construct
  	x = 1
  	y = 1
- 	relative_position_id = IREGEN_fill_the_road_gaps
+ 	relative_position_id = IRE_fill_the_road_gaps
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_fill_the_road_gaps
+ 		focus = IRE_fill_the_road_gaps
  	}
 
  	available = {
@@ -1233,16 +1233,16 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_develop_consumer_goods_industry
+ 	id = IRE_develop_consumer_goods_industry
  	icon = consumer_goods
  	x = -1
  	y = 1
- 	relative_position_id = IREGEN_automoative_mines
+ 	relative_position_id = IRE_automoative_mines
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_encourage_urbanization
- 		focus = IREGEN_automoative_mines
+ 		focus = IRE_encourage_urbanization
+ 		focus = IRE_automoative_mines
  	}
 
  	available = {
@@ -1250,7 +1250,7 @@
  	}
 
  	completion_reward = {
- 		add_ideas = IREGEN_expanded_consumer_goods_industry
+ 		add_ideas = IRE_expanded_consumer_goods_industry
  		random_owned_state = {
  			add_extra_state_shared_building_slots = 1
  			add_building_construction = {
@@ -1263,15 +1263,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_root_steel_works
+ 	id = IRE_root_steel_works
  	icon = GFX_focus_generic_steel
  	x = 1
  	y = 1
- 	relative_position_id = IREGEN_automoative_mines
+ 	relative_position_id = IRE_automoative_mines
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_automoative_mines
+ 		focus = IRE_automoative_mines
  	}
 
  	available = {
@@ -1287,15 +1287,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_housing_program
+ 	id = IRE_housing_program
  	icon = GFX_focus_usa_guarantee_the_american_dream
  	x = -1
  	y = 1
- 	relative_position_id = IREGEN_develop_consumer_goods_industry
+ 	relative_position_id = IRE_develop_consumer_goods_industry
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_develop_consumer_goods_industry
+ 		focus = IRE_develop_consumer_goods_industry
  	}
 
  	available = {
@@ -1319,15 +1319,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_expand_university
+ 	id = IRE_expand_university
  	icon = GFX_focus_generic_university_1
  	x = 1
  	y = 1
- 	relative_position_id = IREGEN_develop_consumer_goods_industry
+ 	relative_position_id = IRE_develop_consumer_goods_industry
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_develop_consumer_goods_industry
+ 		focus = IRE_develop_consumer_goods_industry
  	}
 
  	bypass = {
@@ -1342,19 +1342,19 @@
  }
 
  shared_focus = {
- 	id = IREGEN_Economic_Boom
+ 	id = IRE_Economic_Boom
  	text = GEF_Economic_Boom
  	icon = GFX_goal_generic_industrial_boom
  	x = -1
  	y = 1
- 	relative_position_id = IREGEN_expand_university
+ 	relative_position_id = IRE_expand_university
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_expand_university
+ 		focus = IRE_expand_university
  	}
  	prerequisite = {
- 		focus = IREGEN_housing_program
+ 		focus = IRE_housing_program
  	}
 
  	available = {
@@ -1371,7 +1371,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Nationwide_Industrial_Development
+ 	id = IRE_Nationwide_Industrial_Development
  	text = GEF_Nationwide_Industrial_Development
  	icon = GFX_goal_Civil_Industry
  	x = 0
@@ -1379,10 +1379,10 @@
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_Economic_Boom
+ 		focus = IRE_Economic_Boom
  	}
 
- 	relative_position_id  = IREGEN_Economic_Boom
+ 	relative_position_id  = IRE_Economic_Boom
 
  	completion_reward = {
  		random_owned_state = {
@@ -1409,7 +1409,7 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_Modernize_the_Railway_System
+ 	id = IRE_Modernize_the_Railway_System
  	text = GEF_Modernize_the_Railway_System
  	icon = GFX_goal_generic_construct_infrastructure
  	x = 2
@@ -1417,10 +1417,10 @@
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_Economic_Boom
+ 		focus = IRE_Economic_Boom
  	}
 
- 	relative_position_id  = IREGEN_Economic_Boom
+ 	relative_position_id  = IRE_Economic_Boom
 
  	completion_reward = {
  		random_owned_state = {
@@ -1458,17 +1458,17 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_export_arms_industry
+ 	id = IRE_export_arms_industry
  	icon = industry_military
  	x = 4
  	y = 1
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_Economic_Boom
+ 		focus = IRE_Economic_Boom
  	}
 
- 	relative_position_id  = IREGEN_Economic_Boom
+ 	relative_position_id  = IRE_Economic_Boom
 
  	completion_reward = {
  		random_owned_state = {
@@ -1487,19 +1487,19 @@
  	}
  }
  shared_focus = {
- 	id = IREGEN_centraly_planned_economy
+ 	id = IRE_centraly_planned_economy
  	icon = industry_communist
  	x = -3
  	y = 1
- 	relative_position_id = IREGEN_modern_construction_methods
+ 	relative_position_id = IRE_modern_construction_methods
  	cost = 10
 
  	mutually_exclusive = {
- 		focus = IREGEN_a_free_market_economy
+ 		focus = IRE_a_free_market_economy
  	}
 
  	prerequisite = {
- 		focus = IREGEN_modern_construction_methods
+ 		focus = IRE_modern_construction_methods
  	}
 
  	available = {
@@ -1515,15 +1515,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_fund_public_schools
+ 	id = IRE_fund_public_schools
  	icon = scientific_exchange
  	x = -1
  	y = 1
- 	relative_position_id = IREGEN_centraly_planned_economy
+ 	relative_position_id = IRE_centraly_planned_economy
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_centraly_planned_economy
+ 		focus = IRE_centraly_planned_economy
  	}
 
  	available = {
@@ -1536,15 +1536,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_increase_investments_over_industry
+ 	id = IRE_increase_investments_over_industry
  	icon = GFX_focus_DEN_heavy_regulations
  	x = 1
  	y = 1
- 	relative_position_id = IREGEN_centraly_planned_economy
+ 	relative_position_id = IRE_centraly_planned_economy
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_centraly_planned_economy
+ 		focus = IRE_centraly_planned_economy
  	}
 
  	available = {
@@ -1564,19 +1564,19 @@
  }
 
  shared_focus = {
- 	id = IREGEN_subside_our_farmers
+ 	id = IRE_subside_our_farmers
  	icon = agriculture
  	x = 0
  	y = 1
- 	relative_position_id = IREGEN_increase_investments_over_industry
+ 	relative_position_id = IRE_increase_investments_over_industry
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_increase_investments_over_industry
- 		focus = IREGEN_free_trade
+ 		focus = IRE_increase_investments_over_industry
+ 		focus = IRE_free_trade
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_agrarian_reform
+ 		focus = IRE_agrarian_reform
  	}
 
  	available = {
@@ -1589,11 +1589,11 @@
  }
 
  shared_focus = {
- 	id = IREGEN_state_owned_armories
+ 	id = IRE_state_owned_armories
  	icon = industry_military
  	x = 0
  	y = 1
- 	relative_position_id = IREGEN_fund_public_schools
+ 	relative_position_id = IRE_fund_public_schools
  	cost = 10
 
  	prerequisite = {
@@ -1618,17 +1618,17 @@
 
 
  shared_focus = {
- 	id = IREGEN_a_free_market_economy
+ 	id = IRE_a_free_market_economy
  	icon = industry_democratic2
  	x = 1
  	y = 1
- 	relative_position_id = IREGEN_modern_construction_methods
+ 	relative_position_id = IRE_modern_construction_methods
  	cost = 10
  	mutually_exclusive = {
- 		focus = IREGEN_centraly_planned_economy
+ 		focus = IRE_centraly_planned_economy
  	}
  	prerequisite = {
- 		focus = IREGEN_modern_construction_methods
+ 		focus = IRE_modern_construction_methods
  	}
 
  	available = {
@@ -1643,15 +1643,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_free_trade
+ 	id = IRE_free_trade
  	icon = trade_deal
  	x = 0
  	y = 1
- 	relative_position_id = IREGEN_a_free_market_economy
+ 	relative_position_id = IRE_a_free_market_economy
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_a_free_market_economy
+ 		focus = IRE_a_free_market_economy
  	}
 
  	available = {
@@ -1665,15 +1665,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_anti_monopoly_laws
+ 	id = IRE_anti_monopoly_laws
  	icon = GFX_focus_generic_treaty
  	x = 1
  	y = 1
- 	relative_position_id = IREGEN_free_trade
+ 	relative_position_id = IRE_free_trade
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_free_trade
+ 		focus = IRE_free_trade
  	}
 
  	available = {
@@ -1690,19 +1690,19 @@
  }
 
  shared_focus = {
- 	id = IREGEN_agrarian_reform
+ 	id = IRE_agrarian_reform
  	text = ROM_agrarian_reform
  	icon = GFX_focus_generic_farmland
  	x = -1
  	y = 1
- 	relative_position_id = IREGEN_free_trade
+ 	relative_position_id = IRE_free_trade
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_free_trade
+ 		focus = IRE_free_trade
  	}
  	mutually_exclusive = {
- 		focus = IREGEN_subside_our_farmers
+ 		focus = IRE_subside_our_farmers
  	}
 
  	available = {
@@ -1715,15 +1715,15 @@
  }
 
  shared_focus = {
- 	id = IREGEN_sell_goverment_shares_in_companies
+ 	id = IRE_sell_goverment_shares_in_companies
  	icon = money
  	x = 0
  	y = 1
- 	relative_position_id = IREGEN_anti_monopoly_laws
+ 	relative_position_id = IRE_anti_monopoly_laws
  	cost = 10
 
  	prerequisite = {
- 		focus = IREGEN_anti_monopoly_laws
+ 		focus = IRE_anti_monopoly_laws
  	}
 
 
@@ -1740,19 +1740,19 @@
  }
 
  shared_focus = {
- 	id = IREGEN_the_Austrian_school
+ 	id = IRE_the_Austrian_school
  	icon = libertarianism
  	x = -1
  	y = 1
- 	relative_position_id = IREGEN_sell_goverment_shares_in_companies
+ 	relative_position_id = IRE_sell_goverment_shares_in_companies
  	cost = 10
 
  	mutually_exclusive = {
- 		focus = IREGEN_Institutional_economic_school
+ 		focus = IRE_Institutional_economic_school
  	}
 
  	prerequisite = {
- 		focus = IREGEN_sell_goverment_shares_in_companies
+ 		focus = IRE_sell_goverment_shares_in_companies
  	}
 
  	available = {
@@ -1768,19 +1768,19 @@
  }
 
  shared_focus = {
- 	id = IREGEN_Institutional_economic_school
+ 	id = IRE_Institutional_economic_school
  	icon = tech_sharing
  	x = 1
  	y = 1
- 	relative_position_id = IREGEN_sell_goverment_shares_in_companies
+ 	relative_position_id = IRE_sell_goverment_shares_in_companies
  	cost = 10
 
  	mutually_exclusive = {
- 		focus = IREGEN_the_Austrian_school
+ 		focus = IRE_the_Austrian_school
  	}
 
  	prerequisite = {
- 		focus = IREGEN_sell_goverment_shares_in_companies
+ 		focus = IRE_sell_goverment_shares_in_companies
  	}
 
  	available = {
@@ -1794,3 +1794,2002 @@
  		}
  	}
  }
+ ## generic military 
+ ###navy
+shared_focus = {
+	id = IRE_modernize_the_navy
+	icon = GFX_focus_generic_naval_discipline
+	x = 105
+	y = 0
+	cost = 5
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	completion_reward = {
+		navy_experience = 35
+	}
+}
+
+shared_focus = {
+	id = IRE_test_the_admirals
+	icon = GFX_focus_naval_officer
+	x = 1
+	y = 1
+	relative_position_id = IRE_modernize_the_navy
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_modernize_the_navy
+	}
+
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = armydoctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = naval_doctrine
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_analize_our_ships
+	icon = GFX_goal_generic_occupy_states_coastal
+	x = -1
+	y = 1
+	relative_position_id = IRE_modernize_the_navy
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_modernize_the_navy
+	}
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.5
+			uses = 2
+			category = naval_equipment
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_green_water_navy
+	icon = GFX_USA_Generic_Corvette_1
+	x = 0
+	y = 1
+	relative_position_id = IRE_analize_our_ships
+	cost = 7.2
+	mutually_exclusive = {
+		focus = IRE_blue_water_navy
+	}
+	prerequisite = {
+		focus = IRE_analize_our_ships
+	}
+	prerequisite = {
+		focus = IRE_test_the_admirals
+	}
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = tech_bonus
+			cost_reduction = 0.45
+			uses = 2
+			category = cat_fleet_in_being
+		}
+	}
+}
+shared_focus = {
+	id = IRE_blue_water_navy
+	icon = GFX_ITA_Destroyers
+	x = 0
+	y = 1
+	relative_position_id = IRE_test_the_admirals
+	cost = 7.2
+	mutually_exclusive = {
+		focus = IRE_green_water_navy
+	}
+	prerequisite = {
+		focus = IRE_analize_our_ships
+	}
+	prerequisite = {
+		focus = IRE_test_the_admirals
+	}
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = tech_bonus
+			cost_reduction = 0.45
+			uses = 2
+			category = cat_base_strike
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_dockyard_expansions_scheme
+	icon = naval_dockyards
+	x = 1
+	y = 1
+	relative_position_id = IRE_green_water_navy
+	cost = 7.2
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_green_water_navy
+		focus = IREblue_water_navy
+	}
+
+	completion_reward = {
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = dockyard
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_destroy_the_with_destroyers
+	icon = GFX_goal_Generic_Missile_Cruisers
+	x = 3
+	y = 1
+	relative_position_id = IRE_blue_water_navy
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_blue_water_navy
+	}
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = ca_tech
+		}
+	}
+}
+
+
+shared_focus = {
+	id = IRE_anti_submarine_warfare
+	icon = anti_submarine
+	x = 0
+	y = 1
+	relative_position_id = IRE_destroy_the_with_destroyers
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_destroy_the_with_destroyers
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = asw_tech
+		}
+	}
+}
+shared_focus = {
+	id = IRE_a_mercahnt_fleet
+	icon = GFX_focus_generic_merchant_fleet
+	x = -1
+	y = 1
+	relative_position_id = IRE_anti_submarine_warfare
+	cost = 7.2
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_anti_submarine_warfare
+	}
+
+	completion_reward = {
+		add_ideas = GEN_merchant_fleet
+	}
+}
+shared_focus = {
+	id = IRE_fleet_logistics
+	icon = GFX_goal_generic_position_armies
+	x = 1
+	y = 1
+	relative_position_id = IRE_anti_submarine_warfare
+	cost = 7.2
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_anti_submarine_warfare
+	}
+
+	completion_reward = {
+		add_ideas = GEN_fleet_logistics
+	}
+}
+shared_focus = {
+	id = IRE_our_first_carriers
+	icon = GFX_ITA_Aircraft_Carrier
+	x = 2
+	y = 1
+	relative_position_id = IRE_destroy_the_with_destroyers
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_destroy_the_with_destroyers
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 3.0
+			uses = 1
+			category = cv_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_corrvete_development
+	icon = GFX_goal_Generic_Modern_Corvettes
+	x = -3
+	y = 1
+	relative_position_id = IRE_green_water_navy
+	cost = 7.2
+
+
+	prerequisite = {
+		focus = IRE_green_water_navy
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = dd_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_patrol_our_shores
+	icon = GFX_focus_generic_destroyer
+	x = -1
+	y = 1
+	relative_position_id = IRE_corrvete_development
+	cost = 7.2
+
+
+	prerequisite = {
+		focus = IRE_corrvete_development
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.65
+			uses = 2
+			category = pb_tech
+		}
+	}
+}
+shared_focus = {
+	id = IRE_naval_refitting
+	icon = GFX_goal_Warship_Buidling
+	x = 1
+	y = 1
+	relative_position_id = IRE_patrol_our_shores
+	cost = 7.2
+
+
+	prerequisite = {
+		focus = IRE_patrol_our_shores
+	}
+	prerequisite = {
+		focus = IRE_attack_and_run_tactics
+	}
+
+	completion_reward = {
+		add_ideas = GEN_naval_refitting
+	}
+}
+
+shared_focus = {
+	id = IRE_cwis
+	icon = generic_air_defense3
+	x = -1
+	y = 1
+	relative_position_id = IRE_dockyard_expansions_scheme
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_dockyard_expansions_scheme
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.6
+			uses = 2
+			category = cwis_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_torpedos
+	icon = GFX_goal_Advance_Torpedo
+	x = 1
+	y = 1
+	relative_position_id = IRE_dockyard_expansions_scheme
+	cost = 7.2
+
+
+	prerequisite = {
+		focus = IRE_dockyard_expansions_scheme
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			technology = basic_torpedo
+			technology = magnetic_detonator
+			technology = homing_torpedo
+			technology = electric_torpedo
+			technology = improved_ship_torpedo_launcher
+			technology = advanced_ship_torpedo_launcher
+			technology = modern_ship_torpedo_launcher
+			technology = near_future_ship_torpedo_launcher
+			technology = future_ship_torpedo_launcher
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_attack_and_run_tactics
+	icon = wolf_packs
+	x = 1
+	y = 1
+	relative_position_id = IRE_corrvete_development
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_owned_by = ROOT
+			is_controlled_by = ROOT
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_corrvete_development
+	}
+
+	completion_reward = {
+		add_ideas = GEN_attack_and_run_tactics
+	}
+}
+
+shared_focus = {
+	id = IRE_improved_landing_crafts
+	icon = GFX_goal_generic_navy_cruiser
+	x = 0
+	y = 2
+	relative_position_id = IRE_dockyard_expansions_scheme
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_dockyard_expansions_scheme
+	}
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = tp_tech
+		}
+	}
+}
+shared_focus = {
+	id = IRE_our_own_marine_corps
+	icon = amphibious_assault
+	x = -1
+	y = 1
+	relative_position_id = IRE_improved_landing_crafts
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_improved_landing_crafts
+	}
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = marine_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_hire_ship_makers
+	icon = GFX_focus_POL_develop_polish_shipbuilding
+	x = 1
+	y = 1
+	relative_position_id = IRE_improved_landing_crafts
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+
+	prerequisite = {
+		focus = IRE_improved_landing_crafts
+	}
+
+
+	completion_reward = {
+		add_ideas = naval_production_bonus2
+	}
+}
+
+shared_focus = {
+	id = IRE_a_great_navy
+	icon = navy2
+	x = -1
+	y = 1
+	relative_position_id = IRE_hire_ship_makers
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_hire_ship_makers
+	}
+
+	prerequisite = {
+		focus = IRE_our_own_marine_corps
+	}
+
+
+	completion_reward = {
+		add_ideas = GEN_a_great_navy
+	}
+}
+## airforce
+
+shared_focus = {
+	id = IRE_modernize_the_airforce
+	icon = airforce
+	x = 75
+	y = 0
+	cost = 5
+
+	x = 0
+	y = 2
+	relative_position_id = IRE_military_research_institute
+
+	completion_reward = {
+		air_experience = 35
+	}
+}
+
+shared_focus = {
+	id = IRE_american_fighters
+	icon = GFX_goal_america_plane
+	x = 0
+	y = 1
+	relative_position_id = IRE_modernize_the_airforce
+	cost = 7.2
+
+	bypass = {
+		OR = {
+			USA = {
+				exists = no
+			}
+			has_war_with = USA
+		}
+	}
+
+	available = {
+		NOT = { has_war_with = USA }
+		USA = {
+			exists = yes
+		}
+	}
+
+	mutually_exclusive = {
+		focus = IRE_Russian_bombers
+	}
+
+	mutually_exclusive = {
+		focus = IRE_Chinese_CAS
+	}
+
+	prerequisite = {
+		focus = IRE_modernize_the_airforce
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {has_dlc = "By Blood Alone"}
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_3
+				amount = 35
+				producer = USA
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = medium_plane_airframe_1
+				amount = 30
+				producer = USA
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_Russian_bombers
+	icon = GFX_goal_russia_plane
+	x = -2
+	y = 1
+	relative_position_id = IRE_modernize_the_airforce
+	cost = 7.2
+
+	bypass = {
+		OR = {
+			SOV = {
+				exists = no
+			}
+			has_war_with = SOV
+		}
+	}
+
+	available = {
+		NOT = { has_war_with = SOV }
+		SOV = {
+			exists = yes
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_modernize_the_airforce
+	}
+
+	mutually_exclusive = {
+		focus = IRE_american_fighters
+	}
+
+	mutually_exclusive = {
+		focus = IRE_Chinese_CAS
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {has_dlc = "By Blood Alone"}
+			}
+			add_equipment_to_stockpile = {
+				type = CAS_equipment_2
+				amount = 45
+				producer = SOV
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_1
+				amount = 45
+				producer = SOV
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_Chinese_CAS
+	icon = GFX_goal_china_plane
+	x = 2
+	y = 1
+	relative_position_id = IRE_modernize_the_airforce
+	cost = 7.2
+
+	bypass = {
+		OR = {
+			PRC = {
+				exists = no
+			}
+			has_war_with = PRC
+		}
+	}
+
+	available = {
+		NOT = { has_war_with = PRC }
+		PRC = {
+			exists = yes
+		}
+	}
+
+	prerequisite = {
+		focus = IRE_modernize_the_airforce
+	}
+
+	mutually_exclusive = {
+		focus = IRE_american_fighters
+	}
+
+	mutually_exclusive = {
+		focus = IRE_Russian_bombers
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {has_dlc = "By Blood Alone"}
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_1
+				amount = 45
+				producer = PRC
+			}
+		}
+		else = {
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_1
+				amount = 45
+				producer = PRC
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_analize_new_planes
+	icon = GFX_focus_generic_copy_plane_designs
+	x = -1
+	y = 1
+	relative_position_id = IRE_american_fighters
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_Chinese_CAS
+		focus = IRE_american_fighters
+		focus = IRE_Russian_bombers
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.5
+			uses = 2
+			category = air_equipment
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_utalize_the_new_planes
+	icon = air_doctrine
+	x = 1
+	y = 1
+	relative_position_id = IRE_american_fighters
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_Chinese_CAS
+		focus = IRE_american_fighters
+		focus = IRE_Russian_bombers
+	}
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = tech_bonus
+			cost_reduction = 0.3
+			uses = 2
+			category = air_doctrine
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_strategic_air_base_locations
+	icon = GFX_USA_East_Coast_Air_Bases
+	x = -1
+	y = 1
+	relative_position_id = IRE_utalize_the_new_planes
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_analize_new_planes
+	}
+
+	prerequisite = {
+		focus = IRE_utalize_the_new_planes
+	}
+
+	completion_reward = {
+		random_owned_state = {
+			limit = {
+				free_building_slots = {
+					building = air_base
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_bomb_them
+	icon = bombs2
+	x = 2
+	y = 1
+	relative_position_id = IRE_utalize_the_new_planes
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_analize_new_planes
+	}
+
+	prerequisite = {
+		focus = IRE_utalize_the_new_planes
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 1
+			uses = 1
+			category = cas_bomber
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_lighter_bombs
+	icon = GFX_USA_UCAV_1
+	x = 0
+	y = 1
+	relative_position_id = IRE_bomb_them
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_bomb_them
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = tactical_bomber
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_Bomb_the_sea
+	icon = naval_bomber
+	x = 2
+	y = 2
+	relative_position_id = IRE_bomb_them
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_bomb_them
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = naval_bomber
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_bomb_everything
+	icon = bombs
+	x = 0
+	y = 1
+	relative_position_id = IRE_lighter_bombs
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_lighter_bombs
+	}
+
+	completion_reward = {
+		add_ideas = GEN_bomb_everything
+	}
+}
+
+shared_focus = {
+	id = IRE_fight_them_with_fighters
+	icon = fighter2
+	x = -4
+	y = 1
+	relative_position_id = IRE_utalize_the_new_planes
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_analize_new_planes
+	}
+
+	prerequisite = {
+		focus = IRE_utalize_the_new_planes
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = light_fighter
+		}
+	}
+}
+
+
+shared_focus = {
+	id = IRE_scout_the_skies
+	icon = radar
+	x = 0
+	y = 1
+	relative_position_id = IRE_fight_them_with_fighters
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_fight_them_with_fighters
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = radar_tech
+		}
+		
+	}
+}
+
+shared_focus = {
+	id = IRE_see_everything
+	icon = fighter
+	x = -2
+	y = 2
+	relative_position_id = IRE_fight_them_with_fighters
+	cost = 7.2
+
+	bypass = {
+
+	}
+	allow_branch = { has_dlc = "La Resistance" }
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_fight_them_with_fighters
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = cat_scout_plane
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_best_aces
+	icon = military_mission
+	x = 0
+	y = 1
+	relative_position_id = IRE_scout_the_skies
+	cost = 7.2
+
+	bypass = {
+
+	}
+
+	available = {
+
+	}
+
+	prerequisite = {
+		focus = IRE_scout_the_skies
+	}
+
+	completion_reward = {
+		add_ideas = GEN_aces
+	}
+}
+
+shared_focus = {
+	id = IRE_develop_anti_air_artillery
+	icon = air_defense
+	x = -1
+	y = 1
+	relative_position_id = IRE_strategic_air_base_locations
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_strategic_air_base_locations
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			technology = interwar_antiair
+			technology = antiair1
+			technology = antiair2
+			technology = antiair3
+			technology = antiair4
+			technology = antiair5
+			technology = antiair6
+			technology = antiair7
+			technology = antiair8
+		}
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = IRE_foreign_advisors
+	icon = paratroopers
+	x = 1
+	y = 1
+	relative_position_id = IRE_strategic_air_base_locations
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_strategic_air_base_locations
+	}
+
+	completion_reward = {
+		add_ideas = IRE_foreign_help
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = IRE_air_safety_reforms
+	icon = GFX_ENG_Ground_Crew
+	x = -1
+	y = 1
+	relative_position_id = IRE_foreign_advisors
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_develop_anti_air_artillery
+	}
+
+	prerequisite = {
+		focus = IRE_foreign_advisors
+	}
+
+	completion_reward = {
+		add_ideas = generic_air_force_safety_reforms
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = IRE_art_of_a_deal
+	icon = GFX_focus_arms_trade_deals
+	x = -1
+	y = 1
+	relative_position_id = IRE_air_safety_reforms
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_air_safety_reforms
+	}
+	prerequisite = {
+		focus = IRE_best_aces
+		focus = IRE_bomb_everything
+	}
+
+
+
+	completion_reward = {
+		add_ideas = ROM_acquire_licenses
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = IRE_increase_local_airplane_production
+	icon = air_production
+	x = 1
+	y = 1
+	relative_position_id = IRE_air_safety_reforms
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_air_safety_reforms
+	}
+	prerequisite = {
+		focus = IRE_best_aces
+		focus = IRE_bomb_everything
+	}
+
+
+
+	completion_reward = {
+		add_ideas = ROM_local_development
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+shared_focus = {
+	id = IRE_air_force_military_school
+	icon = GFX_focus_generic_military_academy
+	x = 1
+	y = 1
+	relative_position_id = IRE_art_of_a_deal
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_art_of_a_deal
+	}
+
+	prerequisite = {
+		focus = IRE_increase_local_airplane_production
+	}
+
+
+	completion_reward = {
+		add_ideas = idea_focus_air_force_military_school
+	}
+
+	ai_will_do = {
+		factor = 10
+	}
+}
+###army
+
+shared_focus = {
+	id = IRE_bolster_the_army
+	icon = infantry_allies
+	x = 0
+	y = 2
+	relative_position_id = IRE_a_great_navy
+	cost = 5
+	available = {
+
+	}
+
+	completion_reward = {
+		army_experience = 35
+		add_manpower = 5000
+	}
+}
+
+shared_focus = {
+	id = IRE_retire_the_old_guns
+	icon = small_arms3
+	x = -1
+	y = 1
+	relative_position_id = IRE_bolster_the_army
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_bolster_the_army
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 3.0
+			uses = 1
+			category = infantry_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_revalue_our_tactics
+	icon = army_logistics
+	x = 1
+	y = 1
+	relative_position_id = IRE_bolster_the_army
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_bolster_the_army
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = armydoctrine_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+shared_focus = {
+	id = IRE_legacy_of_trenches
+	icon = construction2
+	x = 1
+	y = 1
+	relative_position_id = IRE_retire_the_old_guns
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_retire_the_old_guns
+	}
+
+	prerequisite = {
+		focus = IRE_revalue_our_tactics
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 1.0
+			uses = 2
+			category = engineers_tech
+		}
+	}
+}
+shared_focus = {
+	id = IRE_innovations_in_warfare
+	icon = GFX_focus_generic_license_production
+	x = 5
+	y = 1
+	relative_position_id = IRE_retire_the_old_guns
+	cost = 7.2
+
+
+	prerequisite = {
+		focus = IRE_revalue_our_tactics
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = FRA_innovation_of_warfare
+	}
+}
+
+shared_focus = {
+	id = IRE_tractors_of_the_modern_age
+	icon = tank_prototype
+	x = -1
+	y = 1
+	relative_position_id = IRE_innovations_in_warfare
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_innovations_in_warfare
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = armor
+		}
+	}
+}
+
+
+shared_focus = {
+	id = IRE_motorization_efforts
+	icon = motorized
+	x = 1
+	y = 1
+	relative_position_id = IRE_innovations_in_warfare
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_innovations_in_warfare
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = motorized_equipment
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_mechanization
+	icon = GFX_USA_IFV
+	x = 0
+	y = 1
+	relative_position_id = IRE_motorization_efforts
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_motorization_efforts
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = cat_light_mechanized_equipment
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_tank_quality_upgrade
+	icon = GFX_USA_MBT_Tanks
+	x = 0
+	y = 1
+	relative_position_id = IRE_tractors_of_the_modern_age
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_tractors_of_the_modern_age
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = GEN_tank_quality_upgrade
+	}
+}
+shared_focus = {
+	id = IRE_cult_of_speed
+	icon = GFX_FIN_Nato_Equipment
+	x = 1
+	y = 1
+	relative_position_id = IRE_tank_quality_upgrade
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_tank_quality_upgrade
+	}
+
+	prerequisite = {
+		focus = IRE_mechanization
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = IRE_cult_of_speed
+	}
+}
+
+
+shared_focus = {
+	id = IRE_modernize_our_weponary
+	text = GEF_Modernize_Our_Small_Arms
+	icon = GFX_goal_Assault_Rifle_1
+	x = 0
+	y = 1
+	relative_position_id = IRE_legacy_of_trenches
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_legacy_of_trenches
+	}
+
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = infantry_weapons
+		}
+	}
+}
+shared_focus = {
+	id = IRE_reform_the_general_staff
+	icon = army_officers
+	x = 1
+	y = 1
+	relative_position_id = IRE_modernize_our_weponary
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_modernize_our_weponary
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = GEN_reformed_the_general_staff
+	}
+}
+shared_focus = {
+	id = IRE_conscription_reforms
+	icon = generic_arm_people
+	x = -1
+	y = 1
+	relative_position_id = IRE_modernize_our_weponary
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_modernize_our_weponary
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = GEN_conscription_reforms
+	}
+}
+
+
+shared_focus = {
+	id = IRE_light_infantry_divisions_doctrine
+	text = HUN_light_infantry_divisions_doctrine
+	icon = infantry_japan
+	x = 0
+	y = 1
+	relative_position_id = IRE_reform_the_general_staff
+	cost = 7.2
+	mutually_exclusive = {
+		focus = IRE_mechanised_infantry
+	}
+	prerequisite = {
+		focus = IRE_reform_the_general_staff
+	}
+	prerequisite = {
+		focus = IRE_conscription_reforms
+	}
+
+	completion_reward = {
+		custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
+		custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
+		hidden_effect = {
+			if = {
+				limit = { has_tech = tech_engineers }
+				division_template = {
+					name = "Light Division"
+					#division_names_group = ROOT_INF_01
+					priority = 2
+
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				else = {
+					division_template = {
+						name = "Light Division"
+						#division_names_group = HUN_INF_01
+						priority = 2
+
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							engineer = { x = 0 y = 1 }
+						}
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = { 43 }
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1. Light Division\" division_template = \"Light Division\" start_experience_factor = 1.0"
+					owner = ROOT
+				}
+			}
+		}
+		hidden_effect = { set_technology = { HUN_light_infantry_tech = 1 } }
+	}
+}
+shared_focus = {
+	id = IRE_mechanised_infantry
+	icon = GFX_ENG_IFV
+	x = 0
+	y = 1
+	relative_position_id = IRE_conscription_reforms
+	cost = 7.2
+	mutually_exclusive = {
+		focus = IRE_light_infantry_divisions_doctrine
+	}
+	prerequisite = {
+		focus = IRE_reform_the_general_staff
+	}
+	prerequisite = {
+		focus = IRE_conscription_reforms
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.5
+			uses = 2
+			category = cat_mechanized_equipment
+		}
+	}
+}
+
+
+shared_focus = {
+	id = IRE_doctrinal_development
+	icon = army_doctrine
+	x = 3
+	y = 1
+	relative_position_id = IRE_innovations_in_warfare
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_innovations_in_warfare
+	}
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = armydoctrine_bonus
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_camoflage_improvements
+	icon = GFX_USA_Military_Research
+	x = 0
+	y = 1
+	relative_position_id = IRE_doctrinal_development
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_doctrinal_development
+	}
+
+	completion_reward = {
+		add_ideas = GEN_comoflage_idea
+	}
+}
+
+shared_focus = {
+	id = IRE_hospitals_in_the_field
+	icon = GFX_focus_generic_field_hostpital
+	x = -1
+	y = 1
+	relative_position_id = IRE_mechanised_infantry
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_mechanised_infantry
+		focus = IRE_light_infantry_divisions_doctrine
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = GEN_hospitals_in_the_field
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 1.0
+			uses = 1
+			category = hospital_tech
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_special_forces
+	text = special_forces
+	icon = special_forces
+	x = 1
+	y = 1
+	relative_position_id = IRE_light_infantry_divisions_doctrine
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_mechanised_infantry
+		focus = IRE_light_infantry_divisions_doctrine
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			bonus = 0.8
+			uses = 2
+			category = marine_tech
+			category = mountaineers_tech
+			category = para_tech
+		}
+	}
+}
+
+
+shared_focus = {
+	id = IRE_increase_wepons_production
+	icon = GFX_goal_Increase_Military_Spending
+	x = 1
+	y = 1
+	relative_position_id = IRE_mechanised_infantry
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_mechanised_infantry
+		focus = IRE_light_infantry_divisions_doctrine
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = GEN_increased_weapons_production
+	}
+}
+
+shared_focus = {
+	id = IRE_military_research_institute
+	icon = research
+	x = 0
+	y = 1
+	relative_position_id = IRE_increase_wepons_production
+	cost = 7.2
+
+	available = {
+		amount_research_slots < 5
+	}
+
+	prerequisite = {
+		focus = IRE_increase_wepons_production
+	}
+	prerequisite = {
+		focus = IRE_hospitals_in_the_field
+		focus = IRE_special_forces
+	}
+
+
+	completion_reward = {
+		add_research_slot = 1
+		custom_effect_tooltip = CZE_war_college_effect_tt
+	}
+}
+
+shared_focus = {
+	id = IRE_standarized_artillery
+	icon = GFX_ITA_Artillery_1
+	x = -4
+	y = 1
+	relative_position_id = IRE_legacy_of_trenches
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_legacy_of_trenches
+	}
+
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_2
+			amount = 150
+			producer = ROOT
+		}
+		add_tech_bonus = {
+			name = tech_bonus
+			uses = 2
+			bonus = 0.8
+			category = artillery
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_bring_out_the_big_guns
+	icon = GFX_SWE_Archer_Artillery_System
+	x = -1
+	y = 1
+	relative_position_id = IRE_standarized_artillery
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_standarized_artillery
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_ideas = GEN_bring_out_the_big_guns
+	}
+}
+
+shared_focus = {
+	id = IRE_destroy_their_tanks
+	icon = GFX_goal_9M133_Kornet
+	x = 1
+	y = 1
+	relative_position_id = IRE_standarized_artillery
+	cost = 7.2
+
+
+	prerequisite = {
+		focus = IRE_standarized_artillery
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			uses = 2
+			bonus = 0.8
+			category = cat_anti_tank
+		}
+	}
+}
+
+shared_focus = {
+	id = IRE_drone_warfare
+	icon = airforce
+	x = -1
+	y = 1
+	relative_position_id = IRE_destroy_their_tanks
+	cost = 5
+
+	prerequisite = {
+		focus = IRE_bring_out_the_big_guns
+	}
+
+	prerequisite = {
+		focus = IRE_destroy_their_tanks
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			ahead_reduction = 1
+			bonus = 1.0
+			category = drone_tech
+		}
+	}
+}
+shared_focus = {
+	id = IRE_rocket_artillery_experiments
+	icon = rocketry
+	x = 0
+	y = 1
+	relative_position_id = IRE_drone_warfare
+	cost = 7.2
+
+	prerequisite = {
+		focus = IRE_drone_warfare
+	}
+
+	available = {
+
+	}
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = tech_bonus
+			uses = 2
+			bonus = 0.8
+			category = rocketry
+		}
+	}
+}
